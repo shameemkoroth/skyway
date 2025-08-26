@@ -1,4 +1,4 @@
-<h2 align="center">Sky Way Tours and Travels/h2>
+<h2 align="center">Sky Way Tours and Travels</h2>
 <div align="center">
 <p>A travel website project created using HTML, CSS and JavaScript.</p>
 <a href="https://github.com/shameemkoroth/skyway" target="_blank"><strong>➥ Live Demo</strong></a>
