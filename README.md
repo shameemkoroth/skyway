@@ -3,5 +3,5 @@
 <p>A travel website project created using HTML, CSS and JavaScript.</p>
 <a href="https://shameemkoroth.github.io/skyway" target="_blank"><strong>➥ Live Demo</strong></a>
 </div> <br/><br/>
-<img src="https://github.com/skyway/blob/main/readme%20images/readme-image.jpg"></img>
+
 
