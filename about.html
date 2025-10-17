@@ -1,145 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="icon" href="./files/logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="icon" href="./files/logo.png" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    nav {
+      background-color: #072f53;
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo {
+      height: 50px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li a {
+      color: #ffffff;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    .navbar li a:hover {
+      background-color: #004d40;
+    }
+
+    .about {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .abt-text h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .abt-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .abt-text strong {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    .connect-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: #072f53;
+    }
+
+    .footer {
+      background-color: #072f53;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .footlinks h4 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+
+    .footlinks ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footlinks ul li {
+      margin: 5px 0;
+    }
+
+    .footlinks a {
+      color: #00bfa5;
+      text-decoration: none;
+    }
+
+    .footlinks a:hover {
+      text-decoration: underline;
+    }
+
+    .footlinks p {
+      color: #ffffff;
+      margin: 5px 0;
+    }
+
+    .social a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: white;
+    }
+
+    .end {
+      background-color: #B0E0E6;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .abt-text h1 {
+        font-size: 1.5rem;
+      }
+
+      .abt-text p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
-
-<style>
-/* CSS to change the header background and link colors */
-nav {
-    background-color: #072f53; /* Light blue */
-    padding: 15px; /* Adds a bit of space */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: #004d40; /* A dark teal for better contrast */
-    font-weight: 500;
-}
-
-/* CSS to change the footer and copyright section */
-.footer {
-    background-color: #072f53;
-    padding: 30px 0;
-    border-radius: 10px;
-}
-
-.footlinks h4,
-.footlinks p {
-    color: #004d40; /* Dark teal for headings and text */
-}
-
-.footer a {
-    color: #00796b; /* A slightly lighter teal for links */
-}
-
-.end {
-    background-color: #B0E0E6;
-    padding: 15px;
-}
-
-/* Updated style for "Quick Links" text */
-.footlinks h4 {
-    color: Pink;
-}
-
-</style>
-	
 <body class="aboutbody">
-        <nav>
-            <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels">
+  <nav>
+    <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
+    <ul class="navbar">
+      <li>
+        <a href="./index.html">Home</a>
+        <a href="./index.html#locations">Locations</a>
+        <a href="./about.html">About Us</a>
+        <a href="./contact.html">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
 
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">Home</a>
-                    <a href="./index.html#locations">Locations</a>
-                    <a href="./about.html">About Us</a>
-                    <a href="./contact.html">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
-        
-    <section class="about">
-           <div class="main">
-            <div class="abt-text">
-                <h1>About Us</h1>
-                <p>At Sky Way Tours & Travels, we believe that travel is more than just reaching a destination; it's about creating lasting memories. Whether you're planning a local excursion, a pilgrimage, or an international adventure, we're here to make your journey seamless and enjoyable.<br>
+  <section class="about">
+    <div class="main">
+      <div class="abt-text">
+        <h1>About Us</h1>
+        <p>
+          At Sky Way Tours & Travels, we believe that travel is more than just reaching a destination; it's about creating lasting memories. Whether you're planning a local excursion, a pilgrimage, or an international adventure, we're here to make your journey seamless and enjoyable.
+        </p>
 
-<br><bold></underline>Our Commitment:</underline></bold><br>
+        <strong>Our Commitment:</strong>
 
-<br><bold>Customer Satisfaction:</bold> 
-<br>Your satisfaction is our priority. 
-<br>We strive to provide personalized service and attend to your unique travel needs.<br>
-<br><bold>Reliability and Safety:</bold>  
-<br>We prioritize your safety and ensure that our services are dependable and trustworthy.<br>
-<br><bold>Expertise and Experience: 
-<br>We leverage our knowledge and experience to offer valuable travel solutions and insights..</p>
-                
+        <strong>Customer Satisfaction:</strong>
+        <p>Your satisfaction is our priority. We strive to provide personalized service and attend to your unique travel needs.</p>
 
-                <div class="connect-section">
+        <strong>Reliability and Safety:</strong>
+        <p>We prioritize your safety and ensure that our services are dependable and trustworthy.</p>
 
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
-                        <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram' ></i></a>
-						<a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail' ></i></a>
-                    </div>
+        <strong>Expertise and Experience:</strong>
+        <p>We leverage our knowledge and experience to offer valuable travel solutions and insights.</p>
 
-                </div>
-            </div>
-            
+        <div class="connect-section">
+          <div class="social-icons">
+            <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-           </div>
-           
+  <section class="footer">
+    <div class="footer-content">
+      <div class="footlinks">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
 
-    </section>
-
-
-    <!-- Footer -->
-
-<!-- Footer -->
-
-<section class="footer">
-    <div class="foot">
-        <div class="footer-content">
-            
-            <div class="footlinks">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footlinks">
-                <h4>Connect</h4>
-                <div class="social">
-                    <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram' ></i></a>
-					<a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail' ></i></a>
-					<br>
-				</div>
-					<br><p style="color: white;">0496 299 69 29</p>
-					<br><p style="color: white;">9496 369 777</p>
-					<br><p style="color: white;">9061 99 69 29</p><br>
-            	</div>
-        
+      <div class="footlinks">
+        <h4>Connect</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+        </div>
+        <p>0496 299 69 29</p>
+        <p>9496 369 777</p>
+        <p>9061 99 69 29</p>
+      </div>
     </div>
 
     <div class="end">
-        <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
+      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
     </div>
-</section>
-
+  </section>
 </body>
 </html>
