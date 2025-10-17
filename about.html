@@ -9,13 +9,16 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
+    
+    /* General styles */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
     }
-
+    
+    /* Header styles */
     nav {
       background-color: #072f53;
       padding: 15px 20px;
@@ -24,11 +27,11 @@
       align-items: center;
       justify-content: space-between;
     }
-
+    
     nav .logo {
       height: 50px;
     }
-
+    
     .navbar {
       display: flex;
       gap: 20px;
@@ -36,7 +39,7 @@
       margin: 0;
       padding: 0;
     }
-
+    
     .navbar li a {
       color: #ffffff;
       font-weight: 500;
@@ -44,124 +47,177 @@
       padding: 8px 12px;
       border-radius: 4px;
     }
-
+    
     .navbar li a:hover {
       background-color: #004d40;
     }
-
-    .about {
+    
+    /* Contact section layout */
+    .contact {
       padding: 40px 20px;
+    }
+    .contact-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       max-width: 900px;
       margin: auto;
+      gap: 40px;
     }
-
-    .abt-text h1 {
+    
+    .contact-left {
+      flex: 1;
+    }
+    .contact-left h1 {
       font-size: 2rem;
       margin-bottom: 20px;
-      text-align: center;
     }
-
-    .abt-text p {
+    
+    .contact-left p {
       font-size: 1rem;
       line-height: 1.6;
+      margin: 5px 0;
     }
-
-    .abt-text strong {
+    
+    .contact-right img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+    /* About section layout */
+    .about {
+      padding: 40px 20px;
+    }
+    
+    .about-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 900px;
+      margin: auto;
+      gap: 40px;
+    }
+    
+    .about-left {
+      flex: 1;
+    }
+    
+    .about-left h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .about-left p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    
+    .about-left strong {
       display: block;
       margin-top: 15px;
       font-weight: 600;
     }
-
-    .connect-section {
-      margin-top: 20px;
-      text-align: center;
+    
+    .about-right img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
     }
-
-    .social-icons a {
-      font-size: 24px;
-      margin: 0 10px;
-      color: #072f53;
-    }
-
+    
+    /* Footer styles */
     .footer {
       background-color: #072f53;
       color: white;
       padding: 40px 20px;
       text-align: center;
     }
-
+    
     .footer-content {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
     }
-
+    
     .footlinks h4 {
       color: pink;
       margin-bottom: 10px;
     }
-
+    
     .footlinks ul {
       list-style: none;
       padding: 0;
     }
-
+    
     .footlinks ul li {
       margin: 5px 0;
     }
-
+    
     .footlinks a {
       color: #00bfa5;
       text-decoration: none;
     }
-
+    
     .footlinks a:hover {
       text-decoration: underline;
     }
-
+    
     .footlinks p {
       color: #ffffff;
       margin: 5px 0;
     }
-
+    
     .social a {
       font-size: 24px;
       margin: 0 10px;
       color: white;
     }
-
+    
     .end {
       background-color: #B0E0E6;
       padding: 15px;
       font-size: 14px;
     }
-
+    
+    /* Responsive styles */
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
       }
-
+      
       .navbar {
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
       }
-
+      
+      .contact-layout,
+      .about-layout,
       .footer-content {
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
-
-      .abt-text h1 {
+      
+      .contact-right img,
+      .about-right img {
+        margin-top: 20px;
+      }
+      
+      .contact-left h1,
+      .about-left h1 {
         font-size: 1.5rem;
       }
-
-      .abt-text p {
+      
+      .contact-left p,
+      .about-left p {
         font-size: 0.95rem;
       }
     }
+
+
   </style>
 </head>
 <body class="aboutbody">
