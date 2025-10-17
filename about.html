@@ -9,16 +9,13 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
-    
-    /* General styles */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
     }
-    
-    /* Header styles */
+
     nav {
       background-color: #072f53;
       padding: 15px 20px;
@@ -27,11 +24,11 @@
       align-items: center;
       justify-content: space-between;
     }
-    
+
     nav .logo {
       height: 50px;
     }
-    
+
     .navbar {
       display: flex;
       gap: 20px;
@@ -39,7 +36,7 @@
       margin: 0;
       padding: 0;
     }
-    
+
     .navbar li a {
       color: #ffffff;
       font-weight: 500;
@@ -47,48 +44,15 @@
       padding: 8px 12px;
       border-radius: 4px;
     }
-    
+
     .navbar li a:hover {
       background-color: #004d40;
     }
-    
-    /* Contact section layout */
-    .contact {
-      padding: 40px 20px;
-    }
-    .contact-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: auto;
-      gap: 40px;
-    }
-    
-    .contact-left {
-      flex: 1;
-    }
-    .contact-left h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    
-    .contact-left p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 5px 0;
-    }
-    
-    .contact-right img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-    }
-    /* About section layout */
+
     .about {
       padding: 40px 20px;
     }
-    
+
     .about-layout {
       display: flex;
       justify-content: space-between;
@@ -97,127 +61,139 @@
       margin: auto;
       gap: 40px;
     }
-    
+
     .about-left {
       flex: 1;
     }
-    
+
     .about-left h1 {
       font-size: 2rem;
       margin-bottom: 20px;
     }
-    
+
     .about-left p {
       font-size: 1rem;
       line-height: 1.6;
       margin: 10px 0;
     }
-    
+
     .about-left strong {
       display: block;
       margin-top: 15px;
       font-weight: 600;
     }
-    
+
+    .about-right {
+      text-align: center;
+    }
+
     .about-right img {
       max-width: 200px;
       height: auto;
       border-radius: 10px;
+      margin-bottom: 15px;
     }
-    
-    /* Footer styles */
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: #072f53;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #004d40;
+    }
+
     .footer {
       background-color: #072f53;
       color: white;
       padding: 40px 20px;
       text-align: center;
     }
-    
+
     .footer-content {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
     }
-    
+
     .footlinks h4 {
       color: pink;
       margin-bottom: 10px;
     }
-    
+
     .footlinks ul {
       list-style: none;
       padding: 0;
     }
-    
+
     .footlinks ul li {
       margin: 5px 0;
     }
-    
+
     .footlinks a {
       color: #00bfa5;
       text-decoration: none;
     }
-    
+
     .footlinks a:hover {
       text-decoration: underline;
     }
-    
+
     .footlinks p {
       color: #ffffff;
       margin: 5px 0;
     }
-    
+
     .social a {
       font-size: 24px;
       margin: 0 10px;
       color: white;
     }
-    
+
     .end {
       background-color: #B0E0E6;
       padding: 15px;
       font-size: 14px;
     }
-    
-    /* Responsive styles */
+
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
       }
-      
+
       .navbar {
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
       }
-      
-      .contact-layout,
+
       .about-layout,
       .footer-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
-      
-      .contact-right img,
+
       .about-right img {
         margin-top: 20px;
       }
-      
-      .contact-left h1,
+
       .about-left h1 {
         font-size: 1.5rem;
       }
-      
-      .contact-left p,
+
       .about-left p {
         font-size: 0.95rem;
       }
     }
-
-
   </style>
 </head>
 <body class="aboutbody">
@@ -234,34 +210,31 @@
   </nav>
 
   <section class="about">
-  <div class="about-layout">
-    <div class="about-left">
-      <h1>About Us</h1>
-      <p>
-        At Sky Way Tours & Travels, we believe that travel is more than just reaching a destination; it's about creating lasting memories. Whether you're planning a local excursion, a pilgrimage, or an international adventure, we're here to make your journey seamless and enjoyable.
-      </p>
+    <div class="about-layout">
+      <div class="about-left">
+        <h1>About Us</h1>
+        <p>
+          At Sky Way Tours & Travels, we believe that travel is more than just reaching a destination; it's about creating lasting memories. Whether you're planning a local excursion, a pilgrimage, or an international adventure, we're here to make your journey seamless and enjoyable.
+        </p>
 
-      <strong>Our Commitment:</strong>
+        <strong>Our Commitment:</strong>
 
-      <strong>Customer Satisfaction:</strong>
-      <p>Your satisfaction is our priority. We strive to provide personalized service and attend to your unique travel needs.</p>
+        <strong>Customer Satisfaction:</strong>
+        <p>Your satisfaction is our priority. We strive to provide personalized service and attend to your unique travel needs.</p>
 
-      <strong>Reliability and Safety:</strong>
-      <p>We prioritize your safety and ensure that our services are dependable and trustworthy.</p>
+        <strong>Reliability and Safety:</strong>
+        <p>We prioritize your safety and ensure that our services are dependable and trustworthy.</p>
 
-      <strong>Expertise and Experience:</strong>
-      <p>We leverage our knowledge and experience to offer valuable travel solutions and insights.</p>
-    </div>
+        <strong>Expertise and Experience:</strong>
+        <p>We leverage our knowledge and experience to offer valuable travel solutions and insights.</p>
+      </div>
 
-    <div class="about-right">
-      <img src="./files/logo.png" alt="Sky Way Logo" />
-    </div>
-        <div class="connect-section">
-          <div class="social-icons">
-            <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-          </div>
+      <div class="about-right">
+        <img src="./files/logo.png" alt="Sky Way Logo" />
+        <div class="social-icons">
+          <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
         </div>
       </div>
     </div>
