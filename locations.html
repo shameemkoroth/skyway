@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Destinations</title>
+    <link rel="icon" href="./files/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+    <style>
+        /* Base / Reset */
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; height: 100%; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Design tokens */
+        :root{
+            --accent-dark: #072f53;
+            --accent-mid: #004d40;
+            --accent-light: #B0E0E6;
+            --muted: #6b7280;
+            --container-padding: 16px;
+            --radius: 10px;
+            --touch: 44px;
+        }
+
+        body.location-body {
+            background: #f7fbff;
+            color: #111827;
+            line-height: 1.5;
+        }
+
+        /* Header/navigation */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            background-color: var(--accent-dark);
+            padding: 10px var(--container-padding);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 12px;
+            z-index: 20;
+        }
+
+        .brand {
+            display:flex;
+            align-items:center;
+            gap: 12px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .brand img.logo {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.06);
+        }
+        .brand .title {
+            font-weight: 600;
+            color: #fff;
+            line-height: 1;
+        }
+        .brand .subtitle {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.85);
+            margin-top: -2px;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li { margin: 0; }
+        .navbar a {
+            color: #e6f0f8;
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .navbar a:hover,
+        .navbar a:focus {
+            background: rgba(255,255,255,0.06);
+            color: #fff;
+            outline: none;
+        }
+
+        /* Hamburger for small screens */
+        .hamburger {
+            display: none;
+            width: var(--touch);
+            height: var(--touch);
+            align-items:center;
+            justify-content:center;
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .hamburger:focus { outline: 2px solid rgba(255,255,255,0.12); }
+
+        /* Main content */
+        .location-section {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 var(--container-padding) 40px;
+        }
+
+        .location-heading h1 {
+            font-size: 1.6rem;
+            margin: 8px 0 18px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .location-heading h1 span { color: var(--accent-dark); }
+
+        .location-detail {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 16px;
+            align-items: center;
+        }
+        .location-detail h1 {
+            margin: 0 0 8px;
+            font-size: 1.15rem;
+            color: var(--accent-dark);
+        }
+        .location-detail p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .location-img img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--accent-dark);
+            padding: 28px var(--container-padding) 0;
+            color: #fff;
+            margin-top: 12px;
+            border-radius: 10px;
+        }
+        .footer .foot {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-bottom: 12px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footlinks h4 { margin: 0 0 10px; color: #ffd6ea; }
+        .footlinks ul { margin:0; padding:0; list-style: none; }
+        .footlinks a { color: #bde5da; text-decoration: none; }
+        .footlinks a:hover { text-decoration: underline; }
+
+        .social a { color: #fff; font-size: 1.25rem; margin-right: 10px; display:inline-block; }
+
+        .end {
+            background-color: var(--accent-light);
+            padding: 12px;
+            text-align: center;
+            color: #072f53;
+            border-radius: 0 0 10px 10px;
+            margin-top: 12px;
+        }
+
+        /* Responsive rules */
+        @media (max-width: 900px) {
+            .location-detail { grid-template-columns: 1fr 180px; }
+            .location-img img { height: 120px; }
+        }
+
+        @media (max-width: 720px) {
+            .navbar { display: none; }
+            .hamburger { display: flex; }
+
+            .location-detail { grid-template-columns: 1fr; }
+            .location-img img { height: 180px; }
+            .location-heading h1 { font-size: 1.35rem; }
+            nav { padding-left: 12px; padding-right: 12px; }
+        }
+
+        /* Mobile menu panel */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 16px;
+            background: #fff;
+            color: #072f53;
+            border-radius: 10px;
+            box-shadow: 0 12px 40px rgba(2,6,23,0.12);
+            width: min(320px, calc(100% - 32px));
+            z-index: 30;
+            overflow: hidden;
+        }
+        .mobile-menu.open { display: block; }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(7,47,83,0.06);
+            color: var(--accent-dark);
+            text-decoration: none;
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:focus, .mobile-menu a:hover { background: rgba(7,47,83,0.04); }
+
+        /* Very small screens */
+        @media (max-width: 420px) {
+            .brand img.logo { width: 40px; height: 40px; }
+            .location-img img { height: 140px; }
+            .location-heading h1 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+
+<body class="location-body">
+    <nav>
+        <a class="brand" href="./index.html" aria-label="Sky Way Tours and Travels homepage">
+            <img src="./files/logo.png" class="logo" alt="Sky Way Tours and Travels logo" />
+            <div>
+                <div class="title">Sky Way Tours</div>
+                <div class="subtitle">Tours and Travels</div>
+            </div>
+        </a>
+
+        <ul class="navbar" role="menu" aria-label="Primary navigation">
+            <li><a href="./index.html" role="menuitem">Home</a></li>
+            <li><a href="./index.html#locations" role="menuitem">Locations</a></li>
+            <li><a href="./about.html" role="menuitem">About Us</a></li>
+            <li><a href="./contact.html" role="menuitem">Contact Us</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect width="20" height="2" rx="1" fill="#ffffff"/>
+                <rect y="6" width="20" height="2" rx="1" fill="#ffffff"/>
+                <rect y="12" width="20" height="2" rx="1" fill="#ffffff"/>
+            </svg>
+        </button>
+
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#locations">Locations</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <main class="location-section" id="locations">
+        <header class="location-heading">
+            <h1>Discover The <span>Beautiful World</span></h1>
+        </header>
+
+        <article class="location-detail" id="kashmir">
+            <div>
+                <h1>Kashmir</h1>
+                <p>Known as "Heaven on Earth," Kashmir stands out as North India's most spectacular travel destination. You simply won't find scenic landscapes, icy glaciers, pristine lakes, and lofty mountains anywhere else.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/kashmir.jpg" alt="Snowy mountains and lake in Kashmir">
+            </div>
+        </article>
+
+        <article class="location-detail" id="istanbul">
+            <div>
+                <h1>Istanbul</h1>
+                <p>Istanbul is where history meets the future. Spanning two continents, this majestic city is a vibrant tapestry of historical and cultural riches, with stunning architecture and bustling markets.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/istanbul.jpg" alt="Istanbul skyline with historic buildings">
+            </div>
+        </article>
+
+        <article class="location-detail" id="paris">
+            <div>
+                <h1>Paris</h1>
+                <p>Paris is the height of sophistication, a city that welcomes everyone from the luxury traveler to the budget explorer. Beyond the iconic Eiffel Tower, the city's boulevards, museums and cafés are unforgettable.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/paris.jpg" alt="Eiffel Tower and Parisian skyline">
+            </div>
+        </article>
+
+        <article class="location-detail" id="bali">
+            <div>
+                <h1>Bali</h1>
+                <p>Bali is a destination where natural beauty meets spiritual depth. The island's beaches, rice terraces and temples combine with a wide range of accommodations to suit any traveler.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/bali.jpg" alt="Beach and palm trees in Bali">
+            </div>
+        </article>
+
+        <article class="location-detail" id="dubai">
+            <div>
+                <h1>Dubai</h1>
+                <p>Dubai is an ideal family holiday destination, with theme parks, beaches, shopping and iconic landmarks like the Burj Khalifa offering unforgettable experiences.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/t5.jpg" alt="Modern skyline and Burj Khalifa, Dubai">
+            </div>
+        </article>
+
+        <article class="location-detail" id="geneva">
+            <div>
+                <h1>Geneva</h1>
+                <p>The charming city of Geneva combines culture and natural beauty, making it a favorite for travelers who love lakeside promenades and alpine views.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/t6.jpg" alt="Lake Geneva and mountains">
+            </div>
+        </article>
+
+        <article class="location-detail" id="port-blair">
+            <div>
+                <h1>Port Blair</h1>
+                <p>Port Blair offers easy access to pristine beaches and marine life — ideal for snorkeling, relaxing and exploring island culture.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/t7.jpg" alt="Beaches at Port Blair">
+            </div>
+        </article>
+
+        <article class="location-detail" id="rome">
+            <div>
+                <h1>Rome</h1>
+                <p>Rome, the eternal city, is full of ancient monuments, world-class art and a vibrant street-life — a destination rich in history and flavor.</p>
+            </div>
+            <div class="location-img">
+                <img src="./files/t8.jpg" alt="Colosseum in Rome">
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="foot">
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social" aria-label="Social links">
+                    <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook' aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+                    <a href="https://www.instagram.com/skyway__travels" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram' aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+                    <a href="mailto:info@skywaytourandtravel.com" target="_blank" rel="noopener noreferrer"><i class='bx bxl-gmail' aria-hidden="true"></i><span class="sr-only">Email</span></a>
+                </div>
+                <div style="margin-top:10px; color:#fff;">
+                    <div>0496 299 69 29</div>
+                    <div>9496 369 777</div>
+                    <div>9061 99 69 29</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        (function () {
+            const btn = document.getElementById('hamburgerBtn');
+            const menu = document.getElementById('mobileMenu');
+
+            function openMenu() {
+                menu.classList.add('open');
+                menu.setAttribute('aria-hidden', 'false');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+            function closeMenu() {
+                menu.classList.remove('open');
+                menu.setAttribute('aria-hidden', 'true');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+
+            btn.addEventListener('click', function (e) {
+                const isOpen = menu.classList.contains('open');
+                if (isOpen) closeMenu();
+                else openMenu();
+            });
+
+            // close when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+
+            // close on ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+    </script>
+</body>
+</html>
