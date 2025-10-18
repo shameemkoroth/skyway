@@ -20,12 +20,14 @@
       background-color: #072f53;
       padding: 15px 20px;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav .logo {
+    .logo {
       height: 50px;
     }
 
@@ -49,25 +51,24 @@
       background-color: #004d40;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
     .banner {
       position: relative;
-      height: 100vh;
-      overflow: hidden;
+      height: auto;
     }
 
     .banner-image {
       width: 100%;
       height: auto;
       display: block;
-    }
-
-    .title h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .title p {
-      font-size: 1.2rem;
     }
 
     .container {
@@ -186,29 +187,25 @@
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       .navbar {
+        display: none;
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
+      }
+
+      .navbar.mobile-visible {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
       }
 
       .rowitems,
       .location-content {
         flex-direction: column;
         align-items: center;
-      }
-
-      .title h1 {
-        font-size: 2rem;
-      }
-
-      .title p {
-        font-size: 1rem;
       }
 
       .text h2,
@@ -223,11 +220,11 @@
     }
   </style>
 </head>
-
-
 <body>
+
   <nav>
     <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
+    <button class="menu-toggle" onclick="document.querySelector('.navbar').classList.toggle('mobile-visible')">☰</button>
     <ul class="navbar">
       <li><a href="#home">Home</a></li>
       <li><a href="#locations">Locations</a></li>
@@ -236,18 +233,9 @@
     </ul>
   </nav>
 
-  <div class="banner">
+  <div class="banner" id="home">
     <img src="./files/header-image.jpg" alt="Banner Image" class="banner-image" />
-    <div class="content" id="home">
-      <!--
-      <div class="title">
-        <h1>Sky Way Tours and Travels</h1>
-        <p>Plan your trip with us and travel around the world with the most affordable packages!</p>
-      </div>
-      -->
-    </div>
   </div>
-
 
   <section class="container">
     <div class="text">
