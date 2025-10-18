@@ -29,6 +29,13 @@
       height: 50px;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
     .navbar {
       display: flex;
       gap: 20px;
@@ -121,16 +128,56 @@
       font-size: 14px;
     }
 
+    .contact-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    .contact-left {
+      flex: 1;
+    }
+
+    .contact-right img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
       }
 
+      .menu-toggle {
+        display: block;
+      }
+
       .navbar {
+        display: none;
         flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+        width: 100%;
+        background-color: #072f53;
+      }
+
+      .navbar.active {
+        display: flex;
+      }
+
+      .navbar li {
+        width: 100%;
+        text-align: left;
+      }
+
+      .navbar li a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
       }
 
       .footer-content {
@@ -145,43 +192,25 @@
       .contact-form p {
         font-size: 0.95rem;
       }
-    }
-    
-    .contact-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      gap: 40px;
-    }
-    
-    .contact-left {
-      flex: 1;
-    }
-    
-    .contact-right img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-    }
-    @media (max-width: 768px) {
+
       .contact-layout {
         flex-direction: column;
         text-align: center;
+        padding: 20px;
       }
+
       .contact-right img {
         margin-top: 20px;
+        margin: auto;
       }
     }
-
   </style>
 </head>
 <body class="contactbody">
   <nav>
     <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
-    <ul class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="navbar" id="navbar">
       <li><a href="./index.html">Home</a></li>
       <li><a href="./index.html#locations">Locations</a></li>
       <li><a href="./about.html">About Us</a></li>
@@ -189,25 +218,23 @@
     </ul>
   </nav>
 
-<section class="contact">
-  <div class="contact-layout">
-    <div class="contact-left">
-      <h1>Contact <span>Us</span></h1>
-      <p>Sky Way Tours & Travels</p>
-      <p>Sky Line Building</p>
-      <p>Nadapuram</p>
-      <p>Kerala - 673504</p>
-      <p>0496 299 69 29</p>
-      <p>9496 369 777</p>
-      <p>9061 99 69 29</p>
+  <section class="contact">
+    <div class="contact-layout">
+      <div class="contact-left">
+        <h1>Contact <span>Us</span></h1>
+        <p>Sky Way Tours & Travels</p>
+        <p>Sky Line Building</p>
+        <p>Nadapuram</p>
+        <p>Kerala - 673504</p>
+        <p>0496 299 69 29</p>
+        <p>9496 369 777</p>
+        <p>9061 99 69 29</p>
+      </div>
+      <div class="contact-right">
+        <img src="./files/logo.png" alt="Sky Way Logo" />
+      </div>
     </div>
-    <div class="contact-right">
-      <img src="./files/logo.png" alt="Sky Way Logo" />
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <section class="footer">
     <div class="footer-content">
@@ -234,5 +261,11 @@
       <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
     </div>
   </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
