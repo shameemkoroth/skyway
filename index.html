@@ -114,18 +114,21 @@
     /* Locations */
     .location-grid {
       display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 40px 20px;
-      flex-wrap: wrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 0; /* Remove gap to avoid spacing between cards */
+      padding: 0;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      width: 100vw; /* Full viewport width */
     }
     
     .location-card {
+      flex: 0 0 100vw; /* Each card takes full viewport width */
+      scroll-snap-align: start;
       position: relative;
-      width: 300px;
-      border-radius: 10px;
+      border-radius: 0;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: none;
     }
     
     .location-card img {
