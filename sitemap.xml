@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
     <loc>https://skywaytourandtravel.com/</loc>
-    <lastmod>2025-10-18</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- About Page -->
   <url>
-    <loc>https://skywaytourandtravel.com/about.html</loc>
+    <loc>https://skywaytourandtravel.com/about-us</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
+  <!-- Contact Page -->
   <url>
-    <loc>https://skywaytourandtravel.com/contact.html</loc>
+    <loc>https://skywaytourandtravel.com/contact-us</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
+  <!-- Locations / Destinations (if individual pages exist) -->
   <url>
-    <loc>https://skywaytourandtravel.com/locations.html</loc>
+    <loc>https://skywaytourandtravel.com/locations</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
+  <!-- Destination placeholders – update or delete if not needed -->
   <url>
-    <loc>https://skywaytourandtravel.com/locations.html#kashmir</loc>
+    <loc>https://skywaytourandtravel.com/turkey-istanbul</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
   <url>
-    <loc>https://skywaytourandtravel.com/locations.html#istanbul</loc>
+    <loc>https://skywaytourandtravel.com/india-kashmir</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
   <url>
-    <loc>https://skywaytourandtravel.com/locations.html#paris</loc>
+    <loc>https://skywaytourandtravel.com/bahrain-destination</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>https://skywaytourandtravel.com/locations.html#bali</loc>
-  </url>
-  <url>
-    <loc>https://skywaytourandtravel.com/locations.html#dubai</loc>
-  </url>
-  <url>
-    <loc>https://skywaytourandtravel.com/locations.html#geneva</loc>
-  </url>
-  <url>
-    <loc>https://skywaytourandtravel.com/locations.html#port-blair</loc>
-  </url>
-  <url>
-    <loc>https://skywaytourandtravel.com/locations.html#rome</loc>
-  </url>
+
 </urlset>
