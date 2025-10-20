@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
+  /* FIX 1: Ensure padding doesn't cause overflow */
+  *, *::before, *::after {
+      box-sizing: border-box;
+  }
+      
+  /* FIX 2: Ensure images are always responsive and do not overflow */
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+
   body {
     margin: 0;
     padding: 0 0 40px 0; /* Adds 40px padding at the bottom */
@@ -26,7 +37,6 @@
     nav {
       background-color: #072f53;
       padding: 0; /* Removed padding here, added to .nav-container */
-      /* Removed display/flex properties, moved to .nav-container */
     }
     
     .nav-container {
@@ -40,6 +50,7 @@
 
     nav .logo {
       height: 50px;
+      /* FIX: Removed max-width if it was here, but img {max-width: 100%} handles it */
     }
 
     .navbar {
@@ -60,6 +71,11 @@
 
     .navbar li a:hover {
       background-color: #004d40;
+    }
+    
+    table {
+      width: 100%; /* Ensure table tries to fit container */
+      min-width: 500px; /* Forces tables to be wide enough for horizontal scrolling */
     }
     
     table, th, td {
@@ -97,11 +113,11 @@
       margin-top: 60px; /* Adds space before the footer */
       background-color: #072f53;
       color: white;
-      padding: 0; /* Removed padding, added to .footer-content-wrapper */
+      padding: 0; 
     }
     
     .footer-content-wrapper {
-        padding: 40px 20px;
+        padding: 40px 20px 0 20px; /* Padding for the main content of footer */
         text-align: center;
     }
 
@@ -213,7 +229,8 @@
 </head>
 <body class="contactbody">
   <nav>
-    <div class="content-wrapper nav-container"> <a href="index.html">
+    <div class="content-wrapper nav-container"> 
+        <a href="index.html">
           <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
         </a>
         <ul class="navbar">
@@ -286,8 +303,7 @@
     <p><strong>Special Documents (If Applicable)</strong></p>
     <li><strong>For Business Visa Applicants:</strong> An official <strong>invitation letter</strong> from the host company in Cambodia, plus your company's registration documents.</li>
     <li><strong>For Student Visa Applicants:</strong> An official <strong>admission letter</strong> from a Cambodian educational institution and proof of financial support.</li>
-    </div>
-  </section>
+    </section>
   
   <hr>
 
@@ -447,69 +463,4 @@
     
     <details>
       <summary>11. What is required if I attend a business conference in Malaysia?</summary>
-      <p style="margin-left: 40px;">You must obtain an official invitation letter from the event host. This letter must clearly state the conference details, your role/tasks, and your planned duration of stay. This document is crucial proof of your business travel purpose for the visa application.</p>
-    </details>
-    
-    <details>
-      <summary>12. Are there limitations on bringing business samples or tools into Malaysia?</summary>
-      <p style="margin-left: 40px;">Yes, business samples and equipment may face limitations. Before traveling, you must verify Malaysian customs regulations and import/export restrictions. Certain items may require special authorization or be subject to tax obligations. We advise contacting Malaysian customs authorities or the embassy for complete information.</p>
-    </details>
-
-    <details>
-      <summary>13. What are the tax implications for long-stay business travelers?</summary>
-      <p style="margin-left: 40px;">Indian business travelers staying in Malaysia for extended periods should be aware of potential tax obligations that may apply to their activities. It is essential to consult with a tax professional specializing in international law to fully understand and comply with any possible tax liabilities.</p>
-    </details>
-
-    <details>
-      <summary>14. Are temporary work permits required for short-term projects?</summary>
-      <p style="margin-left: 40px;">Yes. Even with a business visa, Indian business travelers conducting short-term projects in Malaysia may be required to obtain a temporary work permit. Regulations vary based on the specific project. You must consult with Malaysian immigration authorities to understand the exact requirements for your business activity.</p>
-    </details>
-
-    <details>
-      <summary>15. Can past immigration issues affect my application?</summary>
-      <p style="margin-left: 40px;">Yes, a history of overstaying a visa or other immigration violations in any country may negatively impact your Malaysia visa application, as Malaysian authorities consider past compliance history. It is best to be truthful and provide any supporting documents that may help your case.</p>
-    </details>
-
-    <details>
-      <summary>16. Are there restrictions on tourist activities?</summary>
-      <p style="margin-left: 40px;">Yes. Indian citizens on a tourist visa are strictly limited to leisure, sightseeing, and recreational activities. You are absolutely forbidden from engaging in any form of paid work, employment, or business activities while on a tourist visa.</p>
-    </details>
-
-    <details>
-      <summary>17. What are the rules for bringing prescription medication?</summary>
-      <p style="margin-left: 40px;">You must carry both your prescription and a medical letter from your doctor for any prescription medication you bring into Malaysia. Be aware that some medications may be restricted, so you should verify any specific drug with Malaysian health authorities well before your trip.</p>
-    </details>
-   </section>
-</div>
-
-
-  <section class="footer">
-    <div class="content-wrapper footer-content-wrapper"> <div class="footer-content">
-        <div class="footlinks">
-          <h4>Quick Links</h4>
-          <ul>
-            <a href="./index.html">Home</a>
-            <li><a href="./visa">Visa</a></li>
-            <li><a href="#locations">Locations</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footlinks">
-          <h4>Connect</h4>
-          <div class="social">
-            <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="end">
-      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
-    </div>
-  </section>
-</body>
-</html>
+      <p style="margin-left: 40px;">You must obtain an official invitation letter from the event host. This letter must clearly state the conference details, your role/tasks, and your planned duration of stay. This document is crucial proof of your business trave
