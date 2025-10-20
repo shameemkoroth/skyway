@@ -2,55 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Ultimate Guide to a Cambodia Visa</title>
   <link rel="icon" href="./files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-  /* FIX 1: Ensure padding doesn't cause overflow */
-  *, *::before, *::after {
-      box-sizing: border-box;
-  }
-      
-  /* FIX 2: Ensure images are always responsive and do not overflow */
-  img {
-      max-width: 100%;
-      height: auto;
-  }
 
-  body {
-    margin: 0;
-    padding: 0 0 40px 0; /* Adds 40px padding at the bottom */
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
+  <style>
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
     }
-   
-  .content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+
+    *, *::before, *::after {
+      box-sizing: inherit;
     }
- 
+
+    /* Limit page width and add side space */
+    .content-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
     nav {
       background-color: #072f53;
-      padding: 0; /* Removed padding here, added to .nav-container */
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
-    
-    .nav-container {
-        padding: 15px 20px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
-
 
     nav .logo {
       height: 50px;
-      /* FIX: Removed max-width if it was here, but img {max-width: 100%} handles it */
     }
 
     .navbar {
@@ -72,53 +64,33 @@
     .navbar li a:hover {
       background-color: #004d40;
     }
-    
-    table {
-      width: 100%; /* Ensure table tries to fit container */
-      min-width: 500px; /* Forces tables to be wide enough for horizontal scrolling */
+
+    h1, h2, h3 {
+      color: #072f53;
     }
-    
+
+    p, li {
+      color: #333333;
+      line-height: 1.6;
+    }
+
     table, th, td {
       border: 1px solid #000;
       border-collapse: collapse;
       padding: 8px;
     }
-    
-    /* FIX: Added responsive table wrapper */
-    .table-responsive {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-bottom: 20px;
-    }
 
-    .contact {
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 1px solid #ccc;
     }
-
-    .contact-form h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .contact-form p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 5px 0;
-    }    
 
     .footer {
-      margin-top: 60px; /* Adds space before the footer */
       background-color: #072f53;
       color: white;
-      padding: 0; 
-    }
-    
-    .footer-content-wrapper {
-        padding: 40px 20px 0 20px; /* Padding for the main content of footer */
-        text-align: center;
+      padding: 40px 20px;
+      text-align: center;
     }
 
     .footer-content {
@@ -136,6 +108,7 @@
     .footlinks ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .footlinks ul li {
@@ -151,11 +124,6 @@
       text-decoration: underline;
     }
 
-    .footlinks p {
-      color: #ffffff;
-      margin: 5px 0;
-    }
-
     .social a {
       font-size: 24px;
       margin: 0 10px;
@@ -166,12 +134,10 @@
       background-color: #072f53;
       padding: 15px;
       font-size: 14px;
-      text-align: center;
     }
 
     @media (max-width: 768px) {
-      /* Targeting the new nav container */
-      .nav-container {
+      nav {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -182,285 +148,87 @@
         margin-top: 10px;
       }
 
+      .content-wrapper {
+        padding: 0 15px;
+      }
+
       .footer-content {
         flex-direction: column;
         align-items: center;
       }
-
-      .contact-form h1 {
-        font-size: 1.5rem;
-      }
-
-      .contact-form p {
-        font-size: 0.95rem;
-      }
     }
-    
-    .contact-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      gap: 40px;
-    }
-    
-    .contact-left {
-      flex: 1;
-    }
-    
-    .contact-right img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-    }
-    @media (max-width: 768px) {
-      .contact-layout {
-        flex-direction: column;
-        text-align: center;
-      }
-      .contact-right img {
-        margin-top: 20px;
-      }
-    }
-
   </style>
 </head>
-<body class="contactbody">
+
+<body>
   <nav>
-    <div class="content-wrapper nav-container"> 
-        <a href="index.html">
-          <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
-        </a>
-        <ul class="navbar">
-          <li>
-            <a href="./index.html">Home</a>
-            <a href="./visa">Visa</a>
-            <a href="./index.html#locations">Locations</a>
-            <a href="./about.html">About Us</a>
-            <a href="./contact.html">Contact Us</a>
-          </li>
-        </ul>
-    </div>
+    <a href="index.html">
+      <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
+    </a>
+    <ul class="navbar">
+      <li>
+        <a href="./index.html">Home</a>
+        <a href="./visa">Visa</a>
+        <a href="./index.html#locations">Locations</a>
+        <a href="./about.html">About Us</a>
+        <a href="./contact.html">Contact Us</a>
+      </li>
+    </ul>
   </nav>
-  
-<div class="content-wrapper">
-  <section class="hero">
-    <h1><span style="font-size: 0.9em;">Your Ultimate Guide to a Cambodia Visa</h1>
-    <p class="intro-text">Dreaming of exploring the majestic temples of <strong>Angkor Wat</strong> or the bustling streets of <strong>Phnom Penh</strong>? If you're an Indian citizen, you'll need a valid <strong>Cambodia Visa</strong> to make that journey a reality.</p>
-      <p>The good news? Getting your Cambodian visa is straightforward and can often be done conveniently online! Whether you're planning a thrilling tourist getaway, a quick business trip, or simply passing through, we've broken down every essential detail for you.</p>
-      <p>This guide covers everything: required documents, different visa types, application steps, processing times, and crucial travel tips for your hassle-free trip.</p>
-  </section>
 
-  <hr>
+  <div class="content-wrapper">
+    <section class="hero">
+      <h1>Your Ultimate Guide to a Cambodia Visa</h1>
+      <p>Dreaming of exploring the majestic temples of <strong>Angkor Wat</strong> or the bustling streets of <strong>Phnom Penh</strong>? If you're an Indian citizen, you'll need a valid <strong>Cambodia Visa</strong> to make that journey a reality.</p>
+      <p>The good news? Getting your Cambodian visa is straightforward and can often be done conveniently online! Whether you're planning a thrilling tourist getaway, a quick business trip, or simply passing through, this guide covers everything you need.</p>
+    </section>
 
-  <section>
-    <h2>Cambodia Visa Requirements for Indian Citizens</h2>
-    <p>To ensure a smooth application process, gather these essential documents. Remember, the <strong>Royal Cambodian Embassy</strong> may request additional paperwork based on your profile and visa type.</p>
-    
-    <div class="table-responsive">
-      <table border="1" cellpadding="8" cellspacing="0">
+    <hr>
+
+    <section>
+      <h2>Cambodia Visa Requirements for Indian Citizens</h2>
+      <p>Prepare the following documents to ensure smooth processing:</p>
+      <table>
         <thead>
-          <tr>
-            <th>Document Category</th>
-            <th>Details Required</th>
-          </tr>
+          <tr><th>Document</th><th>Details</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>1. Valid Passport</strong></td>
-            <td>Must be valid for at least 6 months beyond your entry date into Cambodia. Ensure you have at least one to two blank pages for visa stamping.</td>
-          </tr>
-          <tr>
-            <td><strong>2. Recent Photographs</strong>
-            <td>2 recent color passport-size photos (typically $4 \times 6 \text{ cm}$) with a clear white background.</td>
-          </tr>
-          <tr>
-            <td><strong>3. Application Form</strong>
-            <td>A duly filled and signed Cambodia visa application form. All information must be accurate and match your passport.</td>
-          </tr>
-          <tr>
-            <td><strong>4. Travel Itinerary</strong>
-            <td>Confirmed round-trip flight tickets showing both your entry into and exit from Cambodia.</td>
-          </tr>
-          <tr>
-            <td><strong>5. Accommodation Proof</strong>
-            <td>A confirmed hotel reservation or an invitation letter proving where you will stay during your trip.</td>
-          </tr>
-          <tr>
-            <td><strong>6. Financial Documents</strong>
-            <td>Latest bank statements (from the last 3-6 months) to demonstrate you have sufficient funds to cover your travel expenses.</td>
-          </tr>
-          <tr>
-            <td><strong>7. Cover Letter</strong>
-            <td>A personal letter stating your purpose of travel, travel dates, and your clear intention to return to India after your visit.</td>
-          </tr>
+          <tr><td>Valid Passport</td><td>Must be valid for 6 months beyond entry date into Cambodia.</td></tr>
+          <tr><td>Photograph</td><td>2 recent color photos (4×6 cm) with white background.</td></tr>
+          <tr><td>Application Form</td><td>Accurate details matching your passport.</td></tr>
+          <tr><td>Travel Itinerary</td><td>Confirmed round-trip tickets.</td></tr>
+          <tr><td>Accommodation Proof</td><td>Hotel reservation or host invitation letter.</td></tr>
         </tbody>
       </table>
-    </div>
-    <br>
-    <p><strong>Special Documents (If Applicable)</strong></p>
-    <li><strong>For Business Visa Applicants:</strong> An official <strong>invitation letter</strong> from the host company in Cambodia, plus your company's registration documents.</li>
-    <li><strong>For Student Visa Applicants:</strong> An official <strong>admission letter</strong> from a Cambodian educational institution and proof of financial support.</li>
     </section>
-  
-  <hr>
+  </div>
 
-  <section>
-    <h3>Types of Cambodia Visa for Indian Travelers</h3>
-        <p>Indian citizens have several convenient options depending on the duration and purpose of their visit:</p>
-        <li><strong>For Business Visa Applicants:</strong> n official <strong>invitation letter</strong> from the host company in Cambodia, plus your company's registration documents.</li>
-        <li><strong>For Student Visa Applicants:</strong> An official <strong>admission letter</strong> from a Cambodian educational institution and proof of financial support.</li>
-        <li><strong>For Business Visa Applicants:</strong> n official <strong>invitation letter</strong> from the host company in Cambodia, plus your company's registration documents.</li>
-        <li><strong>For Student Visa Applicants:</strong> An official <strong>admission letter</strong> from a Cambodian educational institution and proof of financial support.</li>
-  </section>
-    <hr>
-
-
-  <section> 
-    <h2>Types of Malaysia Visas for Longer Stays</h2>
-    <p>If your trip is longer than 30 days or is specifically for education, you will need to apply for a visa.</p>
-    
-    <div class="table-responsive">
-        <table>
-            <thead>
-                <tr>
-                    <th>Visa Type</th>
-                    <th>Duration &amp; Purpose</th>
-                    <th>Key Requirement</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Tourist Visa</strong></td>
-                    <td>For stays <strong>longer than 30 days</strong> for leisure, vacation, or visiting family/friends.</td>
-                    <td>Valid Indian passport (at least 6 months validity).</td>
-                </tr>
-                <tr>
-                    <td><strong>Business Visa</strong></td>
-                    <td>For stays <strong>longer than 30 days</strong> to conduct business meetings, trade activities, or corporate participation. Single-entry (up to 90 days) and multiple-entry options are available.</td>
-                    <td>An invitation letter from a Malaysian company (if applicable).</td>
-                </tr>
-                <tr>
-                    <td><strong>Study Visa</strong></td>
-                    <td>Allows you to legally reside in Malaysia for the duration of your educational program, language course, or training. Initially granted for a period (e.g., 90 days), with extensions required for longer courses.</td>
-                    <td>An acceptance letter from a recognized Malaysian educational institution.</td>
-                </tr>
-                <tr>
-                    <td><strong>eVISA</strong></td>
-                    <td>An online application process covering various visa categories. Its duration depends on the specific category.</td>
-                    <td>A scanned copy of your valid Indian passport.</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-  </section>
-        <hr>
-  
-  <section>
-    <h2>Your Easy Visa Application Process with Skyway</h2>
-    <p>If you require a visa (for stays over 30 days or for study), our simple, step-by-step process makes applying from India quick and easy.</p>
-    <h3>1. Determine Your Visa Type</h3>
-    <p>Identify the right visa for your travel purpose (Tourist, Business, Study, etc.).</p>
-
-    <h3>2. Gather All Required Documents</h3>
-    <p>Collect the necessary paperwork. This typically includes:</p>
-    <ul>
-        <li><strong>Passport Photocopy:</strong> First and last pages.</li>
-        <li><strong>Recent Photograph:</strong> A high-quality scanned color photograph.</li>
-        <li><strong>Confirmed Return Flight Ticket:</strong> Mandatory proof of your planned exit.</li>
-        <li><strong>Proof of Accommodation:</strong> Hotel booking or an invitation letter from your host in Malaysia.</li>
-        <li><strong>Child’s Identification:</strong> For travelers under 14, a birth certificate is required.</li>
-    </ul>
-    
-    <h3>3. Complete and Submit Your Application</h3>
-    <p>The <strong>Malaysia visa application form</strong> is available on the Skyway website. Fill it out accurately—any missing or incorrect details can lead to delays or rejection. Submit the completed form and all supporting documents through our secure portal.</p>
-    
-    <h3>4. Pay the Visa Fee</h3>
-    <p>Pay the required <strong>Malaysia visa fee</strong> directly through our website. Fees vary based on the visa type and duration. Our professionals can provide you with a specific fee structure.</p>
-    
-    <h3>5. Wait for Processing &amp; Collection</h3>
-    <p>Visa processing generally takes between <strong>5 to 15 regular working days</strong>. We recommend submitting your application well in advance of your travel date. Once approved, Skyway will send you instructions on how to check your Malaysia visa details.</p>
-  </section>
-
-  <hr>
-
-
-  
-  <section>
-    <h2>Why Choose Skyway for Your Malaysia Visa?</h2>
-    <p>Navigating the nuances of international travel documents can be tricky—that's where we step in.</p>
+  <section class="footer">
+    <div class="footer-content">
+      <div class="footlinks">
+        <h4>Quick Links</h4>
         <ul>
-            <li><strong>Expert Guidance:</strong> Our specialists help you compile a <strong>detailed and accurate application</strong>, ensuring you meet the latest visa requirements.</li>
-            <li><strong>Smooth Entry:</strong> We guide you through essential steps like completing the <strong>Malaysia Digital Arrival Card (MDAC)</strong> for a seamless entry into Malaysia.</li>
-            <li><strong>Avoid Rejection:</strong> We help you prevent common mistakes, such as incomplete applications, missing documents, or issues proving sufficient funds.</li>
-            <li><strong>Track Your Status:</strong> Our website allows you to easily <strong>track your application status</strong> from India using your date of birth and application reference number.</li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./visa">Visa</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
         </ul>
-    <p><strong>Focus on the adventure, not the paperwork.</strong> Let Skyway handle the complexities of your Malaysia visa application!</p>
+      </div>
 
-    <hr>
+      <div class="footlinks">
+        <h4>Connect</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class="bx bxl-gmail"></i></a>
+        </div>
+      </div>
+    </div>
 
-    <div class="cta">
-        <p><strong>Planning a trip over 30 days or a study program?</strong></p>
-        <p>Contact <b>Skyway</b> today for expert guidance on your Malaysia visa application!</a></p>
+    <div class="end">
+      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
     </div>
   </section>
-  
-  
-  <section>
-    <h2>Frequently Asked Questions (FAQs) about Malaysia Visa for Indians</h2>
-    
-    <details>
-      <summary>1. How do I choose the correct Malaysian visa category?</summary>
-      <p style="margin-left: 40px;">Indian travelers have access to several categories, including Tourism, Business, Study, Employment, and Transit visas. You must select the visa that precisely matches your primary reason for travel. Selecting the correct category is essential, as the requirements, required documentation, and processing times vary significantly between them.</p>
-    </details>
-    
-    <details>
-      <summary>2. How much does an Azerbaijan Visa cost for Indians?</summary>
-      <p style="margin-left: 40px;">The visa fee varies based on the type of visa (e.g., tourist or business) and the processing speed selected (regular or urgent). To find out the current visa fees and special offers, please contact Skyway directly.</p>
-    </details>
-    
-    <details>
-      <summary>3. Is the Malaysia eVisa different from a regular visa?</summary>
-      <p style="margin-left: 40px;">Yes. The Malaysia eVisa is specifically designed to simplify the process for certain purposes, mainly tourism. Business and transit travelers often need to apply for a standard sticker visa through the Malaysian embassy, which involves more extensive documentation and a longer finalization period. Your travel purpose determines the required visa type.</p>
-    </details>
-    
-    <details>
-      <summary>4. How much does a Malaysia visa cost for Indian citizens?</summary>
-      <p style="margin-left: 40px;">The cost varies based on the specific visa you select (eVisa, Tourist, Business, etc.). You can find the most current and specific fee structure on the official Malaysian visa portal or by consulting with a trusted agency like Skyway.</p>
-    </details>
-    
-    <details>
-      <summary>5. How long does the visa processing take?</summary>
-      <p style="margin-left: 40px;">Processing time depends on the visa type: eVisas typically take between 2–3 working days, while standard embassy sticker visas can take 5–15 working days. We strongly recommend submitting your application well ahead of your planned travel date, especially during peak season, to minimize anxiety and ensure a smooth process.</p>
-    </details>
-    
-    <details>
-      <summary>6. Can I track my visa application status online?</summary>
-      <p style="margin-left: 40px;">Yes, you can track your application status using the online platform. You'll need your application reference number to get live updates throughout the process. Keep this reference number safe, as it's your tool for a hassle-free tracking experience.</p>
-    </details>
-    
-    <details>
-      <summary>7. What documents prove sufficient funds for Indian tourists?</summary>
-      <p style="margin-left: 40px;">Indian tourists must provide financial documents, typically 3-6 months of bank statements, to demonstrate stable and sufficient funds for the duration of the trip. Supporting documents like traveler’s checks and credit card statements can also help confirm your financial stability to cover lodging and daily expenses in Malaysia.</p>
-    </details>
-    
-    <details>
-      <summary>8. Do Indian tourists need to show proof of onward travel?</summary>
-      <p style="margin-left: 40px;">Yes, Indian tourists must present evidence of their departure plans, such as a confirmed return flight ticket or a ticket to an alternative onward destination, as mandatory proof that they will leave Malaysia after their authorized stay.</p>
-    </details>
-    
-    <details>
-      <summary>9. What are the requirements for Indian citizens traveling for medical tourism?</summary>
-      <p style="margin-left: 40px;">If you're visiting for medical tourism, you will likely need to provide medical reports, an appointment letter from the Malaysian hospital, and proof of sufficient funds to cover your medical expenses. It is also recommended to have a referral letter from your doctor in India. Always check the latest specific requirements with the Malaysian embassy.</p>
-    </details>
-    
-    <details>
-      <summary>10. Can Indian business owners get a long-term, multiple-entry visa?</summary>
-      <p style="margin-left: 40px;">Yes, business owners who frequently travel to Malaysia for work can apply for a multiple-entry business visa. This allows you to enter and leave Malaysia repeatedly during the visa's validity period. You must provide clear evidence of your ongoing business operations and the necessity for regular cross-border travel.</p>
-    </details>
-    
-    <details>
-      <summary>11. What is required if I attend a business conference in Malaysia?</summary>
-      <p style="margin-left: 40px;">You must obtain an official invitation letter from the event host. This letter must clearly state the conference details, your role/tasks, and your planned duration of stay. This document is crucial proof of your business trave
+</body>
+</html>
