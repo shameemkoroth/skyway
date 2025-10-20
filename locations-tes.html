@@ -90,7 +90,7 @@
       flex-wrap: wrap;
     }
 
-    .location-card {
+    .locations-card {
       position: relative;
       width: 300px;
       border-radius: 10px;
@@ -98,7 +98,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    .location-card img {
+    .locations-card img {
       width: 100%;
       height: 200px;
       display: block;
@@ -188,11 +188,11 @@
         align-items: center;
       }
 
-      .location-overlay h2 {
+      .locations-overlay h2 {
         font-size: 1.5rem;
       }
 
-      #locationSearch {
+      #locationsSearch {
         width: 80%;
       }
     }
@@ -216,7 +216,7 @@
   <section class="Locations" id="Locations">
     <div class="locations-banner">
       <div class="locations-overlay">
-        <h2>VISA</h2>
+        <h2>Locations</h2>
         <input type="text" id="locationsSearch" placeholder="Search for a location..." onkeyup="filterLocationsCards()" />
       </div>
     </div>
@@ -301,9 +301,9 @@
   </section>
 
   <script>
-    function filterVisaCards() {
-      const input = document.getElementById('visaSearch').value.toLowerCase();
-      const cards = document.querySelectorAll('.visa-card');
+    function filterLicationsCards() {
+      const input = document.getElementById('locationsSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.locations-card');
 
       cards.forEach(card => {
         const banner = card.querySelector('.banner');
