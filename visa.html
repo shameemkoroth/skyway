@@ -49,36 +49,35 @@
       background-color: #004d40;
     }
 
-    .contact {
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
+    .visa-banner {
+      background-image: url('./files/visa-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .contact-form h1 {
+    .visa-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .visa-overlay h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .contact-form p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 5px 0;
-    }
-
-    .Visa h2 {
-      text-align: center;
-      margin-top: 40px;
+      margin-bottom: 15px;
     }
 
     #visaSearch {
       padding: 10px;
       width: 300px;
       font-size: 1rem;
-      margin: 20px auto;
-      display: block;
-      border: 1px solid #ccc;
+      border: none;
       border-radius: 5px;
     }
 
@@ -188,42 +187,13 @@
         align-items: center;
       }
 
-      .contact-form h1 {
+      .visa-overlay h2 {
         font-size: 1.5rem;
       }
 
-      .contact-form p {
-        font-size: 0.95rem;
+      #visaSearch {
+        width: 80%;
       }
-
-      .contact-layout {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .contact-right img {
-        margin-top: 20px;
-      }
-    }
-
-    .contact-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      gap: 40px;
-    }
-
-    .contact-left {
-      flex: 1;
-    }
-
-    .contact-right img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
     }
   </style>
 </head>
@@ -243,8 +213,12 @@
   </nav>
 
   <section class="Visa" id="Visa">
-    <h2>VISA</h2>
-    <input type="text" id="visaSearch" placeholder="Search for a visa..." onkeyup="filterVisaCards()" />
+    <div class="visa-banner">
+      <div class="visa-overlay">
+        <h2>VISA</h2>
+        <input type="text" id="visaSearch" placeholder="Search for a visa..." onkeyup="filterVisaCards()" />
+      </div>
+    </div>
 
     <div class="visa-grid">
       <div class="visa-card">
@@ -313,14 +287,9 @@
         if (!banner) return;
 
         const bannerText = banner.textContent.toLowerCase();
-        if (bannerText.includes(input)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display = bannerText.includes(input) ? 'block' : 'none';
       });
     }
   </script>
-
 </body>
-</html>  
+</html>
