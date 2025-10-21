@@ -1,33 +1,56 @@
-#
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Locations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sky Way Tours and Travels</title>
   <link rel="icon" href="./files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
   <style>
+    /* Base Styles */
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
+      color: #333;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Navigation */
     nav {
       background-color: #072f53;
       padding: 15px 20px;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav .logo {
+    .logo {
       height: 50px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
 
     .navbar {
@@ -41,70 +64,99 @@
     .navbar li a {
       color: #ffffff;
       font-weight: 500;
-      text-decoration: none;
       padding: 8px 12px;
       border-radius: 4px;
+      transition: background 0.3s ease;
     }
 
     .navbar li a:hover {
       background-color: #004d40;
     }
 
-    .locations-banner {
-      background-image: url("./files/visa-banner.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Banner */
+    .banner-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
 
-    .locations-overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      color: white;
+    /* Container */
+    main {
+      padding: 40px 20px;
     }
 
-    .locations-overlay h2 {
+    .text h1 {
       font-size: 2rem;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
+      text-align: center;
     }
 
-    #locationsSearch {
-      padding: 10px;
-      width: 300px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
+    /* Service Boxes */
+    .rowitems {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .container-box {
+      width: 250px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    /* Locations */
+    .locations {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .locations h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .locations-wrapper {
+      position: relative;
+      margin: 0 auto;
     }
 
     .locations-grid {
       display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 40px 20px;
-      flex-wrap: wrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px 0;
+      scroll-behavior: smooth;
+    }
+
+    .locations-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .locations-grid {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
 
     .locations-card {
-      position: relative;
+      flex: 0 0 auto;
       width: 300px;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
     }
 
     .locations-card img {
       width: 100%;
       height: 200px;
-      display: block;
     }
 
-    .banner {
+    .locations-card .overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -117,7 +169,26 @@
       font-size: 1.2rem;
     }
 
-    .footer {
+    .scroll-left,
+    .scroll-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(7, 47, 83, 0.7);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 10;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .scroll-left { left: 0; }
+    .scroll-right { right: 0; }
+
+    /* Footer */
+    footer {
       background-color: #072f53;
       color: white;
       padding: 40px 20px;
@@ -132,7 +203,7 @@
     }
 
     .footlinks h4 {
-      color: pink;
+      color: #ffb6c1;
       margin-bottom: 10px;
     }
 
@@ -147,16 +218,10 @@
 
     .footlinks a {
       color: #00bfa5;
-      text-decoration: none;
     }
 
     .footlinks a:hover {
       text-decoration: underline;
-    }
-
-    .footlinks p {
-      color: #ffffff;
-      margin: 5px 0;
     }
 
     .social a {
@@ -171,123 +236,158 @@
       font-size: 14px;
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       .navbar {
+        display: none;
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
       }
 
+      .navbar.mobile-visible {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .rowitems,
+      .locations-grid,
       .footer-content {
         flex-direction: column;
         align-items: center;
       }
 
-      .locations-overlay h2 {
+      .text h1,
+      .locations h2 {
         font-size: 1.5rem;
-      }
-
-      #locationsSearch {
-        width: 80%;
       }
     }
   </style>
 </head>
-<body class="contactbody">
+<body>
+
+  <!-- Navigation -->
   <nav>
-    <a href="index.html">
+    <a href="#home">
       <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
     </a>
+    <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.navbar').classList.toggle('mobile-visible')">☰</button>
     <ul class="navbar">
-      <li>
-        <a href="./index.html">Home</a>
-        <a href="./visa">Visa</a>
-        <a href="./about.html">About Us</a>
-        <a href="./contact.html">Contact Us</a>
-      </li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="./visa.html">Visa</a></li>
+      <li><a href="./locations">Locations</a></li>
+      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./contact.html">Contact Us</a></li>
     </ul>
   </nav>
 
-  <section class="Locations" id="locations">
-    <div class="locations-banner">
-      <div class="locations-overlay">
-        <h2>Locations</h2>
-        <input type="text" id="locationsSearch" placeholder="Search for a location..." onkeyup="filterlocationsCards()" />
-      </div>
+  <!-- Banner -->
+  <div class="banner-image-container" id="home">
+    <img src="./files/header-image.jpg" alt="Banner Image" class="banner-image" />
+  </div>
+
+  <!-- Services -->
+  <section class="container">
+    <div class="text">
+      <h1>We have the best services available for you!</h1>
     </div>
-
-    <div class="locations-grid">
-      <div class="locations-card">
-        <a href="./kashmir">
-          <img src="./files/kashmir.jpg" alt="Kashmir">
-          <div class="banner">Kashmir</div>
-        </a>
+    <div class="rowitems">
+      <div class="container-box">
+        <div class="container-image">
+          <img src="./files/airplane.png" alt="Flight Services" />
+        </div>
+        <h4>Flight Services</h4>
+        <p>Arrival and Departure</p>
       </div>
 
-      <div class="locations-card">
-        <a href="./istanbul">
-          <img src="./files/istanbul.jpg" alt="Istanbul">
-          <div class="banner">Istanbul</div>
-        </a>
+      <div class="container-box">
+        <div class="container-image">
+          <img src="./files/3a.jpg" alt="Travel Services" />
+        </div>
+        <h4>Travel Services</h4>
+        <p>Pick-up/drop</p>
       </div>
 
-      <div class="locations-card">
-        <a href="./paris">
-          <img src="./files/paris.jpg" alt="Paris">
-          <div class="banner">Paris</div>
-        </a>
+      <div class="container-box">
+        <div class="container-image">
+          <img src="./files/4a.jpg" alt="Hotel Services" />
+        </div>
+        <h4>Hotel Services</h4>
+        <p>Check-in/out</p>
       </div>
-
-      <div class="locations-card">
-        <a href="./bali">
-          <img src="./files/bali.jpg" alt="Bali">
-          <div class="banner">Bali</div>
-        </a>
-      </div>
-
-      <div class="locations-card">
-        <a href="./dubai">
-          <img src="./files/l5.jpg" alt="Dubai">
-          <div class="banner">Dubai</div>
-        </a>
-      </div>
-
-      <div class="locations-card">
-        <a href="./geneva">
-          <img src="./files/l6.jpg" alt="Geneva">
-          <div class="banner">Geneva</div>
-        </a>
-      </div>
-
-      <div class="locations-card">
-        <a href="./andaman">
-          <img src="./files/l7.jpg" alt="Andaman & Nicobar">
-          <div class="banner">Andaman & Nicobar</div>
-        </a>
-      </div>
-
-      <div class="locations-card">
-        <a href="./rome">
-          <img src="./files/rome.jpg" alt="Rome">
-          <div class="banner">Rome</div>
-        </a>
-      </div>
-
-
     </div>
   </section>
 
-  <section class="footer">
+  <!-- Locations -->
+  <section class="locations" id="locations">
+    <h2>Locations</h2>
+    <div class="locations-wrapper">
+      <button class="scroll-left" onclick="scrollLocations(-300)">&#10094;</button>
+      <div class="locations-grid" id="locationsGrid">
+        <div class="locations-card">
+          <a href="./locations.html#kashmir">
+            <img src="./files/kashmir.jpg" alt="Kashmir" />
+            <div class="overlay">Kashmir</div>
+          </a>
+        </div>
+        <div class="locations-card">
+          <a href="./locations.html#istanbul">
+            <img src="./files/istanbul.jpg" alt="Istanbul" />
+            <div class="overlay">Istanbul</div>
+          </a>
+        </div>
+        <div class="locations-card">
+          <a href="./locations.html#paris">
+            <img src="./files/paris.jpg" alt="Paris" />
+            <div class="overlay">Paris</div>
+          </a>
+        </div>
+        <div class="locations-card">
+          <a href="./locations.html#bali">
+            <img src="./files/bali.jpg" alt="Bali" />
+            <div class="overlay">Bali</div>
+          </a>
+        </div>
+        <div class="locations-card">
+          <a href="./locations.html#dubai">
+            <img src="./files/l5.jpg" alt="Dubai" />
+            <div class="overlay">Dubai</div>
+          </a>
+        </div>
+        <div class="locations-card">
+          <a href="./locations.html#geneva">
+            <img src="./files/l6.jpg" alt="Geneva" />
+            <div class="overlay">Geneva</div>
+          </a>
+        </div>
+        <div class="locations-card">
+          <a href="./locations.html#port-blair">
+            <img src="./files/l7.jpg" alt="Port Blair" />
+            <div class="overlay">Andaman & Nicobar</div>
+          </a>
+        </div>
+        <div class="locations-card">
+          <a href="./locations.html#rome">
+            <img src="./files/rome.jpg" alt="Rome" />
+            <div class="overlay">Rome</div>
+          </a>
+        </div>
+      </div>
+      <button class="scroll-right" onclick="scrollLocations(300)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
     <div class="footer-content">
       <div class="footlinks">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="./visa">Visa</a></li>
+          <li><a href="./visa.html">Visa</a></li>
+          <li><a href="./locations.html">Locations</a></li>
           <li><a href="./about.html">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
         </ul>
@@ -300,26 +400,21 @@
           <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
           <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
         </div>
+        <p>0496 299 69 29</p>
+        <p>9496 369 777</p>
+        <p>9061 99 69 29</p>
       </div>
     </div>
 
     <div class="end">
       <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
     </div>
-  </section>
+  </footer>
 
+  <!-- JS for scroll buttons -->
   <script>
-    function filterlocationsCards() {
-      const input = document.getElementById('locationsSearch').value.toLowerCase();
-      const cards = document.querySelectorAll('.locations-card');
-
-      cards.forEach(card => {
-        const banner = card.querySelector('.banner');
-        if (!banner) return;
-
-        const bannerText = banner.textContent.toLowerCase();
-        card.style.display = bannerText.includes(input) ? 'block' : 'none';
-      });
+    function scrollLocations(amount) {
+      document.getElementById('locationsGrid').scrollBy({ left: amount, behavior: 'smooth' });
     }
   </script>
 
