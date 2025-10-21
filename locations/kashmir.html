@@ -64,25 +64,22 @@
     table {
       width: 100%;
       max-width: 1000px;
-      margin: 20px auto;
-      border-collapse: collapse;
+      margin: 20px auto; /* centers the table */
       background-color: #fff;
       text-align: left;
-      word-wrap: break-word;     /* breaks long words */
-      table-layout: fixed;       /* keeps columns consistent */
     }
     
-    th, td {
-      border: 1px solid #000;
-      padding: 10px;
+    th {
+      background-color: #072f53;
+      color: white;
+      text-align: center;
+    }
+    
+    td {
+      background-color: #f5f7fa;
       vertical-align: top;
-      white-space: normal;       /* allows wrapping */
-      word-break: break-word;    /* ensures text wraps inside cells */
     }
     
-    tr:nth-child(even) {
-      background-color: #f8f8f8;
-    }
 
     .contact {
       padding: 40px 20px;
