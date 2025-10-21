@@ -203,6 +203,54 @@
         <button class="scroll-right" onclick="scrollLocations(300)">&#10095;</button>
       </div>
     </section>
+
+    <!-- Visa Services -->
+    <section class="locations" id="visa">
+      <h2>Popular Visa Services</h2>
+      <div class="locations-wrapper">
+        <button class="scroll-left" onclick="scrollVisa(-300)">&#10094;</button>
+        <div class="locations-grid" id="visaGrid">
+          <div class="locations-card">
+            <a href="./visa.html#schengen">
+              <img src="./files/visa-schengen.jpg" alt="Schengen Visa" />
+              <div class="overlay">Schengen Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa.html#uk">
+              <img src="./files/visa-uk.jpg" alt="UK Visa" />
+              <div class="overlay">UK Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa.html#usa">
+              <img src="./files/visa-usa.jpg" alt="USA Visa" />
+              <div class="overlay">USA Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa.html#canada">
+              <img src="./files/visa-canada.jpg" alt="Canada Visa" />
+              <div class="overlay">Canada Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa.html#australia">
+              <img src="./files/visa-australia.jpg" alt="Australia Visa" />
+              <div class="overlay">Australia Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa.html#india">
+              <img src="./files/visa-india.jpg" alt="India Visa" />
+              <div class="overlay">India Visa</div>
+            </a>
+          </div>
+        </div>
+        <button class="scroll-right" onclick="scrollVisa(300)">&#10095;</button>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -237,12 +285,12 @@
   </footer>
 
   <script>
-    // Scroll buttons
+    // Scroll buttons for Locations
     function scrollLocations(amount) {
       document.getElementById('locationsGrid').scrollBy({ left: amount, behavior: 'smooth' });
     }
 
-    // Touch/Swipe support
+    // Touch/Swipe support for Locations
     const grid = document.getElementById('locationsGrid');
     let isDown = false;
     let startX;
@@ -260,11 +308,11 @@
       if(!isDown) return;
       e.preventDefault();
       const x = e.pageX - grid.offsetLeft;
-      const walk = (x - startX) * 2; //scroll-fast
+      const walk = (x - startX) * 2;
       grid.scrollLeft = scrollLeft - walk;
     });
 
-    // Mobile touch events
+    // Mobile touch events for Locations
     let startTouchX;
     grid.addEventListener('touchstart', (e) => { startTouchX = e.touches[0].clientX; });
     grid.addEventListener('touchmove', (e) => {
@@ -272,6 +320,43 @@
       const walk = startTouchX - x;
       grid.scrollLeft += walk;
       startTouchX = x;
+    });
+
+    // Scroll buttons for Visa
+    function scrollVisa(amount) {
+      document.getElementById('visaGrid').scrollBy({ left: amount, behavior: 'smooth' });
+    }
+
+    // Touch/Swipe support for Visa
+    const visaGrid = document.getElementById('visaGrid');
+    let isVisaDown = false;
+    let startVisaX;
+    let scrollVisaLeft;
+
+    visaGrid.addEventListener('mousedown', (e) => {
+      isVisaDown = true;
+      visaGrid.classList.add('active');
+      startVisaX = e.pageX - visaGrid.offsetLeft;
+      scrollVisaLeft = visaGrid.scrollLeft;
+    });
+    visaGrid.addEventListener('mouseleave', () => { isVisaDown = false; visaGrid.classList.remove('active'); });
+    visaGrid.addEventListener('mouseup', () => { isVisaDown = false; visaGrid.classList.remove('active'); });
+    visaGrid.addEventListener('mousemove', (e) => {
+      if(!isVisaDown) return;
+      e.preventDefault();
+      const x = e.pageX - visaGrid.offsetLeft;
+      const walk = (x - startVisaX) * 2;
+      visaGrid.scrollLeft = scrollVisaLeft - walk;
+    });
+
+    // Mobile touch events for Visa
+    let startVisaTouchX;
+    visaGrid.addEventListener('touchstart', (e) => { startVisaTouchX = e.touches[0].clientX; });
+    visaGrid.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].clientX;
+      const walk = startVisaTouchX - x;
+      visaGrid.scrollLeft += walk;
+      startVisaTouchX = x;
     });
   </script>
 
