@@ -82,7 +82,7 @@
       border-radius: 5px;
     }
 
-    .lications-grid {
+    .locations-grid {
       display: flex;
       justify-content: center;
       gap: 40px;
@@ -213,11 +213,11 @@
     </ul>
   </nav>
 
-  <section class="Locations" id="Locations">
+  <section class="Locations" id="locations">
     <div class="locations-banner">
       <div class="locations-overlay">
         <h2>Locations</h2>
-        <input type="text" id="locationsSearch" placeholder="Search for a location..." onkeyup="filterLocationsCards()" />
+        <input type="text" id="locationsSearch" placeholder="Search for a location..." onkeyup="filterlocationsCards()" />
       </div>
     </div>
 
@@ -252,24 +252,32 @@
 
       <div class="locations-card">
         <a href="./dubai">
-          <img src="./files/t5.jpg" alt="Cambodia">
-          <div class="banner">Cambodia</div>
+          <img src="./files/l5.jpg" alt="Dubai">
+          <div class="banner">Dubai</div>
         </a>
       </div>
 
       <div class="locations-card">
         <a href="./geneva">
-          <img src="./files/t6.jpg" alt="Geneva">
+          <img src="./files/l6.jpg" alt="Geneva">
           <div class="banner">Geneva</div>
         </a>
       </div>
 
       <div class="locations-card">
-        <a href="./Rome">
-          <img src="./files/t7.jpg" alt="Rome">
+        <a href="./andaman">
+          <img src="./files/l7.jpg" alt="Andaman & Nicobar">
+          <div class="banner">Andaman & Nicobar</div>
+        </a>
+      </div>
+
+      <div class="locations-card">
+        <a href="./rome">
+          <img src="./files/rome.jpg" alt="Rome">
           <div class="banner">Rome</div>
         </a>
       </div>
+
 
     </div>
   </section>
@@ -301,9 +309,9 @@
   </section>
 
   <script>
-    function filterLicationsCards() {
-      const input = document.getElementById('locationsSearch').value.toLowerCase();
-      const cards = document.querySelectorAll('.locations-card');
+    function filterVisaCards() {
+      const input = document.getElementById('visaSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.visa-card');
 
       cards.forEach(card => {
         const banner = card.querySelector('.banner');
