@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bali: Your Island Paradise Awaits</title>
+  <meta name="description" content="Escape to Bali — explore temples, beaches, culture, and adventure with Sky Way Tours and Travels. Plan your dream Bali getaway today!" />
   <link rel="icon" href="../files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 0 0 40px 0;
       font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
     }
@@ -80,8 +81,25 @@
       vertical-align: top;
     }
 
-    /* ---------- FOOTER STYLE (copied & matched from main page) ---------- */
-    footer {
+    .contact {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-form h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-form p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 5px 0;
+    }
+
+    .footer {
       background-color: #072f53;
       color: white;
       padding: 40px 20px;
@@ -96,7 +114,7 @@
     }
 
     .footlinks h4 {
-      color: #ffb6c1;
+      color: pink;
       margin-bottom: 10px;
     }
 
@@ -116,6 +134,11 @@
 
     .footlinks a:hover {
       text-decoration: underline;
+    }
+
+    .footlinks p {
+      color: #ffffff;
+      margin: 5px 0;
     }
 
     .social a {
@@ -146,6 +169,44 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .contact-form h1 {
+        font-size: 1.5rem;
+      }
+
+      .contact-form p {
+        font-size: 0.95rem;
+      }
+    }
+
+    .contact-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    .contact-left {
+      flex: 1;
+    }
+
+    .contact-right img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout {
+        flex-direction: column;
+        text-align: center;
+      }
+      .contact-right img {
+        margin-top: 20px;
+      }
     }
 
     table {
@@ -156,69 +217,97 @@
     }
   </style>
 </head>
-<body>
+
+<body class="contactbody">
   <nav>
     <a href="../index.html">
-      <img src="../files/logo.png" class="logo" alt="Sky Way Tours and Travels Logo" title="Sky Way Tours and Travels" />
+      <img src="../files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
     </a>
     <ul class="navbar">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../visa.html">Visa Services</a></li>
-      <li><a href="../locations.html">Locations</a></li>
+      <li><a href="../visa">Visa</a></li>
+      <li><a href="../locations">Locations</a></li>
       <li><a href="../about.html">About Us</a></li>
       <li><a href="../contact.html">Contact Us</a></li>
     </ul>
   </nav>
 
   <div class="content-wrapper">
+    <!-- Hero Section -->
     <section class="hero">
-      <h1>Bali: Your Island Paradise Awaits</h1>
+      <h1><span style="font-size: 0.9em;">Bali: Your Island Paradise Awaits</span></h1>
       <p class="intro-text">
-        Escape to Bali, an island paradise that captivates with its blend of spiritual heritage, lush landscapes, and world-class beaches. Known as the "Island of the Gods," Bali is more than just a destination; it's a sensory journey that refreshes the mind and nourishes the soul.
+        Escape to Bali, an island paradise that captivates with its blend of spiritual heritage, lush landscapes, and world-class beaches.
+        Known as the "Island of the Gods," Bali is more than just a destination; it's a sensory journey that refreshes the mind and nourishes the soul.
       </p>
     </section>
 
+    <!-- Discover Bali -->
     <section>
       <h2>Discover Bali's Diverse Wonders</h2>
-      <p><strong>The Cultural Heart of Ubud:</strong> Venture inland to Ubud, the spiritual and cultural core of Bali...</p>
-      <p><strong>Iconic Temples and Spiritual Sites:</strong> Bali is dotted with breathtaking temples that cling to cliffsides...</p>
+
+      <p><strong>The Cultural Heart of Ubud:</strong></p>
+      <p>Venture inland to Ubud, the spiritual and cultural core of Bali. Surrounded by lush, emerald-green Tegalalang Rice Terraces (a UNESCO World Heritage site),
+        this town is a haven for wellness, art, and tradition. Explore the playful inhabitants of the Sacred Monkey Forest Sanctuary,
+        delve into Balinese dance and art, and join a yoga or meditation retreat for total rejuvenation.</p>
+
+      <p><strong>Iconic Temples and Spiritual Sites:</strong></p>
+      <p>Bali is dotted with breathtaking temples that cling to cliffsides or stand guard against the ocean. Don't miss the dramatic sunset views at Tanah Lot Temple,
+        perched on a rocky island just offshore. Experience a traditional Kecak Fire Dance at the cliff-top Uluwatu Temple.
+        For an incredibly scenic drive, visit Ulun Danu Beratan Temple, which appears to float on the waters of Lake Beratan.</p>
+
       <p><strong>Beaches, Surf, and Sunsets:</strong></p>
-      <ul>
-        <li><strong>Seminyak & Canggu:</strong> Chic areas known for beach clubs and surf spots.</li>
-        <li><strong>Kuta:</strong> Lively nightlife and beginner surf lessons.</li>
-        <li><strong>Uluwatu & Jimbaran:</strong> Sunset seafood dinners and cliff views.</li>
+      <ul style="margin-left: 40px;">
+        <li><strong>Seminyak & Canggu:</strong> Hip areas known for chic boutiques, trendy cafes, and beach clubs like La Brisa.</li>
+        <li><strong>Kuta:</strong> Famous for its long stretch of sand, surf lessons, and lively nightlife.</li>
+        <li><strong>Uluwatu & Jimbaran:</strong> Home to world-renowned surf breaks, stunning cliffs, and Jimbaran Beach seafood dinners at sunset.</li>
       </ul>
     </section>
 
+    <!-- Adventure -->
     <section>
       <h2>Adventure Awaits</h2>
-      <ul>
-        <li>Trek Mount Batur for a stunning sunrise.</li>
-        <li>Chase waterfalls like Sekumpul or Gitgit.</li>
-        <li>Visit Nusa Penida or Lembongan islands.</li>
-        <li>Try rafting on the Ayung River or the famous Bali Swing.</li>
+      <p>For the adventurous soul, Bali delivers:</p>
+      <ul style="margin-left: 40px;">
+        <li>Trek up the active volcano Mount Batur before dawn to witness a spectacular sunrise above the clouds.</li>
+        <li>Chase majestic waterfalls like Sekumpul or Gitgit.</li>
+        <li>Take a fast boat for a day trip to the stunning nearby islands of Nusa Penida or Nusa Lembongan.</li>
+        <li>Try white-water rafting on the Ayung River or experience the thrill of a Bali Swing over the jungle canopy.</li>
       </ul>
     </section>
 
+    <!-- Travel Tips -->
     <section>
       <h2>Essential Travel Tips</h2>
-      <ul>
-        <li><strong>Best Time to Visit:</strong> April to October offers ideal weather.</li>
-        <li><strong>Getting Around:</strong> Hire a driver or use Grab/Gojek.</li>
-        <li><strong>Culture & Respect:</strong> Dress modestly and respect temple customs.</li>
+
+      <p><strong>Best Time to Visit:</strong></p>
+      <ul style="margin-left: 40px;">
+        <li>The ideal time to visit Bali is during the dry season, from April to October. May, June, and September offer a sweet spot with excellent weather and fewer crowds.</li>
       </ul>
+
+      <p><strong>Getting Around:</strong></p>
+      <ul style="margin-left: 40px;">
+        <li>Hiring a private driver for day tours is affordable and recommended. For shorter distances, Grab and Gojek are widely used. Many rent scooters, but caution is advised.</li>
+      </ul>
+
+      <p><strong>Culture & Respect:</strong></p>
+      <ul style="margin-left: 40px;">
+        <li>Balinese culture is deeply rooted in Hinduism. Dress modestly at temples, never step on offerings, and be mindful of local customs.</li>
+      </ul>
+
       <p><strong>Start planning your Balinese adventure today — paradise is waiting!</strong></p>
     </section>
   </div>
 
-  <!-- Updated Footer -->
-  <footer>
+  <!-- Footer -->
+  <section class="footer">
     <div class="footer-content">
       <div class="footlinks">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="../visa.html">Visa Services</a></li>
-          <li><a href="../locations.html">Locations</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../visa">Visa</a></li>
+          <li><a href="../locations">Locations</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
@@ -231,15 +320,12 @@
           <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
           <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
         </div>
-        <p>📞 0496 299 69 29</p>
-        <p>📞 9496 369 777</p>
-        <p>📞 9061 99 69 29</p>
       </div>
     </div>
 
     <div class="end">
-      <p>Copyright © 2025 Sky Way Tours and Travels. All Rights Reserved.</p>
+      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
     </div>
-  </footer>
+  </section>
 </body>
 </html>
