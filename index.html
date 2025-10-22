@@ -203,6 +203,126 @@
         <button class="scroll-right" onclick="scrollLocations(300)">&#10095;</button>
       </div>
     </section>
+
+    <!-- Visa Services -->
+    <section class="locations" id="visa">
+      <h2>Popular Visa Services</h2>
+      <div class="locations-wrapper">
+        <button class="scroll-left" onclick="scrollVisa(-300)">&#10094;</button>
+        <div class="locations-grid" id="visaGrid">
+          <div class="locations-card">
+            <a href="./visa/azerbaijan-visa">
+              <img src="./files/azerbaijan.WEBP" alt="Azerbaijan Visa" />
+              <div class="overlay">Azerbaijan Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/schengen-visa">
+              <img src="./files/schengen.JPG" alt="Schengen Visa" />
+              <div class="overlay">Schengen Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/malaysia-visa">
+              <img src="./files/malaysia.jpg" alt="Malaysia Visa" />
+              <div class="overlay">Malaysia Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/egypt-visa">
+              <img src="./files/egypt.jpg" alt="Egypt Visa" />
+              <div class="overlay">Egypt Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/cambodia-visa">
+              <img src="./files/cambodia.jpg" alt="Cambodia Visa" />
+              <div class="overlay">Cambodia Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/vietnam-visa">
+              <img src="./files/vietnam.jpg" alt="Vietnam Visa" />
+              <div class="overlay">Vietnam Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/uzbekistan-visa">
+              <img src="./files/usbekistan.jpg" alt="Uzbekistan Visa" />
+              <div class="overlay">Uzbekistan Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/morroco-visa">
+              <img src="./files/morroco.jpg" alt="Morroco Visa" />
+              <div class="overlay">Morroco Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/indonesia-visa">
+              <img src="./files/indonesia.jpg" alt="Indonesia Visa" />
+              <div class="overlay">Indonesia Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/tanzania-visa">
+              <img src="./files/tanzania.jpg" alt="Tanzania Visa" />
+              <div class="overlay">Tanzania Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/angola-visa">
+              <img src="./files/angola.jpg" alt="Angola Visa" />
+              <div class="overlay">Angola Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/jordan-visa">
+              <img src="./files/jordan.JPG" alt="Jordan Visa" />
+              <div class="overlay">Jordan Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/kenya-visa">
+              <img src="./files/kenya.jpg" alt="Kenya Visa" />
+              <div class="overlay">Kenya Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/kyrgyzstan-visa">
+              <img src="./files/kyrgyzstan.jpg" alt="Kyrgyzstan Visa" />
+              <div class="overlay">Kyrgyzstan Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/tajikistan-visa">
+              <img src="./files/tajikistan.jpg" alt="Tajikistan Visa" />
+              <div class="overlay">Tajikistan Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/turkey-visa">
+              <img src="./files/turkey.jpg" alt="Turkey Visa" />
+              <div class="overlay">Turkey Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/armenia-visa">
+              <img src="./files/armenia.jpg" alt="Armenia Visa" />
+              <div class="overlay">Armenia Visa</div>
+            </a>
+          </div>
+          <div class="locations-card">
+            <a href="./visa/russia-visa">
+              <img src="./files/russia.jpg" alt="Russia Visa" />
+              <div class="overlay">Russia Visa</div>
+            </a>
+          </div>
+        </div>
+        <button class="scroll-right" onclick="scrollVisa(300)">&#10095;</button>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -237,12 +357,12 @@
   </footer>
 
   <script>
-    // Scroll buttons
+    // Scroll buttons for Locations
     function scrollLocations(amount) {
       document.getElementById('locationsGrid').scrollBy({ left: amount, behavior: 'smooth' });
     }
 
-    // Touch/Swipe support
+    // Touch/Swipe support for Locations
     const grid = document.getElementById('locationsGrid');
     let isDown = false;
     let startX;
@@ -260,11 +380,11 @@
       if(!isDown) return;
       e.preventDefault();
       const x = e.pageX - grid.offsetLeft;
-      const walk = (x - startX) * 2; //scroll-fast
+      const walk = (x - startX) * 2;
       grid.scrollLeft = scrollLeft - walk;
     });
 
-    // Mobile touch events
+    // Mobile touch events for Locations
     let startTouchX;
     grid.addEventListener('touchstart', (e) => { startTouchX = e.touches[0].clientX; });
     grid.addEventListener('touchmove', (e) => {
@@ -272,6 +392,43 @@
       const walk = startTouchX - x;
       grid.scrollLeft += walk;
       startTouchX = x;
+    });
+
+    // Scroll buttons for Visa
+    function scrollVisa(amount) {
+      document.getElementById('visaGrid').scrollBy({ left: amount, behavior: 'smooth' });
+    }
+
+    // Touch/Swipe support for Visa
+    const visaGrid = document.getElementById('visaGrid');
+    let isVisaDown = false;
+    let startVisaX;
+    let scrollVisaLeft;
+
+    visaGrid.addEventListener('mousedown', (e) => {
+      isVisaDown = true;
+      visaGrid.classList.add('active');
+      startVisaX = e.pageX - visaGrid.offsetLeft;
+      scrollVisaLeft = visaGrid.scrollLeft;
+    });
+    visaGrid.addEventListener('mouseleave', () => { isVisaDown = false; visaGrid.classList.remove('active'); });
+    visaGrid.addEventListener('mouseup', () => { isVisaDown = false; visaGrid.classList.remove('active'); });
+    visaGrid.addEventListener('mousemove', (e) => {
+      if(!isVisaDown) return;
+      e.preventDefault();
+      const x = e.pageX - visaGrid.offsetLeft;
+      const walk = (x - startVisaX) * 2;
+      visaGrid.scrollLeft = scrollVisaLeft - walk;
+    });
+
+    // Mobile touch events for Visa
+    let startVisaTouchX;
+    visaGrid.addEventListener('touchstart', (e) => { startVisaTouchX = e.touches[0].clientX; });
+    visaGrid.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].clientX;
+      const walk = startVisaTouchX - x;
+      visaGrid.scrollLeft += walk;
+      startVisaTouchX = x;
     });
   </script>
 
