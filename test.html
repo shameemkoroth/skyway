@@ -4,18 +4,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Sky Way Tours and Travels</title>
+  <title>About Us - Sky Way Tours and Travels</title>
   <link rel="icon" href="./files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
-      color: #333;
     }
 
     nav {
@@ -111,18 +109,21 @@
       color: #004d40;
     }
 
-    /* Updated Footer (same as homepage) */
+    /* --- Footer Styles (Replicated from Homepage) --- */
     footer {
       background-color: #072f53;
       color: white;
       padding: 40px 20px;
-      text-align: center;
+      text-align: left;
     }
 
     .footer-content {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin: auto;
       gap: 40px;
     }
 
@@ -149,16 +150,28 @@
       text-decoration: underline;
     }
 
+    .footlinks p {
+      color: #ffffff;
+      margin: 5px 0;
+    }
+
     .social a {
       font-size: 24px;
       margin: 0 10px;
       color: white;
+      text-decoration: none;
+    }
+
+    .social a:hover {
+      color: #00bfa5;
     }
 
     .end {
       background-color: #072f53;
       padding: 15px;
+      text-align: center;
       font-size: 14px;
+      border-top: 1px solid #0c406e;
     }
 
     @media (max-width: 768px) {
@@ -194,24 +207,21 @@
     }
   </style>
 </head>
-
 <body class="aboutbody">
-  <!-- Navigation -->
   <nav>
-    <a href="./index.html">
+    <a href="index.html">
       <img src="./files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
     </a>
     <ul class="navbar">
       <li>
         <a href="./index.html">Home</a>
-        <a href="./visa.html">Visa Services</a>
+        <a href="./visa.html">Visa</a>
         <a href="./locations.html">Locations</a>
         <a href="./contact.html">Contact Us</a>
       </li>
     </ul>
   </nav>
 
-  <!-- About Section -->
   <section class="about">
     <div class="about-layout">
       <div class="about-left">
@@ -249,15 +259,15 @@
     </div>
   </section>
 
-  <!-- Updated Footer -->
+  <!-- Footer replicated from homepage -->
   <footer>
     <div class="footer-content">
       <div class="footlinks">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="./visa.html">Visa Services</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./visa.html">Visa</a></li>
           <li><a href="./locations.html">Locations</a></li>
-          <li><a href="./about.html">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
         </ul>
       </div>
