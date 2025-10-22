@@ -99,59 +99,60 @@
       margin: 5px 0;
     }    
 
-    .footer {
-      background-color: #072f53;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+    footer { 
+      background-color:#072f53; 
+      color:white; 
+      padding:40px 20px; 
+      text-align:center; 
+    }
+    
+    .footer-content { 
+      display:flex; 
+      flex-wrap:wrap; 
+      justify-content:center; 
+      gap:40px; 
+    }
+    
+    .footlinks h4 { 
+      color:#ffb6c1; /* Light Pink */
+      margin-bottom:10px;
+    }
+    
+    .footlinks ul { 
+      list-style:none; 
+      padding:0; 
+    }
+    
+    .footlinks ul li { 
+      margin:5px 0; 
+    }
+    
+    .footlinks a { 
+      color:#00bfa5; /* Teal */
+    }
+    
+    .footlinks a:hover { 
+      text-decoration:underline; 
+    }
+    
+    .social a { 
+      font-size:24px; 
+      margin:0 10px; 
+      color:white; 
+    }
+    
+    .end { 
+      background-color:#072f53; 
+      padding:15px; 
+      font-size:14px; 
+    }
+    
+    /* Relevant Media Query for responsiveness */
+    @media(max-width:768px){
+      /* The footer layout implicitly adjusts due to flex-wrap:wrap and text-align:center, 
+      but no explicit footer-specific rules were defined here, unlike the navbar. */
     }
 
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .footlinks h4 {
-      color: pink;
-      margin-bottom: 10px;
-    }
-
-    .footlinks ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footlinks ul li {
-      margin: 5px 0;
-    }
-
-    .footlinks a {
-      color: #00bfa5;
-      text-decoration: none;
-    }
-
-    .footlinks a:hover {
-      text-decoration: underline;
-    }
-
-    .footlinks p {
-      color: #ffffff;
-      margin: 5px 0;
-    }
-
-    .social a {
-      font-size: 24px;
-      margin: 0 10px;
-      color: white;
-    }
-
-    .end {
-      background-color: #072f53;
-      padding: 15px;
-      font-size: 14px;
-    }
 
     @media (max-width: 768px) {
       nav {
