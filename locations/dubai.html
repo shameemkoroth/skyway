@@ -5,216 +5,72 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discover Dubai: Where Innovation Meets Tradition</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore Dubai with our ultimate travel guide. Discover Burj Khalifa, Palm Jumeirah, Dubai Mall, cultural districts, culinary delights, and the best time to visit." />
+  <meta name="keywords" content="Dubai travel guide, Burj Khalifa, Palm Jumeirah, Dubai Mall, Dubai attractions, Dubai culture, Dubai food, Dubai shopping, Dubai desert safari, Dubai tourism" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Sky Way Tours and Travels" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Discover Dubai: Where Innovation Meets Tradition" />
+  <meta property="og:description" content="Plan your Dubai trip with our comprehensive guide. Visit iconic attractions, explore heritage districts, indulge in culinary delights, and shop like a pro." />
+  <meta property="og:image" content="../files/logo.png" />
+  <meta property="og:url" content="https://www.skywaytourandtravel.com/locations/dubai.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Discover Dubai: Where Innovation Meets Tradition" />
+  <meta name="twitter:description" content="Explore Dubai with Sky Way Tours and Travels. Discover top attractions, cultural experiences, culinary delights, and shopping destinations." />
+  <meta name="twitter:image" content="../files/logo.png" />
+
   <link rel="icon" href="../files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <style>
   body {
     margin: 0;
-    padding: 0 0 40px 0; /* Adds 40px padding at the bottom */
+    padding: 0 0 40px 0;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
   }
-
-	.content-wrapper {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
-	}
-
-    nav {
-      background-color: #072f53;
-      padding: 15px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    nav .logo {
-      height: 50px;
-    }
-
-    .navbar {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar li a {
-      color: #ffffff;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-    }
-
-    .navbar li a:hover {
-      background-color: #004d40;
-    }
-    
-    table, th, td {
-      border: 1px solid #000;
-      border-collapse: collapse;
-      padding: 8px;
-    }
-    
-    table {
-      width: 100%;
-      max-width: 1000px;
-      margin: 20px auto; /* centers the table */
-      background-color: #fff;
-      text-align: left;
-    }
-    
-    th {
-      background-color: #072f53;
-      color: white;
-      text-align: center;
-    }
-    
-    td {
-      background-color: #f5f7fa;
-      vertical-align: top;
-    }
-    
-
-    .contact {
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .contact-form h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .contact-form p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 5px 0;
-    }    
-
-    .footer {
-      background-color: #072f53;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .footlinks h4 {
-      color: pink;
-      margin-bottom: 10px;
-    }
-
-    .footlinks ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footlinks ul li {
-      margin: 5px 0;
-    }
-
-    .footlinks a {
-      color: #00bfa5;
-      text-decoration: none;
-    }
-
-    .footlinks a:hover {
-      text-decoration: underline;
-    }
-
-    .footlinks p {
-      color: #ffffff;
-      margin: 5px 0;
-    }
-
-    .social a {
-      font-size: 24px;
-      margin: 0 10px;
-      color: white;
-    }
-
-    .end {
-      background-color: #072f53;
-      padding: 15px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .navbar {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .contact-form h1 {
-        font-size: 1.5rem;
-      }
-
-      .contact-form p {
-        font-size: 0.95rem;
-      }
-    }
-    
-    .contact-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      gap: 40px;
-    }
-    
-    .contact-left {
-      flex: 1;
-    }
-    
-    .contact-right img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-    }
-    @media (max-width: 768px) {
-      .contact-layout {
-        flex-direction: column;
-        text-align: center;
-      }
-      .contact-right img {
-        margin-top: 20px;
-      }
-    }
-    
-    table {
-      font-size: 0.9rem;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
+  .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  nav { background-color: #072f53; padding: 15px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+  nav .logo { height: 50px; }
+  .navbar { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .navbar li a { color: #ffffff; font-weight: 500; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
+  .navbar li a:hover { background-color: #004d40; }
+  table, th, td { border: 1px solid #000; border-collapse: collapse; padding: 8px; }
+  table { width: 100%; max-width: 1000px; margin: 20px auto; background-color: #fff; text-align: left; display: block; overflow-x: auto; white-space: nowrap; font-size: 0.9rem; }
+  th { background-color: #072f53; color: white; text-align: center; }
+  td { background-color: #f5f7fa; vertical-align: top; }
+  .contact { padding: 40px 20px; max-width: 600px; margin: auto; text-align: center; }
+  .contact-form h1 { font-size: 2rem; margin-bottom: 20px; }
+  .contact-form p { font-size: 1rem; line-height: 1.6; margin: 5px 0; }
+  .footer { background-color: #072f53; color: white; padding: 40px 20px; text-align: center; }
+  .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+  .footlinks h4 { color: pink; margin-bottom: 10px; }
+  .footlinks ul { list-style: none; padding: 0; }
+  .footlinks ul li { margin: 5px 0; }
+  .footlinks a { color: #00bfa5; text-decoration: none; }
+  .footlinks a:hover { text-decoration: underline; }
+  .footlinks p { color: #ffffff; margin: 5px 0; }
+  .social a { font-size: 24px; margin: 0 10px; color: white; }
+  .end { background-color: #072f53; padding: 15px; font-size: 14px; }
+  @media (max-width: 768px) {
+    nav { flex-direction: column; align-items: flex-start; }
+    .navbar { flex-direction: column; gap: 10px; margin-top: 10px; }
+    .footer-content { flex-direction: column; align-items: center; }
+    .contact-form h1 { font-size: 1.5rem; }
+    .contact-form p { font-size: 0.95rem; }
+    .contact-layout { flex-direction: column; text-align: center; }
+    .contact-right img { margin-top: 20px; }
+  }
+  .contact-layout { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: auto; padding: 40px 20px; gap: 40px; }
+  .contact-left { flex: 1; }
+  .contact-right img { max-width: 200px; height: auto; border-radius: 10px; }
   </style>
 </head>
 <body class="contactbody">
@@ -232,71 +88,57 @@
       </li>
     </ul>
   </nav>
-  
-  
+
   <div class="content-wrapper">
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1><span style="font-size: 0.9em;">🏙️ Discover Dubai: Where Innovation Meets Tradition</h1>
-    <p class="intro-text">Dubai is a dazzling gem in the heart of the United Arab Emirates, where futuristic ambition and rich heritage blend into an unforgettable travel experience. Whether you’re chasing adrenaline, luxury, culture, or sunshine, Dubai delivers it all with flair.
-      
-    </p>
-  </section>
-  
-  <!-- attractions -->
-  <section>
-    <h2>🌟 Top Attractions</h2>
-      <li style="margin-left: 40px;"><strong>Burj Khalifa: </strong>The tallest building in the world offers panoramic views from its observation decks and a nightly fountain show at its base.</li>
-      <li style="margin-left: 40px;"><strong>Palm Jumeirah: </strong>This iconic man-made island is home to luxury resorts like Atlantis The Palm, pristine beaches, and upscale dining.</li>
-      <li style="margin-left: 40px;"><strong>Dubai Mall: </strong>More than just shopping—explore an indoor aquarium, ice rink, and endless entertainment.</li>
-      <li style="margin-left: 40px;"><strong>Desert Safari: </strong>Venture into the golden dunes for dune bashing, camel rides, and traditional Bedouin-style dinners under the stars.</li>
-    <br>
-  </section>
-  
-  <!-- Culture & Heritage -->
-  <section>
-    <h2>🕌 Culture & Heritage</h2>
-        <li style="margin-left: 40px;"><strong>Al Fahidi Historical District: </strong>Step back in time with wind-tower architecture, museums, and art galleries.</li>
-        <li style="margin-left: 40px;"><strong>Dubai Creek: </strong>Take an abra ride across the water and explore the bustling souks for spices, gold, and textiles.</li>
-        <li style="margin-left: 40px;"><strong>Global Village: </strong>A seasonal cultural extravaganza showcasing food, crafts, and performances from around the world.</li>
-    <br>
-  </section>
-            
-    
-  
-  <!-- Culinary Delights  -->
-  <section>
-    <h2>🍽️ Culinary Delights</h2>
-    <p>Dubai’s food scene is a melting pot of flavors:</p>
-    <li style=margin-left:40px; ">Savor Emirati dishes like machboos and luqaimat.</li>
-    <li style=margin-left:40px; ">Indulge in Michelin-starred restaurants or street food from every corner of the globe.</li>
-    <li style=margin-left:40px; ">Don’t miss brunch—a Dubai weekend tradition that’s both lavish and lively.</li>
-  </section>
-  
-  <br>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1><span style="font-size: 0.9em;">🏙️ Discover Dubai: Where Innovation Meets Tradition</span></h1>
+      <p class="intro-text">Dubai is a dazzling gem in the heart of the United Arab Emirates, where futuristic ambition and rich heritage blend into an unforgettable travel experience. Whether you’re chasing adrenaline, luxury, culture, or sunshine, Dubai delivers it all with flair.</p>
+    </section>
 
-  <!-- Shopping & Style  -->
-  <section>
-    <h2>🛍️ Shopping & Style</h2>
-      <p>From luxury boutiques in DIFC to bargain hunting in Karama, Dubai is a shopper’s paradise. Visit:</p>
-      <li style=margin-left:40px; "><strong>Mall of the Emirates </strong>for indoor skiing and designer brands.</li>
-      <li style=margin-left:40px; "><strong>Souk Madinat Jumeirah</strong> for artisanal finds in a scenic setting.</li>
-  </section>
-  <br>
-  
-  <!-- Best Time to Visit  -->
-  <section>
-    <h2>🌞 Best Time to Visit</h2>
-      <p>The ideal time to explore Dubai is between <strong>November and March<strong>, when the weather is pleasantly cool and outdoor activities are in full swing.</p>
-  
-  <br>
-    <p>Whether you’re planning a romantic getaway, a family vacation, or a solo adventure, Dubai promises a journey filled with wonder, warmth, and world-class experiences. ✈️ Ready to take off?</p>
-  
-  </section>
-  
+    <!-- Attractions -->
+    <section>
+      <h2>🌟 Top Attractions</h2>
+      <li style="margin-left: 40px;"><strong>Burj Khalifa:</strong> The tallest building in the world with panoramic views and nightly fountain shows.</li>
+      <li style="margin-left: 40px;"><strong>Palm Jumeirah:</strong> Iconic man-made island with luxury resorts, beaches, and upscale dining.</li>
+      <li style="margin-left: 40px;"><strong>Dubai Mall:</strong> Shopping, indoor aquarium, ice rink, and endless entertainment.</li>
+      <li style="margin-left: 40px;"><strong>Desert Safari:</strong> Dune bashing, camel rides, and traditional Bedouin-style dinners under the stars.</li>
+    </section>
 
-  <br>
+    <!-- Culture & Heritage -->
+    <section>
+      <h2>🕌 Culture & Heritage</h2>
+      <li style="margin-left: 40px;"><strong>Al Fahidi Historical District:</strong> Wind-tower architecture, museums, and art galleries.</li>
+      <li style="margin-left: 40px;"><strong>Dubai Creek:</strong> Abra rides and bustling souks for spices, gold, and textiles.</li>
+      <li style="margin-left: 40px;"><strong>Global Village:</strong> Seasonal cultural extravaganza with food, crafts, and performances.</li>
+    </section>
 
+    <!-- Culinary Delights -->
+    <section>
+      <h2>🍽️ Culinary Delights</h2>
+      <p>Dubai’s food scene is a melting pot of flavors:</p>
+      <li style="margin-left:40px;">Savor Emirati dishes like machboos and luqaimat.</li>
+      <li style="margin-left:40px;">Indulge in Michelin-starred restaurants or street food from around the globe.</li>
+      <li style="margin-left:40px;">Don’t miss brunch—a Dubai weekend tradition that’s lavish and lively.</li>
+    </section>
+
+    <!-- Shopping & Style -->
+    <section>
+      <h2>🛍️ Shopping & Style</h2>
+      <p>From luxury boutiques in DIFC to bargain hunting in Karama, Dubai is a shopper’s paradise:</p>
+      <li style="margin-left:40px;"><strong>Mall of the Emirates:</strong> Indoor skiing and designer brands.</li>
+      <li style="margin-left:40px;"><strong>Souk Madinat Jumeirah:</strong> Artisanal finds in a scenic setting.</li>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section>
+      <h2>🌞 Best Time to Visit</h2>
+      <p>The ideal time to explore Dubai is between <strong>November and March</strong>, when the weather is pleasantly cool and outdoor activities are in full swing.</p>
+      <p>Whether you’re planning a romantic getaway, a family vacation, or a solo adventure, Dubai promises a journey filled with wonder, warmth, and world-class experiences. ✈️ Ready to take off?</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
   <section class="footer">
     <div class="footer-content">
       <div class="footlinks">
@@ -309,7 +151,6 @@
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
-
       <div class="footlinks">
         <h4>Connect</h4>
         <div class="social">
@@ -319,12 +160,9 @@
         </div>
       </div>
     </div>
-    
-
     <div class="end">
       <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
     </div>
-	
   </section>
 </body>
 </html>
