@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Sky Way Tours & Travels - Kerala's Trusted Travel Agency</title>
+  <title>About Us | Sky Way Tours & Travels - Kerala Travel Experts</title>
   <meta name="description" content="Sky Way Tours & Travels is a trusted travel agency in Kerala offering personalized tour packages, pilgrimage trips, and international travel services." />
   <meta name="keywords" content="Sky Way Tours, Kerala travel agency, customized tour packages, pilgrimage tours, international travel, Thrissur travel agent" />
   <meta name="author" content="Sky Way Tours & Travels" />
@@ -12,10 +12,200 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
-    /* [Same CSS as before, unchanged for brevity] */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    nav {
+      background-color: #072f53;
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo {
+      height: 50px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li a {
+      color: #ffffff;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    .navbar li a:hover {
+      background-color: #004d40;
+    }
+
+    .about {
+      padding: 40px 20px;
+    }
+
+    .about-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: auto;
+      gap: 40px;
+    }
+
+    .about-left {
+      flex: 1;
+    }
+
+    .about-left h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-left h2 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      color: #072f53;
+    }
+
+    .about-left h3 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #004d40;
+    }
+
+    .about-left p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    .about-right {
+      text-align: center;
+    }
+
+    .about-right img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: #072f53;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #004d40;
+    }
+
+    .footer {
+      background-color: #072f53;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .footlinks h4 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+
+    .footlinks ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footlinks ul li {
+      margin: 5px 0;
+    }
+
+    .footlinks a {
+      color: #00bfa5;
+      text-decoration: none;
+    }
+
+    .footlinks a:hover {
+      text-decoration: underline;
+    }
+
+    .footlinks p {
+      color: #ffffff;
+      margin: 5px 0;
+    }
+
+    .social a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: white;
+    }
+
+    .end {
+      background-color: #B0E0E6;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .about-layout,
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-right img {
+        margin-top: 20px;
+      }
+
+      .about-left h1 {
+        font-size: 1.5rem;
+      }
+
+      .about-left p {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
-<body class="aboutbody">
+<body>
   <nav>
     <a href="index.html">
       <img src="./files/logo.png" class="logo" alt="Sky Way Tours and Travels Logo" title="Sky Way Tours and Travels" />
