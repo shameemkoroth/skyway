@@ -16,10 +16,115 @@
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
-    /* [CSS remains unchanged for brevity] */
+    body {
+      margin: 0;
+      padding: 0 0 40px 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav {
+      background-color: #072f53;
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .logo {
+      height: 50px;
+    }
+    .navbar {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar li a {
+      color: #ffffff;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+    .navbar li a:hover {
+      background-color: #004d40;
+    }
+    section {
+      margin: 40px 0;
+    }
+    h1, h2 {
+      color: #072f53;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .footer {
+      background-color: #072f53;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .footlinks h4 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+    .footlinks ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footlinks ul li {
+      margin: 5px 0;
+    }
+    .footlinks a {
+      color: #00bfa5;
+      text-decoration: none;
+    }
+    .footlinks a:hover {
+      text-decoration: underline;
+    }
+    .social a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: white;
+    }
+    .end {
+      background-color: #072f53;
+      padding: 15px;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
-<body class="contactbody">
+<body>
   <nav>
     <a href="index.html">
       <img src="../files/logo.png" class="logo" alt="Skyway Tours and Travels Logo" title="Skyway Tours and Travels" />
@@ -38,12 +143,11 @@
   <div class="content-wrapper">
     <section class="hero">
       <h1>🇮🇹 Discover Rome with Skyway Travels</h1>
-      <p class="intro-text">Step into a living museum where every cobblestone whispers stories of emperors, artists, and revolutionaries. Rome, Italy’s captivating capital, is a timeless blend of ancient grandeur and modern charm—a destination that promises unforgettable experiences for every traveler.</p>
+      <p>Step into a living museum where every cobblestone whispers stories of emperors, artists, and revolutionaries. Rome, Italy’s captivating capital, is a timeless blend of ancient grandeur and modern charm—a destination that promises unforgettable experiences for every traveler.</p>
     </section>
 
     <section>
       <h2>🏛️ History Around Every Corner</h2>
-      <p>Rome is a treasure trove of historical wonders:</p>
       <ul>
         <li><strong>The Colosseum:</strong> Stand in awe of this iconic amphitheater where gladiators once battled for glory.</li>
         <li><strong>Roman Forum:</strong> Wander through the ruins of temples, basilicas, and marketplaces that once formed the heart of ancient Rome.</li>
@@ -62,7 +166,6 @@
 
     <section>
       <h2>🍝 A Culinary Journey</h2>
-      <p>Rome’s cuisine is a celebration of simplicity and flavor:</p>
       <ul>
         <li>Try <strong>Cacio e Pepe</strong>, a creamy peppery pasta that’s pure comfort.</li>
         <li>Savor <strong>Roman-style pizza</strong>—thin, crispy, and topped with fresh ingredients.</li>
