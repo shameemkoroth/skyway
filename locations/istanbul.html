@@ -4,374 +4,182 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Discover Istanbul — where Europe meets Asia. Explore Hagia Sophia, the Blue Mosque, Grand Bazaar, Bosphorus cruises, and Turkish cuisine with Sky Way Tours and Travels." />
-  <meta name="keywords" content="Istanbul travel guide, Istanbul tourism, Hagia Sophia, Blue Mosque, Bosphorus cruise, Turkish culture, Sky Way Tours and Travels" />
+  <title>Istanbul: Where Continents Converge | Sky Way Tours and Travels</title>
+  <meta name="description" content="Discover Istanbul — the city where Europe meets Asia. Explore the Hagia Sophia, Blue Mosque, and vibrant bazaars with Sky Way Tours and Travels for an unforgettable cultural journey." />
+  <meta name="keywords" content="Istanbul tour packages, Turkey travel, Hagia Sophia, Blue Mosque, Grand Bazaar, Istanbul sightseeing, Sky Way Tours and Travels, Europe-Asia city" />
   <meta name="author" content="Sky Way Tours and Travels" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://skywaytourandtravel.com/locations/istanbul.html" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Istanbul: Where Continents Converge | Sky Way Tours and Travels" />
-  <meta property="og:description" content="Explore Istanbul's iconic landmarks, vibrant culture, and delicious cuisine. Plan your perfect trip with Sky Way Tours and Travels." />
+  <meta property="og:description" content="Experience Istanbul — where East meets West. Discover majestic mosques, ancient palaces, and a blend of cultures with Sky Way Tours and Travels." />
+  <meta property="og:image" content="../files/istanbul.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://skywaytourandtravel.com/locations/istanbul.html" />
-  <meta property="og:image" content="https://skywaytourandtravel.com/files/istanbul-banner.jpg" />
+  <meta property="og:url" content="https://skywaytourandtravel.com/locations/istanbul" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Istanbul: Where Continents Converge | Sky Way Tours and Travels" />
-  <meta name="twitter:description" content="Discover Istanbul's landmarks, bazaars, and cultural delights. Plan your visit with Sky Way Tours and Travels." />
-  <meta name="twitter:image" content="https://skywaytourandtravel.com/files/istanbul-banner.jpg" />
-
-  <title>Istanbul: Where Continents Converge</title>
   <link rel="icon" href="../files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  
+
   <style>
     body {
       margin: 0;
-      padding: 0 0 40px 0; 
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    .content-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    nav {
-      background-color: #072f53;
-      padding: 15px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    nav .logo {
-      height: 50px;
-    }
-
-    .navbar {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar li a {
-      color: #ffffff;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-    }
-
-    .navbar li a:hover {
-      background-color: #004d40;
-    }
-    
-    table, th, td {
-      border: 1px solid #000;
-      border-collapse: collapse;
-      padding: 8px;
-    }
-    
-    table {
-      width: 100%;
-      max-width: 1000px;
-      margin: 20px auto; 
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      line-height: 1.6;
       background-color: #fff;
-      text-align: left;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-      font-size: 0.9rem;
-    }
-    
-    th {
-      background-color: #072f53;
-      color: white;
-      text-align: center;
-    }
-    
-    td {
-      background-color: #f5f7fa;
-      vertical-align: top;
     }
 
-    .contact {
-      padding: 40px 20px;
-      max-width: 600px;
+    header {
+      background: url('../files/istanbul-banner.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 60px 10%;
+      max-width: 1100px;
       margin: auto;
-      text-align: center;
     }
 
-    .contact-form h1 {
+    h2 {
+      color: #004aad;
       font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
       margin-bottom: 20px;
     }
 
-    .contact-form p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 5px 0;
-    }    
-
-    .footer {
-      background-color: #072f53;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .footer-content {
+    footer {
+      background-color: #001f3f;
+      color: #fff;
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
+      padding: 40px 10%;
     }
 
-    .footlinks h4 {
-      color: pink;
-      margin-bottom: 10px;
+    footer h3 {
+      margin-bottom: 15px;
     }
 
-    .footlinks ul {
+    footer ul {
       list-style: none;
       padding: 0;
     }
 
-    .footlinks ul li {
-      margin: 5px 0;
+    footer ul li {
+      margin-bottom: 10px;
     }
 
-    .footlinks a {
-      color: #00bfa5;
+    footer ul li a {
       text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
     }
 
-    .footlinks a:hover {
-      text-decoration: underline;
+    footer ul li a:hover {
+      color: #00bcd4;
     }
 
-    .footlinks p {
-      color: #ffffff;
-      margin: 5px 0;
-    }
-
-    .social a {
-      font-size: 24px;
-      margin: 0 10px;
-      color: white;
-    }
-
-    .end {
-      background-color: #072f53;
+    .footer-bottom {
+      text-align: center;
+      background-color: #001a33;
+      color: #aaa;
       padding: 15px;
       font-size: 14px;
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
+      header h1 {
+        font-size: 2rem;
       }
 
-      .navbar {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .footer-content {
+      footer {
         flex-direction: column;
         align-items: center;
-      }
-
-      .contact-form h1 {
-        font-size: 1.5rem;
-      }
-
-      .contact-form p {
-        font-size: 0.95rem;
-      }
-    }
-
-    .contact-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      gap: 40px;
-    }
-    
-    .contact-left {
-      flex: 1;
-    }
-    
-    .contact-right img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-    }
-            
-    /* WhatsApp Floating Icon */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px; /* Adjust to appear above footer */
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      font-size: 36px;
-      padding: 12px;
-      border-radius: 50%;
-      z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-    
-    .whatsapp-float:hover {
-      background-color: #128C7E;
-    }
-
-
-    @media (max-width: 768px) {
-      .contact-layout {
-        flex-direction: column;
         text-align: center;
       }
-      .contact-right img {
-        margin-top: 20px;
-      }
     }
-
   </style>
 </head>
-<body class="contactbody">
-  <nav>
-    <a href="index.html">
-      <img src="../files/logo.png" class="logo" alt="Sky Way Tours and Travels Logo" title="Sky Way Tours and Travels" />
-    </a>
-    <ul class="navbar">
-      <li>
-        <a href="../index.html">Home</a>
-        <a href="../visa">Visa</a>
-        <a href="../locations">Locations</a>
-        <a href="../about.html">About Us</a>
-        <a href="../contact.html">Contact Us</a>
-      </li>
-    </ul>
-  </nav>
-  
-  <div class="content-wrapper">
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1><span style="font-size: 0.9em;">Istanbul: Where Continents Converge 🇹🇷 </span></h1>
-      <p class="intro-text">Istanbul isn't just a city; it's a living, breathing history book, straddling two continents and thousands of years of imperial history. Formerly known as Byzantium and then Constantinople, this sprawling metropolis is where Europe and Asia meet across the shimmering waters of the Bosphorus Strait. Prepare to be swept away by a mesmerizing blend of ancient wonders, vibrant modern life, and a culinary scene that will delight every sense.</p>
-    </section>
-    
-    <!-- Must visit places -->
-    <section>
-      <h2>A Journey Through Time: Unmissable Landmarks</h2>
-      <p>Istanbul’s historic peninsula, a UNESCO World Heritage site, is packed with architectural marvels that tell the city's extraordinary story.</p>
-      <ul>
-        <li><strong>Hagia Sophia Grand Mosque: </strong>A masterpiece of Byzantine architecture, it has served as a cathedral, a mosque, and a museum before returning to a mosque. Its colossal dome and glittering mosaics are truly breathtaking.</li>
-        <li><strong>Dal Lake & Houseboats:</strong> Experience life on the water by staying in a beautiful, intricately carved houseboat and taking a leisurely ride on a traditional wooden boat called a Shikara at sunrise or sunset.</li>
-        <li><strong>The Blue Mosque (Sultan Ahmed Mosque): </strong>Directly facing the Hagia Sophia, this stunning 17th-century mosque is famed for its six minarets and the intricate Iznik tiles that line its interior, giving it its famous blue glow.</li>
-        <li><strong>Topkapi Palace: </strong>Once the opulent residence of the Ottoman sultans for nearly 400 years, this vast complex offers a fascinating glimpse into imperial life, housing courtyards, treasuries, and the historic Harem.</li>
-        <li><strong>Basilica Cistern (Yerebatan Sarnıcı): </strong>Descend into this dramatic, subterranean world of ancient columns. Built in the 6th century, the cistern's reflected light and the famous Medusa heads create an unforgettable, moody atmosphere.</li>
-        <li><strong>Galata Tower: </strong>Climb this medieval stone tower for spectacular 360-degree panoramic views of the city, the Golden Horn, and the Bosphorus.</li>
-      </ul>
-      
-      <h2>The Heart of the City: Bazaars and Bosphorus</h2>
-      <p>To feel the pulse of Istanbul, you must immerse yourself in its bustling markets and take to the water.</p>
-      <ul>
-        <li><strong>Grand Bazaar (Kapalıçarşı): </strong>Get happily lost in one of the world's oldest and largest covered markets. Hundreds of shops spill over with ceramics, exquisite Turkish carpets, jewellery, and leather goods. Remember to haggle—it's part of the fun!</li>
-        <li><strong>Spice Bazaar (Egyptian Bazaar): </strong>A feast for the senses, this smaller, fragrant market is the perfect place to stock up on exotic spices, dried fruits, Turkish delight (lokum), and strong, local coffee.</li>
-        <li><strong>Bosphorus Cruise: </strong>Cruising the Bosphorus is an essential Istanbul experience. You'll sail between the European and Asian sides, passing grand palaces like Dolmabahçe Palace, historic wooden yalı (seaside mansions), and formidable fortresses like Rumeli Hisarı.</li>
-      </ul>
-    </section>
-    
-    <!-- Travel Tips -->
-    <section>
-      <h2>Essential Travel Tips for Your Trip</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Advice</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Getting Around</td>
-            <td>The Istanbulkart is essential for using the city's extensive and efficient public transport (metro, tram, ferry, bus). Taxis can be tricky; use official apps or demand the meter be used for the full fare.</td>
-          </tr>
-          <tr>
-            <td>Food & Drink</td>
-            <td>Don't miss a traditional Turkish breakfast. Try street food like simit (sesame bread rings), balık ekmek (fish sandwich), and, of course, authentic Turkish coffee and strong black tea (çay).</td>
-          </tr>
-          <tr>
-            <td>When to Visit</td>
-            <td>Spring (April-May) and Autumn (September-October) offer the best weather, with comfortable temperatures perfect for sightseeing.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    
-    <!-- end section -->
-    <section>
-      <h2>🍛 Culinary & Cultural Delights</h2>
-      <p>Kashmiri culture is as vibrant as its landscapes, particularly its world-famous cuisine.</p>
-      <ul>
-        <li><strong>🍽️ The Wazwan Feast</strong> — A 36-course royal feast and a significant part of Kashmiri identity. Key dishes to try include Rogan Josh, Gushtaba, Rista, and Yakhni.</li>
-        <li><strong>☕ Kahwa: The Saffron Elixir</strong> — Traditional aromatic green tea brewed with saffron, cardamom, cinnamon, and cloves, often topped with slivered almonds.</li>
-        <li><strong>🎨 Handiwork & Attire</strong> — Look for Pashmina shawls and hand-knotted Kashmiri carpets. The traditional pheran garment keeps locals warm during winter months.</li>
-      </ul>
-    </section>
-  </div>
+<body>
 
-  <section class="footer">
-    <div class="footer-content">
-      <div class="footlinks">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../visa">Visa</a></li>
-          <li><a href="../locations">Locations</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li><a href="../contact.html">Contact Us</a></li>
-        </ul>
-      </div>
+  <header>
+    <h1>Istanbul: Where Continents Converge</h1>
+  </header>
 
-      <div class="footlinks">
-        <h4>Connect</h4>
-        <div class="social">
-          <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
-          <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
-          <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="end">
-      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
-    </div>
+  <section>
+    <h2>Welcome to Istanbul</h2>
+    <p>
+      Step into <strong>Istanbul</strong> — a city that bridges two continents and thousands of years of history. With its skyline adorned by grand mosques and palaces, Istanbul offers a perfect blend of ancient tradition and modern charm. Wander through narrow streets filled with the aroma of Turkish coffee and the sounds of bustling bazaars, and you’ll discover why this city has fascinated travelers for centuries.
+    </p>
+
+    <h2>Top Attractions</h2>
+    <p>
+      Explore architectural masterpieces such as the <strong>Hagia Sophia</strong>, <strong>Blue Mosque</strong>, and <strong>Topkapi Palace</strong>. Take a cruise on the <strong>Bosphorus Strait</strong> to witness the breathtaking beauty of Istanbul’s skyline, or lose yourself in the lively lanes of the <strong>Grand Bazaar</strong>, one of the world’s oldest and largest markets.
+    </p>
+
+    <h2>Cultural Experience</h2>
+    <p>
+      Istanbul is more than just a destination — it’s an experience. Discover Turkish hospitality, savor traditional delights like <em>baklava</em> and <em>kebabs</em>, and enjoy the rhythm of local music and dance that echoes through the city’s heart. The rich blend of Byzantine, Ottoman, and modern influences makes Istanbul a living museum of cultures.
+    </p>
+
+    <h2>Why Travel with Sky Way Tours and Travels</h2>
+    <p>
+      At <strong>Sky Way Tours and Travels</strong>, we craft personalized Istanbul itineraries that capture the essence of this dynamic city. From cultural tours and culinary walks to scenic cruises and historical explorations, our team ensures every moment of your journey is seamless and unforgettable.
+    </p>
+
+    <h2>Plan Your Istanbul Adventure</h2>
+    <p>
+      Get ready to explore the city where East meets West, ancient meets modern, and every corner tells a story. <br />
+      <strong>Contact Sky Way Tours and Travels</strong> today to plan your <strong>Istanbul tour package</strong> and uncover the charm of Turkey’s magnificent capital.
+    </p>
   </section>
-  
-  <!-- WhatsApp Floating Icon -->
-  <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class='bx bxl-whatsapp'></i>
-  </a>
+
+  <footer>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../locations.html">Destinations</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact & Connect</h3>
+      <ul>
+        <li>📞 0496 299 69 29</li>
+        <li>📱 9496 369 777 | 9061 99 69 29</li>
+        <li>✉️ info@skywaytourandtravel.com</li>
+        <li>
+          <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="https://wa.me/919496369777" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    © 2025 Sky Way Tours and Travels. All Rights Reserved.
+  </div>
 
 </body>
 </html>
