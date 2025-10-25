@@ -4,25 +4,25 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Discover Geneva: Switzerland’s Lakeside Gem</title>
+  <title>Geneva: The Heart of Swiss Elegance | Sky Way Tours and Travels</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore Geneva, Switzerland’s lakeside gem. Discover top attractions, Lake Geneva, Jet d’Eau, museums, culture, cuisine, and the best time to visit." />
-  <meta name="keywords" content="Geneva travel guide, Lake Geneva, Jet d’Eau, Geneva museums, Geneva culture, Geneva food, Geneva attractions, Switzerland travel, Geneva tourism" />
+  <meta name="description" content="Experience Geneva — a city of lakeside charm, luxury, and diplomacy. Explore Lake Geneva, the Jet d’Eau, Old Town, and Swiss chocolate tours with Sky Way Tours and Travels." />
+  <meta name="keywords" content="Geneva travel guide, Geneva tourism, Lake Geneva, Jet d’Eau, Swiss Alps, Geneva tour packages, Sky Way Tours and Travels" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Sky Way Tours and Travels" />
 
   <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Discover Geneva: Switzerland’s Lakeside Gem" />
-  <meta property="og:description" content="Plan your Geneva trip with Sky Way Tours and Travels. Visit Lake Geneva, Jet d’Eau, museums, cultural districts, and enjoy Swiss cuisine." />
+  <meta property="og:title" content="Geneva: The Heart of Swiss Elegance | Sky Way Tours and Travels" />
+  <meta property="og:description" content="Discover Geneva with Sky Way Tours and Travels — luxury, lakes, chocolate, and the charm of Switzerland’s cultural capital." />
   <meta property="og:image" content="../files/logo.png" />
   <meta property="og:url" content="https://www.skywaytourandtravel.com/locations/geneva.html" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Discover Geneva: Switzerland’s Lakeside Gem" />
-  <meta name="twitter:description" content="Explore Geneva with Sky Way Tours and Travels. Discover attractions, culture, cuisine, and lakeside experiences in Switzerland’s elegant city." />
+  <meta name="twitter:title" content="Geneva: The Heart of Swiss Elegance | Sky Way Tours and Travels" />
+  <meta name="twitter:description" content="Explore Geneva — the Swiss city of culture, diplomacy, and stunning lakeside scenery." />
   <meta name="twitter:image" content="../files/logo.png" />
 
   <link rel="icon" href="../files/logo.png" />
@@ -42,29 +42,31 @@
   .navbar { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
   .navbar li a { color: #ffffff; font-weight: 500; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
   .navbar li a:hover { background-color: #004d40; }
-  table, th, td { border: 1px solid #000; border-collapse: collapse; padding: 8px; }
-  table { width: 100%; max-width: 1000px; margin: 20px auto; background-color: #fff; text-align: left; font-size: 0.9rem; display: block; overflow-x: auto; white-space: nowrap; }
-  th { background-color: #072f53; color: white; text-align: center; }
-  td { background-color: #f5f7fa; vertical-align: top; }
-  .contact { padding: 40px 20px; max-width: 600px; margin: auto; text-align: center; }
-  .contact-form h1 { font-size: 2rem; margin-bottom: 20px; }
-  .contact-form p { font-size: 1rem; line-height: 1.6; margin: 5px 0; }
+  h1, h2 { color: #072f53; }
+  section { margin-bottom: 30px; }
+  p { color: #333; line-height: 1.6; }
+  li { margin: 8px 0; color: #333; line-height: 1.6; }
+  .hero { text-align: center; padding: 50px 20px 30px; background: linear-gradient(to right, #00416A, #E4E5E6); color: white; border-radius: 10px; margin-top: 20px; }
+  .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+  .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+
+  /* Footer */
   .footer { background-color: #072f53; color: white; padding: 40px 20px; text-align: center; }
   .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-  .footlinks h4 { color: pink; margin-bottom: 10px; }
-  .footlinks ul { list-style: none; padding: 0; }
+  .footlinks h4 { color: #ffca28; margin-bottom: 10px; font-weight: 600; }
+  .footlinks ul { list-style: none; padding: 0; margin: 0; }
   .footlinks ul li { margin: 5px 0; }
   .footlinks a { color: #00bfa5; text-decoration: none; }
   .footlinks a:hover { text-decoration: underline; }
   .footlinks p { color: #ffffff; margin: 5px 0; }
-  .social a { font-size: 24px; margin: 0 10px; color: white; }
-  .end { background-color: #072f53; padding: 15px; font-size: 14px; }
- 
-            
-    /* WhatsApp Floating Icon */
-    .whatsapp-float {
+  .social a { font-size: 24px; margin: 0 10px; color: white; transition: color 0.3s ease; }
+  .social a:hover { color: #00bfa5; }
+  .end { background-color: #051f35; padding: 15px; font-size: 14px; }
+
+  /* WhatsApp Floating Icon */
+  .whatsapp-float {
       position: fixed;
-      bottom: 20px; /* Adjust to appear above footer */
+      bottom: 20px;
       right: 20px;
       background-color: #25D366;
       color: white;
@@ -74,31 +76,25 @@
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-    }
-    
-    .whatsapp-float:hover {
+  }
+  .whatsapp-float:hover {
       background-color: #128C7E;
-    }
+  }
 
-
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     nav { flex-direction: column; align-items: flex-start; }
     .navbar { flex-direction: column; gap: 10px; margin-top: 10px; }
     .footer-content { flex-direction: column; align-items: center; }
-    .contact-form h1 { font-size: 1.5rem; }
-    .contact-form p { font-size: 0.95rem; }
-    .contact-layout { flex-direction: column; text-align: center; }
-    .contact-right img { margin-top: 20px; }
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { font-size: 1rem; }
   }
-  .contact-layout { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: auto; padding: 40px 20px; gap: 40px; }
-  .contact-left { flex: 1; }
-  .contact-right img { max-width: 200px; height: auto; border-radius: 10px; }
   </style>
 </head>
-<body class="contactbody">
+
+<body>
   <nav>
-    <a href="index.html">
-      <img src="../files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
+    <a href="../index.html">
+      <img src="../files/logo.png" class="logo" alt="Sky Way Tours and Travels Logo" title="Sky Way Tours and Travels" />
     </a>
     <ul class="navbar">
       <li>
@@ -114,36 +110,62 @@
   <div class="content-wrapper">
     <!-- Hero Section -->
     <section class="hero">
-      <h1><span style="font-size: 0.9em;">✨ Discover Geneva: Switzerland’s Lakeside Gem</span></h1>
-      <p class="intro-text">Nestled between the Alps and the Jura mountains, Geneva is a city that effortlessly blends cosmopolitan flair with natural serenity. Whether you’re drawn by its diplomatic prestige, lakeside charm, or cultural treasures, Geneva offers a travel experience that’s as refined as it is unforgettable.</p>
+      <h1>🏔️ Geneva: The Heart of Swiss Elegance</h1>
+      <p>Geneva — where breathtaking Alpine views meet cosmopolitan sophistication. From the sparkling Lake Geneva to the United Nations headquarters, this Swiss city offers serenity, culture, and world-class experiences for travelers of all kinds.</p>
     </section>
 
-    <!-- Discover Geneva -->
+    <!-- Top Attractions -->
     <section>
-      <h2>🌍 A Global City with a Local Soul</h2>
-      <p>Home to the United Nations and countless international organizations, Geneva pulses with global energy. Yet, its heart remains distinctly Swiss—clean streets, efficient transport, and a deep respect for nature and heritage. Stroll through the Old Town’s cobbled alleys, where centuries-old buildings whisper stories of Calvinist reform and medieval intrigue.</p>
-      
-      <h2>🏞️ Nature Meets Urban Elegance</h2>
-      <p>Lake Geneva (Lac Léman) is the city’s crown jewel. Take a boat cruise across its shimmering waters, or relax on the shores with views of Mont Blanc in the distance. The iconic Jet d’Eau fountain shoots water 140 meters into the sky, a dramatic symbol of Geneva’s elegance.</p>
-      
-      <h2>🖼️ Culture, Cuisine, and Curiosity</h2>
-      <p>Geneva’s museums are world-class. Don’t miss the Museum of Art and History or the Patek Philippe Museum for a glimpse into Swiss watchmaking mastery. For science lovers, CERN offers mind-bending insights into particle physics. And when hunger strikes, indulge in fondue, raclette, or international cuisine that reflects Geneva’s multicultural makeup.</p>
-        
-      <h2>🚲 Explore with Ease</h2>
-      <p>Geneva is compact and walkable, with excellent public transport. Rent a bike and explore the Parc des Bastions, or hop on a tram to Carouge—a bohemian neighborhood with Mediterranean vibes, artisan shops, and lively cafés.</p>
-        
-      <h2>🌸 When to Visit</h2>
-      <p>Each season paints Geneva in a different light:</p>
-        <ul>
-          <li><strong>Spring:</strong> Blossoms and lakeside strolls</li>
-          <li><strong>Summer:</strong> Festivals and outdoor adventures</li>
-          <li><strong>Autumn:</strong> Golden foliage and cozy cafés</li>
-          <li><strong>Winter:</strong> Snow-capped views and nearby ski escapes</li>
-        </ul>
-        
-      <p>Whether you’re here for a day or a week, Geneva invites you to slow down, look closer, and savor the harmony of nature, culture, and innovation. Ready to plan your trip? Geneva is waiting.</p>
+      <h2>🌟 Top Attractions</h2>
+      <ul>
+        <li><strong>Jet d’Eau:</strong> The city’s iconic water fountain, shooting 140 meters into the sky over Lake Geneva.</li>
+        <li><strong>Old Town (Vieille Ville):</strong> A charming maze of cobbled streets, historic architecture, and cozy cafés.</li>
+        <li><strong>St. Pierre Cathedral:</strong> Climb the towers for panoramic views of Geneva and the surrounding Alps.</li>
+        <li><strong>United Nations Office:</strong> Visit the European headquarters of the UN and learn about global diplomacy.</li>
+        <li><strong>English Garden & Flower Clock:</strong> Stroll through beautiful gardens featuring Geneva’s famous floral landmark.</li>
+      </ul>
     </section>
 
+    <!-- Culture & Heritage -->
+    <section>
+      <h2>🏛️ Culture & Heritage</h2>
+      <p>Geneva is a melting pot of art, history, and international culture. Explore world-class museums like the <strong>Musée d’Art et d’Histoire</strong> and the <strong>International Red Cross Museum</strong>. Don’t miss the <strong>Palais des Nations</strong> for an insightful tour of global cooperation in action.</p>
+    </section>
+
+    <!-- Culinary Delights -->
+    <section>
+      <h2>🍫 Culinary Delights</h2>
+      <p>Indulge in Geneva’s culinary excellence:</p>
+      <ul>
+        <li>Try traditional Swiss fondue and raclette by the lakeside.</li>
+        <li>Sample luxurious Swiss chocolates at local chocolatiers like Favarger and Auer.</li>
+        <li>Enjoy fine dining with French influence in Michelin-starred restaurants.</li>
+      </ul>
+    </section>
+
+    <!-- Day Trips & Nature -->
+    <section>
+      <h2>🚞 Day Trips & Nature Escapes</h2>
+      <p>Geneva’s location makes it a perfect gateway to nature and nearby attractions:</p>
+      <ul>
+        <li><strong>Montreux:</strong> A picturesque lakeside town, home to the Montreux Jazz Festival.</li>
+        <li><strong>Chamonix (France):</strong> Just an hour away — take a cable car to Mont Blanc for breathtaking views.</li>
+        <li><strong>Lavaux Vineyards:</strong> UNESCO World Heritage terraced vineyards offering scenic wine-tasting tours.</li>
+      </ul>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section>
+      <h2>☀️ Best Time to Visit</h2>
+      <p>The best time to visit Geneva is from <strong>May to September</strong>, when the weather is mild and perfect for exploring the city’s lakes, parks, and festivals. Winter months are ideal for travelers looking to experience nearby Alpine ski resorts.</p>
+    </section>
+
+    <!-- Why Choose Sky Way -->
+    <section>
+      <h2>✈️ Why Travel with Sky Way Tours and Travels</h2>
+      <p>At <strong>Sky Way Tours and Travels</strong>, we curate unforgettable Swiss experiences. From scenic city tours and cultural excursions to luxury hotel stays, our Geneva travel packages ensure comfort, discovery, and elegance at every step.</p>
+      <p>Book your <strong>Geneva tour package</strong> today and experience Switzerland’s charm in style.</p>
+    </section>
   </div>
 
   <!-- Footer -->
@@ -159,7 +181,6 @@
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
-
       <div class="footlinks">
         <h4>Connect</h4>
         <div class="social">
@@ -169,9 +190,8 @@
         </div>
       </div>
     </div>
-
     <div class="end">
-      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
+      <p>Copyright © 2025 Sky Way Tours and Travels. All Rights Reserved.</p>
     </div>
   </section>
   
@@ -179,7 +199,5 @@
   <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
   </a>
-
-  
 </body>
 </html>
