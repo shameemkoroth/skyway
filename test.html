@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visa</title>
+  <title>Locations</title>
   <link rel="icon" href="./files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -49,7 +49,7 @@
       background-color: #004d40;
     }
 
-    .visa-banner {
+    .locations-banner {
       background-image: url("./files/visa-banner.jpg");
       background-size: cover;
       background-position: center;
@@ -60,7 +60,7 @@
       justify-content: center;
     }
 
-    .visa-overlay {
+    .locations-overlay {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
       border-radius: 10px;
@@ -68,12 +68,12 @@
       color: white;
     }
 
-    .visa-overlay h2 {
+    .locations-overlay h2 {
       font-size: 2rem;
       margin-bottom: 15px;
     }
 
-    #visaSearch {
+    #locationsSearch {
       padding: 10px;
       width: 300px;
       font-size: 1rem;
@@ -81,7 +81,7 @@
       border-radius: 5px;
     }
 
-    .visa-grid {
+    .locations-grid {
       display: flex;
       justify-content: center;
       gap: 40px;
@@ -89,7 +89,7 @@
       flex-wrap: wrap;
     }
 
-    .visa-card {
+    .locations-card {
       position: relative;
       width: 300px;
       border-radius: 10px;
@@ -97,7 +97,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    .visa-card img {
+    .locations-card img {
       width: 100%;
       height: 200px;
       display: block;
@@ -169,7 +169,7 @@
       padding: 15px;
       font-size: 14px;
     }
-    
+        
     /* WhatsApp Floating Icon */
     .whatsapp-float {
       position: fixed;
@@ -190,6 +190,7 @@
     }
 
 
+
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -207,11 +208,11 @@
         align-items: center;
       }
 
-      .visa-overlay h2 {
+      .locations-overlay h2 {
         font-size: 1.5rem;
       }
 
-      #visaSearch {
+      #locationsSearch {
         width: 80%;
       }
     }
@@ -225,145 +226,75 @@
     <ul class="navbar">
       <li>
         <a href="./index.html">Home</a>
-        <a href="./locations">Locations</a>
+        <a href="./visa">Visa</a>
         <a href="./about.html">About Us</a>
         <a href="./contact.html">Contact Us</a>
       </li>
     </ul>
   </nav>
 
-  <section class="Visa" id="Visa">
-    <div class="visa-banner">
-      <div class="visa-overlay">
-        <h2>VISA</h2>
-        <input type="text" id="visaSearch" placeholder="Search for a visa..." onkeyup="filterVisaCards()" />
+  <section class="Locations" id="locations">
+    <div class="locations-banner">
+      <div class="locations-overlay">
+        <h2>Locations</h2>
+        <input type="text" id="locationsSearch" placeholder="Search for a location..." onkeyup="filterlocationsCards()" />
       </div>
     </div>
 
-    <div class="visa-grid">
-      <div class="visa-card">
-        <a href="./visa/azerbaijan-visa">
-          <img src="./files/azerbaijan.WEBP" alt="Azerbaijan">
-          <div class="banner">Azerbaijan</div>
+    <div class="locations-grid">
+      <div class="locations-card">
+        <a href="./locations/kashmir">
+          <img src="./files/kashmir.jpg" alt="Kashmir">
+          <div class="banner">Kashmir</div>
         </a>
       </div>
 
-      <div class="visa-card">
-        <a href="./visa/schengen-visa">
-          <img src="./files/schengen.JPG" alt="Schengen">
-          <div class="banner">Schengen</div>
+      <div class="locations-card">
+        <a href="./locations/istanbul">
+          <img src="./files/istanbul.jpg" alt="Istanbul">
+          <div class="banner">Istanbul</div>
         </a>
       </div>
 
-      <div class="visa-card">
-        <a href="./visa/malaysia-visa">
-          <img src="./files/malaysia.jpg" alt="Malaysia">
-          <div class="banner">Malaysia</div>
+      <div class="locations-card">
+        <a href="./locations/paris">
+          <img src="./files/paris.jpg" alt="Paris">
+          <div class="banner">Paris</div>
         </a>
       </div>
 
-      <div class="visa-card">
-        <a href="./visa/egypt-visa">
-          <img src="./files/egypt.jpg" alt="Egypt">
-          <div class="banner">Egypt</div>
+      <div class="locations-card">
+        <a href="./locations/bali">
+          <img src="./files/bali.jpg" alt="Bali">
+          <div class="banner">Bali</div>
         </a>
       </div>
 
-      <div class="visa-card">
-        <a href="./visa/cambodia-visa">
-          <img src="./files/cambodia.jpg" alt="Cambodia">
-          <div class="banner">Cambodia</div>
+      <div class="locations-card">
+        <a href="./locations/dubai">
+          <img src="./files/l5.jpg" alt="Dubai">
+          <div class="banner">Dubai</div>
         </a>
       </div>
 
-      <div class="visa-card">
-        <a href="./visa/vietnam-visa">
-          <img src="./files/vietnam.jpg" alt="Vietnam">
-          <div class="banner">Vietnam</div>
+      <div class="locations-card">
+        <a href="./locations/geneva">
+          <img src="./files/l6.jpg" alt="Geneva">
+          <div class="banner">Geneva</div>
         </a>
       </div>
 
-      <div class="visa-card">
-        <a href="./visa/uzbekistan-visa">
-          <img src="./files/usbekistan.jpg" alt="Uzbekistan">
-          <div class="banner">Uzbekistan</div>
+      <div class="locations-card">
+        <a href="./locations/andaman">
+          <img src="./files/l7.jpg" alt="Andaman & Nicobar">
+          <div class="banner">Andaman & Nicobar</div>
         </a>
       </div>
 
-      <div class="visa-card">
-        <a href="./visa/morroco-visa">
-          <img src="./files/morroco.jpg" alt="Morroco">
-          <div class="banner">Morroco</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/indonesia-visa">
-          <img src="./files/indonesia.jpg" alt="Indonesia">
-          <div class="banner">Indonesia</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/tanzania-visa">
-          <img src="./files/tanzania.jpg" alt="Tanzania">
-          <div class="banner">Tanzania</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/angola-visa">
-          <img src="./files/angola.jpg" alt="Angola">
-          <div class="banner">Angola</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/jordan-visa">
-          <img src="./files/jordan.JPG" alt="Jordan">
-          <div class="banner">Jordan</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/kenya-visa">
-          <img src="./files/kenya.jpg" alt="Kenya">
-          <div class="banner">Kenya</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/kyrgyzstan-visa">
-          <img src="./files/kyrgyzstan.jpg" alt="Kyrgyzstan">
-          <div class="banner">Kyrgyzstan</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/tajikistan-visa">
-          <img src="./files/tajikistan.jpg" alt="Tajikistan">
-          <div class="banner">Tajikistan</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/turkey-visa">
-          <img src="./files/turkey.jpg" alt="Turkey">
-          <div class="banner">Turkey</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/armenia-visa">
-          <img src="./files/armenia.jpg" alt="Armenia">
-          <div class="banner">Armenia</div>
-        </a>
-      </div>
-
-      <div class="visa-card">
-        <a href="./visa/russia-visa">
-          <img src="./files/russia.jpg" alt="Russia">
-          <div class="banner">Russia</div>
+      <div class="locations-card">
+        <a href="./locations/rome">
+          <img src="./files/rome.jpg" alt="Rome">
+          <div class="banner">Rome</div>
         </a>
       </div>
 
@@ -376,7 +307,7 @@
       <div class="footlinks">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="./locations">Locations</a></li>
+          <li><a href="./visa">Visa</a></li>
           <li><a href="./about.html">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
         </ul>
@@ -398,9 +329,9 @@
   </section>
 
   <script>
-    function filterVisaCards() {
-      const input = document.getElementById('visaSearch').value.toLowerCase();
-      const cards = document.querySelectorAll('.visa-card');
+    function filterlocationsCards() {
+      const input = document.getElementById('locationsSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.locations-card');
 
       cards.forEach(card => {
         const banner = card.querySelector('.banner');
