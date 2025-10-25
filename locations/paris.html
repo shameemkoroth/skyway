@@ -4,26 +4,26 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paris: The City of Light - Your Ultimate Travel Guide</title>
+  <title>Paris: The City of Love & Lights | Sky Way Tours and Travels</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore Paris, the City of Light. Discover Eiffel Tower, Louvre Museum, Montmartre, French cuisine, and top travel experiences in Paris with our ultimate guide." />
-  <meta name="keywords" content="Paris travel guide, Eiffel Tower, Louvre Museum, Arc de Triomphe, Notre-Dame, Montmartre, Le Marais, Parisian food, French cuisine, Paris attractions, Paris sightseeing" />
+  <meta name="description" content="Discover Paris — the city of love, lights, and culture. Explore Eiffel Tower, Louvre, Seine cruises, Montmartre, and Parisian cuisine with Sky Way Tours and Travels." />
+  <meta name="keywords" content="Paris travel, Paris tourism, Eiffel Tower, Louvre Museum, Seine Cruise, Montmartre, Paris honeymoon, Paris packages, France travel, Sky Way Tours and Travels" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Sky Way Tours and Travels" />
 
   <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Paris: The City of Light - Your Ultimate Travel Guide" />
-  <meta property="og:description" content="Plan your Paris trip with our comprehensive guide. Visit iconic landmarks, charming neighborhoods, and indulge in the best of Parisian cuisine." />
-  <meta property="og:image" content="../files/l3.jpg" />
+  <meta property="og:title" content="Paris: The City of Love & Lights | Sky Way Tours and Travels" />
+  <meta property="og:description" content="Plan your Paris trip with Sky Way Tours and Travels. Explore Eiffel Tower, Louvre, Seine cruises, Montmartre, and Parisian culture." />
+  <meta property="og:image" content="../files/logo.png" />
   <meta property="og:url" content="https://www.skywaytourandtravel.com/locations/paris.html" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Paris: The City of Light - Your Ultimate Travel Guide" />
-  <meta name="twitter:description" content="Discover the best of Paris with Sky Way Tours and Travels. Explore Eiffel Tower, Louvre, Montmartre, and Parisian cuisine." />
-  <meta name="twitter:image" content="../files/l3.jpg" />
+  <meta name="twitter:title" content="Paris: The City of Love & Lights | Sky Way Tours and Travels" />
+  <meta name="twitter:description" content="Experience the magic of Paris — Eiffel Tower, Seine cruises, Montmartre, and French cuisine — with Sky Way Tours and Travels." />
+  <meta name="twitter:image" content="../files/logo.png" />
 
   <link rel="icon" href="../files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
@@ -42,28 +42,31 @@
   .navbar { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
   .navbar li a { color: #ffffff; font-weight: 500; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
   .navbar li a:hover { background-color: #004d40; }
-  table, th, td { border: 1px solid #000; border-collapse: collapse; padding: 8px; }
-  table { width: 100%; max-width: 1000px; margin: 20px auto; background-color: #fff; text-align: left; display: block; overflow-x: auto; white-space: nowrap; font-size: 0.9rem; }
-  th { background-color: #072f53; color: white; text-align: center; }
-  td { background-color: #f5f7fa; vertical-align: top; }
-  .contact { padding: 40px 20px; max-width: 600px; margin: auto; text-align: center; }
-  .contact-form h1 { font-size: 2rem; margin-bottom: 20px; }
-  .contact-form p { font-size: 1rem; line-height: 1.6; margin: 5px 0; }
+  h1, h2 { color: #072f53; }
+  section { margin-bottom: 30px; }
+  p { color: #333; line-height: 1.6; }
+  li { margin: 8px 0; color: #333; line-height: 1.6; }
+  .hero { text-align: center; padding: 50px 20px 30px; background: linear-gradient(to right, #009688, #004d40); color: white; border-radius: 10px; margin-top: 20px; }
+  .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+  .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+
+  /* Footer */
   .footer { background-color: #072f53; color: white; padding: 40px 20px; text-align: center; }
   .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-  .footlinks h4 { color: pink; margin-bottom: 10px; }
-  .footlinks ul { list-style: none; padding: 0; }
+  .footlinks h4 { color: #ffca28; margin-bottom: 10px; font-weight: 600; }
+  .footlinks ul { list-style: none; padding: 0; margin: 0; }
   .footlinks ul li { margin: 5px 0; }
   .footlinks a { color: #00bfa5; text-decoration: none; }
   .footlinks a:hover { text-decoration: underline; }
   .footlinks p { color: #ffffff; margin: 5px 0; }
-  .social a { font-size: 24px; margin: 0 10px; color: white; }
-  .end { background-color: #072f53; padding: 15px; font-size: 14px; }
-          
-    /* WhatsApp Floating Icon */
-    .whatsapp-float {
+  .social a { font-size: 24px; margin: 0 10px; color: white; transition: color 0.3s ease; }
+  .social a:hover { color: #00bfa5; }
+  .end { background-color: #051f35; padding: 15px; font-size: 14px; }
+
+  /* WhatsApp Floating Icon */
+  .whatsapp-float {
       position: fixed;
-      bottom: 20px; /* Adjust to appear above footer */
+      bottom: 20px;
       right: 20px;
       background-color: #25D366;
       color: white;
@@ -73,30 +76,25 @@
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-    }
-    
-    .whatsapp-float:hover {
+  }
+  .whatsapp-float:hover {
       background-color: #128C7E;
-    }
+  }
 
   @media (max-width: 768px) {
     nav { flex-direction: column; align-items: flex-start; }
     .navbar { flex-direction: column; gap: 10px; margin-top: 10px; }
     .footer-content { flex-direction: column; align-items: center; }
-    .contact-form h1 { font-size: 1.5rem; }
-    .contact-form p { font-size: 0.95rem; }
-    .contact-layout { flex-direction: column; text-align: center; }
-    .contact-right img { margin-top: 20px; }
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { font-size: 1rem; }
   }
-  .contact-layout { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: auto; padding: 40px 20px; gap: 40px; }
-  .contact-left { flex: 1; }
-  .contact-right img { max-width: 200px; height: auto; border-radius: 10px; }
   </style>
 </head>
-<body class="contactbody">
+
+<body>
   <nav>
-    <a href="index.html">
-      <img src="../files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
+    <a href="../index.html">
+      <img src="../files/logo.png" class="logo" alt="Sky Way Tours and Travels Logo" title="Sky Way Tours and Travels" />
     </a>
     <ul class="navbar">
       <li>
@@ -112,69 +110,56 @@
   <div class="content-wrapper">
     <!-- Hero Section -->
     <section class="hero">
-      <h1><span style="font-size: 0.9em;">Paris: The City of Light ✨ - Your Ultimate Travel Guide </span></h1>
-      <p class="intro-text">Welcome to Paris, the world's undisputed capital of romance, art, and gastronomy! A city where every cobblestone whispers a story, every corner holds a piece of history, and every meal is a masterpiece. Whether you're here for the iconic landmarks or to simply soak up the chic Parisian life, this guide will help you navigate your unforgettable journey.</p>
-      <img src="../files/l3.jpg" alt="Paris" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      <h1>🌟 Paris: The City of Love & Lights</h1>
+      <p>Paris — world-renowned for romance, art, and elegance — is a city of timeless charm. From iconic landmarks to cozy cafés, Paris invites travelers to explore history, culture, and unforgettable experiences.</p>
     </section>
 
-    <!-- Must visit places -->
+    <!-- Top Attractions -->
     <section>
-      <h2>Must-See Parisian Icons</h2>
-      <p>Paris is home to some of the planet's most recognizable monuments. Don't leave without checking these off your list!</p>
-      <li style="margin-left: 40px;"><strong>Eiffel Tower (La Tour Eiffel):</strong> Climb it during the day for breathtaking panoramic views, and watch it sparkle at night.</li>
-      <li style="margin-left: 40px;"><strong>Louvre Museum:</strong> Home to the Mona Lisa, Venus de Milo, and countless masterpieces. Spend hours exploring its vast collections.</li>
-      <li style="margin-left: 40px;"><strong>Arc de Triomphe:</strong> Climb to the top for stunning views of 12 radiating avenues.</li>
-      <li style="margin-left: 40px;"><strong>Notre-Dame Cathedral:</strong> Iconic French Gothic cathedral. Its exterior is a must-see while restoration continues.</li>
-      <li style="margin-left: 40px;"><strong>Musée d'Orsay:</strong> Former railway station featuring Impressionist and Post-Impressionist art by Monet, Van Gogh, and Renoir.</li>
-
-      <h2>Explore the Charming Neighborhoods (Arrondissements)</h2>
-      <p>Paris’s true character shines in its unique districts.</p>
-      <li style="margin-left: 40px;"><strong>Montmartre:</strong> Home to Sacré-Cœur Basilica and Place du Tertre, with winding village-like streets.</li>
-      <li style="margin-left: 40px;"><strong>Le Marais:</strong> Historic district with trendy boutiques, art galleries, and a vibrant Jewish Quarter.</li>
-      <li style="margin-left: 40px;"><strong>Latin Quarter:</strong> Intellectual hub surrounding Sorbonne University, Luxembourg Gardens, and Shakespeare and Company bookstore.</li>
-      <li style="margin-left: 40px;"><strong>Saint-Germain-des-Prés:</strong> Elegant district with literary cafés, luxury shopping, and art viewing.</li>
-
-      <h2>The Parisian Palate: Essential Food Experiences</h2>
-      <p>French cuisine is a journey in itself! Must-try items include:</p>
-      <li style="margin-left: 40px;"><strong>The Classics:</strong> Croissant, French Onion Soup, Steak Frites.</li>
-      <li style="margin-left: 40px;"><strong>Sweet Treats:</strong> Macarons, Crème Brûlée.</li>
-      <li style="margin-left: 40px;"><strong>Street Food:</strong> Crêpes and Jambon-beurre sandwiches.</li>
-      <li style="margin-left: 40px;"><strong>Fine Dining:</strong> Traditional dishes like Duck Confit or Beef Bourguignon with French wine.</li>
+      <h2>🏛️ Top Attractions</h2>
+      <ul>
+        <li><strong>Eiffel Tower:</strong> The symbol of Paris — breathtaking views and unforgettable photo opportunities.</li>
+        <li><strong>Louvre Museum:</strong> Home to masterpieces like the Mona Lisa and countless art treasures.</li>
+        <li><strong>Notre-Dame Cathedral:</strong> Marvel at Gothic architecture and centuries of history.</li>
+        <li><strong>Seine River Cruise:</strong> Experience Paris from the water with evening lights and romantic ambiance.</li>
+        <li><strong>Montmartre:</strong> Explore the artistic neighborhood with cobblestone streets, Sacré-Cœur, and bohemian cafés.</li>
+      </ul>
     </section>
 
-    <!-- Travel Tips -->
+    <!-- Culture & Lifestyle -->
     <section>
-      <h2>Quick Travel Tips</h2>
-      <table border="1" cellpadding="8" cellspacing="0">
-        <thead>
-          <tr>
-            <th>Tip</th>
-            <th>Detail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Getting Around</td>
-            <td>The Metro system is efficient. Walking is recommended to enjoy the city fully.</td>
-          </tr>
-          <tr>
-            <td>River Cruise</td>
-            <td>Seine River cruises offer views of landmarks, especially at night.</td>
-          </tr>
-          <tr>
-            <td>Museum Passes</td>
-            <td>Paris Museum Pass allows multiple museum visits with savings and skip-the-line benefits.</td>
-          </tr>
-          <tr>
-            <td>Bonjour!</td>
-            <td>Greet shopkeepers and waiters politely. A little French goes a long way.</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>🎭 Culture & Lifestyle</h2>
+      <p>Paris is a hub of culture, fashion, and creativity. Visit world-class galleries, enjoy street performances, or simply wander through charming neighborhoods like Le Marais and Saint-Germain. Every corner tells a story of elegance and history.</p>
     </section>
 
+    <!-- Culinary Delights -->
     <section>
-      <p>Paris awaits! Pack your walking shoes, your appetite, and your sense of wonder. Bon Voyage! 🇫🇷</p>
+      <h2>🍽️ Culinary Delights</h2>
+      <p>Paris offers a feast for the senses:</p>
+      <ul>
+        <li>Savor French classics like <strong>croissants</strong>, <strong>baguettes</strong>, <strong>coq au vin</strong>, and <strong>escargot</strong>.</li>
+        <li>Indulge in exquisite pastries and desserts like <strong>macarons</strong> and <strong>crème brûlée</strong>.</li>
+        <li>Enjoy café culture with a cup of espresso or hot chocolate on charming Parisian streets.</li>
+      </ul>
+    </section>
+
+    <!-- Adventure & Exploration -->
+    <section>
+      <h2>🌆 Adventure & Exploration</h2>
+      <p>Explore Paris by foot, bicycle, or metro. Discover hidden gardens, boutique shops, and scenic viewpoints. Attend local events, fashion shows, or night cruises for a complete Parisian experience.</p>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section>
+      <h2>🌤️ Best Time to Visit</h2>
+      <p>The best time to visit Paris is <strong>April to June</strong> or <strong>September to October</strong>, when the weather is pleasant and crowds are manageable — perfect for sightseeing and romantic strolls.</p>
+    </section>
+
+    <!-- Why Choose Sky Way -->
+    <section>
+      <h2>✈️ Why Travel with Sky Way Tours and Travels</h2>
+      <p><strong>Sky Way Tours and Travels</strong> designs personalized Paris itineraries, from romantic getaways and family trips to cultural explorations. Experience expert guidance, seamless planning, and memories that last a lifetime.</p>
+      <p>Start your <strong>Paris adventure</strong> today with our exclusive packages and professional support.</p>
     </section>
   </div>
 
@@ -184,7 +169,7 @@
       <div class="footlinks">
         <h4>Quick Links</h4>
         <ul>
-          <a href="../index.html">Home</a>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="../visa">Visa</a></li>
           <li><a href="../locations">Locations</a></li>
           <li><a href="../about.html">About Us</a></li>
@@ -201,7 +186,7 @@
       </div>
     </div>
     <div class="end">
-      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
+      <p>Copyright © 2025 Sky Way Tours and Travels. All Rights Reserved.</p>
     </div>
   </section>
   
@@ -209,6 +194,5 @@
   <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
   </a>
-  
 </body>
 </html>
