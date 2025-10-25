@@ -4,240 +4,185 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kashmir: Journey to Paradise on Earth</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore Kashmir, the Paradise on Earth. Discover Srinagar, Gulmarg, Pahalgam, Sonamarg, local cuisine, culture, and the best travel experiences in Kashmir." />
-  <meta name="keywords" content="Kashmir travel, Srinagar, Gulmarg, Pahalgam, Sonamarg, Kashmir tourism, Kashmir attractions, Kashmir travel guide, Wazwan, Kahwa, Pashmina" />
-  <meta name="robots" content="index, follow" />
+  <title>Kashmir: The Paradise on Earth | Sky Way Tours and Travels</title>
+  <meta name="description" content="Experience the breathtaking beauty of Kashmir — the paradise on earth. Explore Srinagar, Gulmarg, Pahalgam, and Sonmarg with Sky Way Tours and Travels for an unforgettable journey." />
+  <meta name="keywords" content="Kashmir tour packages, Srinagar travel, Gulmarg, Pahalgam, Sonmarg, Kashmir tourism, Kashmir honeymoon, Sky Way Tours and Travels, Paradise on Earth" />
   <meta name="author" content="Sky Way Tours and Travels" />
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Kashmir: Journey to Paradise on Earth" />
-  <meta property="og:description" content="Discover the best of Kashmir – breathtaking valleys, lakes, mountains, local cuisine, and cultural experiences." />
-  <meta property="og:image" content="../files/kashmir-lake.png" />
-  <meta property="og:url" content="https://www.skywaytourandtravel.com/locations/kashmir.html" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Kashmir: The Paradise on Earth | Sky Way Tours and Travels" />
+  <meta property="og:description" content="Discover the enchanting valleys and snow-capped peaks of Kashmir — the paradise on earth — with Sky Way Tours and Travels." />
+  <meta property="og:image" content="../files/kashmir.jpg" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kashmir: Journey to Paradise on Earth" />
-  <meta name="twitter:description" content="Plan your trip to Kashmir with Sky Way Tours and Travels. Explore Srinagar, Gulmarg, Pahalgam, and Sonamarg." />
-  <meta name="twitter:image" content="../files/kashmir-lake.png" />
+  <meta property="og:url" content="https://skywaytourandtravel.com/locations/kashmir" />
 
   <link rel="icon" href="../files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
-  body {
-    margin: 0;
-    padding: 0 0 40px 0; 
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-  }
-  .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-  nav { background-color: #072f53; padding: 15px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
-  nav .logo { height: 50px; }
-  .navbar { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
-  .navbar li a { color: #ffffff; font-weight: 500; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
-  .navbar li a:hover { background-color: #004d40; }
-  table, th, td { border: 1px solid #000; border-collapse: collapse; padding: 8px; }
-  table { width: 100%; max-width: 1000px; margin: 20px auto; background-color: #fff; text-align: left; display: block; overflow-x: auto; white-space: nowrap; font-size: 0.9rem; }
-  th { background-color: #072f53; color: white; text-align: center; }
-  td { background-color: #f5f7fa; vertical-align: top; }
-  .contact { padding: 40px 20px; max-width: 600px; margin: auto; text-align: center; }
-  .contact-form h1 { font-size: 2rem; margin-bottom: 20px; }
-  .contact-form p { font-size: 1rem; line-height: 1.6; margin: 5px 0; }    
-  .footer { background-color: #072f53; color: white; padding: 40px 20px; text-align: center; }
-  .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-  .footlinks h4 { color: pink; margin-bottom: 10px; }
-  .footlinks ul { list-style: none; padding: 0; }
-  .footlinks ul li { margin: 5px 0; }
-  .footlinks a { color: #00bfa5; text-decoration: none; }
-  .footlinks a:hover { text-decoration: underline; }
-  .footlinks p { color: #ffffff; margin: 5px 0; }
-  .social a { font-size: 24px; margin: 0 10px; color: white; }
-  .end { background-color: #072f53; padding: 15px; font-size: 14px; }
- 
-          
-    /* WhatsApp Floating Icon */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px; /* Adjust to appear above footer */
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      font-size: 36px;
-      padding: 12px;
-      border-radius: 50%;
-      z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-    
-    .whatsapp-float:hover {
-      background-color: #128C7E;
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #fff;
     }
 
+    header {
+      background: url('../files/kashmir-banner.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
 
-   @media (max-width: 768px) {
-    nav { flex-direction: column; align-items: flex-start; }
-    .navbar { flex-direction: column; gap: 10px; margin-top: 10px; }
-    .footer-content { flex-direction: column; align-items: center; }
-    .contact-form h1 { font-size: 1.5rem; }
-    .contact-form p { font-size: 0.95rem; }
-    .contact-layout { flex-direction: column; text-align: center; }
-    .contact-right img { margin-top: 20px; }
-  }
-  .contact-layout { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: auto; padding: 40px 20px; gap: 40px; }
-  .contact-left { flex: 1; }
-  .contact-right img { max-width: 200px; height: auto; border-radius: 10px; }
+    header h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 60px 10%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #004aad;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 40px 10%;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+    }
+
+    footer ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    footer ul li a:hover {
+      color: #00bcd4;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      background-color: #001a33;
+      color: #aaa;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
-<body class="contactbody">
-  <nav>
-    <a href="index.html">
-      <img src="../files/logo.png" class="logo" alt="Logo" title="Sky Way Tours and Travels" />
-    </a>
-    <ul class="navbar">
-      <li>
-        <a href="../index.html">Home</a>
-        <a href="../visa">Visa</a>
-        <a href="../locations">Locations</a>
-        <a href="../about.html">About Us</a>
-        <a href="../contact.html">Contact Us</a>
-      </li>
-    </ul>
-  </nav>
-  
-  <div class="content-wrapper">
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1><span style="font-size: 0.9em;">Kashmir: Journey to Paradise on Earth 🏞️ </span></h1>
-      <p class="intro-text">Often dubbed the <strong>"Paradise on Earth,"</strong> Kashmir is a land of unparalleled beauty, where snow-capped mountains meet serene valleys and shimmering lakes. It's a destination that captivates the soul with its rich culture, lush landscapes, and tranquil atmosphere, offering a unique blend of adventure and peace.</p>
-    </section>
-  
-    <!-- Must visit places -->
-    <section>
-      <h2>Must-Visit Destinations & Experiences</h2>
-      <p>From the tranquil waters of Srinagar to the adventurous slopes of Gulmarg, Kashmir is filled with iconic spots waiting to be explored.</p>
-      <p><strong>🛶 Srinagar: The Summer Capital</strong></p>
-      <p>The heart of the Kashmir Valley, Srinagar is famous for its aquatic life and vibrant gardens.</p>
-      <li style="margin-left: 40px;"><strong>Dal Lake & Houseboats:</strong> Experience life on the water by staying in a beautiful, intricately carved houseboat and taking a leisurely ride on a traditional wooden boat called a Shikara at sunrise or sunset.</li>
-      <img src="../files/kashmir-lake.png" alt="A view of a lake in Kashmir" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-      <li style="margin-left: 40px;"><strong>Mughal Gardens:</strong> Stroll through the terraced beauty of the Persian-style Shalimar Bagh (Abode of Love) and Nishat Bagh (Garden of Bliss).</li>
-      <li style="margin-left: 40px;"><strong>Tulip Garden:</strong> If visiting in spring (usually April), don't miss Asia's largest Indira Gandhi Memorial Tulip Garden for a breathtaking spectacle of color.</li>
-      <br>
-      <p><strong>🏔️ Gulmarg: Meadow of Flowers</strong></p>
-      <p>Known globally for its winter sports and year-round scenic beauty, Gulmarg is a pristine hill station.</p>
-      <li style="margin-left:40px;"><strong>Gulmarg Gondola:</strong> Take a ride on the Gulmarg Gondola, one of the highest cable cars in the world, to the spectacular Apharwat Peak for panoramic views.</li>
-      <li style="margin-left:40px;"><strong>Winter Sports:</strong> During winter, it transforms into a hub for skiing and snowboarding.</li>
-      <br>
-      <p><strong>🌿 Pahalgam: Valley of Shepherds</strong></p>
-      <p>Nestled on the banks of the Lidder River, Pahalgam is your gateway to stunning alpine meadows and valleys.</p>
-      <li style="margin-left:40px;"><strong>Aru & Betaab Valley:</strong> Explore the breathtaking landscapes of Aru Valley (a base for trekking) and Betaab Valley (named after a Bollywood movie shot here).</li>
-      <li style="margin-left:40px;"><strong>Lidder River:</strong> Enjoy trout fishing or a relaxing riverside picnic.</li>
-      <br>
-      <p><strong>🌟 Sonamarg: Meadow of Gold</strong></p>
-      <p>This picturesque valley is your starting point for various high-altitude treks and offers mesmerizing sights.</p>
-      <li style="margin-left:40px;"><strong>Thajiwas Glacier:</strong> Hire a pony or trek to the stunning Thajiwas Glacier to experience snow even in summer.</li>
-      <li style="margin-left:40px;"><strong>Zoji La Pass:</strong> An adventurous, high-mountain pass offering spectacular views (often requiring special permits and weather-dependent).</li>
-      <br>
-    </section>
-  
-    <!-- Time to visit -->
-    <section>
-      <h2>The Best Time to Visit Kashmir</h2>
-      <p>Kashmir is a year-round destination, with each season offering a unique charm:</p>
-      <table border="1" cellpadding="8" cellspacing="0">
-        <thead>
-          <tr>
-            <th>Season</th>
-            <th>Months</th>
-            <th>Highlights</th>
-            <th>Experience</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spring</td>
-            <td>March to Early May</td>
-            <td>Tulip Festival, blooming </td>
-            <td>Ideal for sightseeing and colorful landscapes.</td>
-          </tr>
-          <tr>
-            <td>Summer</td>
-            <td>May to August</td>
-            <td>Lush green valleys, clear skies, comfortable temperatures</td>
-            <td>Best for trekking and enjoying outdoor activities.</td>
-          </tr>
-          <tr>
-            <td>Autumn</td>
-            <td>October to November</td>
-            <td>The Chinar leaves turn from green to brilliant gold, crimson, and red, making the landscapes perfect for photography and a unique, poetic experience.</td>
-            <td>Perfect for photography and a unique, poetic experience.</td>
-          </tr>
-          <tr>
-            <td>Winter</td>
-            <td>December to February</td>
-            <td>Heavy snowfall, snow-clad scenery, winter sports</td>
-            <td>The best time to experience Kashmir as a true 'winter wonderland,' perfect for enjoying winter adventure sports like skiing.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  
-    <!-- Culinary & Culture -->
-    <section>
-      <h2>🍛 Culinary & Cultural Delights</h2>
-      <p>Kashmiri culture is as vibrant as its landscapes, particularly its world-famous cuisine.</p>
-      <br>
-      <p><strong>🍽️ The Wazwan Feast</strong></p>
-      <p>The Wazwan is not just a meal; it's a 36-course royal feast and a significant part of Kashmiri identity, traditionally prepared by master chefs called wazas. Key dishes to try include:</p>
-      <li style="margin-left:40px;"><strong>Rogan Josh:</strong> An aromatic, slow-cooked lamb curry colored by Kashmiri chillies.</li>
-      <li style="margin-left:40px;"><strong>Gushtaba:</strong> Royal-sized, pounded meat balls cooked in a creamy yogurt gravy, often considered the 'final course' of the Wazwan.</li>
-      <li style="margin-left:40px;"><strong>Rista:</strong> Fiery red, smaller meatballs simmered in a rich gravy.</li>
-      <li style="margin-left:40px;"><strong>Yakhni:</strong> Tender meat or lotus stem (Nadru) cooked in a mild, subtly flavored yogurt-based sauce.</li>
-      <p><strong>☕ Kahwa: The Saffron Elixir</strong></p>
-      <p>Traditional aromatic green tea brewed with saffron, cardamom, cinnamon, and cloves.</p>
-      <p><strong>🎨 Handiwork & Attire</strong></p>
-      <p>Look for Pashmina shawls, hand-knotted carpets, and the traditional Kashmiri pheran.</p>
-    </section>
+<body>
+
+  <header>
+    <h1>Kashmir: The Paradise on Earth</h1>
+  </header>
+
+  <section>
+    <h2>Welcome to Kashmir</h2>
+    <p>
+      Nestled in the lap of the Himalayas, <strong>Kashmir</strong> is rightly called the <em>Paradise on Earth</em>. With its snow-capped peaks, crystal-clear lakes, lush valleys, and charming houseboats, Kashmir offers an experience of serenity and beauty unlike anywhere else in the world.
+    </p>
+
+    <h2>Explore the Scenic Wonders</h2>
+    <p>
+      Begin your journey in <strong>Srinagar</strong>, famous for its <em>Dal Lake</em> and the iconic <em>Shikara rides</em>. Visit the <strong>Mughal Gardens</strong> — Shalimar Bagh and Nishat Bagh — to witness the timeless grandeur of nature and architecture.
+    </p>
+    <p>
+      Head to <strong>Gulmarg</strong>, a wonderland for adventure seekers and winter sports enthusiasts. Ride the world’s second-highest cable car, the <em>Gulmarg Gondola</em>, and witness breathtaking alpine views. In <strong>Pahalgam</strong>, stroll by the Lidder River or trek the scenic valleys. And for those seeking untouched beauty, <strong>Sonmarg</strong> — the Meadow of Gold — awaits.
+    </p>
+
+    <h2>Cultural Charm & Cuisine</h2>
+    <p>
+      Kashmir’s culture is as warm as its people. Experience the soothing aroma of <strong>Kashmiri Kahwa</strong>, taste the exquisite <em>Rogan Josh</em>, and explore vibrant handicraft markets filled with Pashmina shawls and intricate woodwork. The region’s Sufi traditions and poetic heritage add a soulful charm to every visit.
+    </p>
+
+    <h2>Why Travel with Sky Way Tours and Travels</h2>
+    <p>
+      At <strong>Sky Way Tours and Travels</strong>, we bring you the best of Kashmir with curated itineraries designed for comfort and wonder. Whether it’s a romantic honeymoon, a family getaway, or an adventure trip, our team ensures you experience the true essence of Kashmir — with seamless travel, personalized stays, and unforgettable memories.
+    </p>
+
+    <h2>Plan Your Kashmir Journey</h2>
+    <p>
+      From shimmering lakes to snow-laden valleys, Kashmir is more than just a destination — it’s a feeling. <br />
+      <strong>Contact Sky Way Tours and Travels</strong> today to plan your <strong>Kashmir tour package</strong> and explore heaven on earth like never before.
+    </p>
+  </section>
+
+  <footer>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../locations.html">Destinations</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact & Connect</h3>
+      <ul>
+        <li>📞 0496 299 69 29</li>
+        <li>📱 9496 369 777 | 9061 99 69 29</li>
+        <li>✉️ info@skywaytourandtravel.com</li>
+        <li>
+          <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="https://wa.me/919496369777" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    © 2025 Sky Way Tours and Travels. All Rights Reserved.
   </div>
 
-  <!-- Footer -->
-  <section class="footer">
-    <div class="footer-content">
-      <div class="footlinks">
-        <h4>Quick Links</h4>
-        <ul>
-          <a href="../index.html">Home</a>
-          <li><a href="../visa">Visa</a></li>
-          <li><a href="../locations">Locations</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li><a href="../contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footlinks">
-        <h4>Connect</h4>
-        <div class="social">
-          <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
-          <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
-          <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="end">
-      <p>Copyright © 2025 Sky Way Tours and Travels All Rights Reserved.</p>
-    </div>
-  </section>
-  
-  <!-- WhatsApp Floating Icon -->
-  <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class='bx bxl-whatsapp'></i>
-  </a>
-
-  
 </body>
 </html>
