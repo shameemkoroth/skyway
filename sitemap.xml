@@ -8,16 +8,9 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- About Page -->
+   <!-- Visa Page -->
   <url>
-    <loc>https://skywaytourandtravel.com/about-us</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Contact Page -->
-  <url>
-    <loc>https://skywaytourandtravel.com/contact-us</loc>
+    <loc>https://skywaytourandtravel.com/visa</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -26,6 +19,20 @@
   <url>
     <loc>https://skywaytourandtravel.com/locations</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://skywaytourandtravel.com/about</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://skywaytourandtravel.com/contact</loc>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
