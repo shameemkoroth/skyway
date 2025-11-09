@@ -193,5 +193,101 @@
     <i class='bx bxl-whatsapp'></i>
   </a>
 
+  <!-- Site QA Chatbot -->
+<div id="sitebot">
+  <div id="sitebot-window"></div>
+  <div id="sitebot-inputs">
+    <input id="sitebot-query" placeholder="Ask about visas, locations, services…" />
+    <button id="sitebot-send">Ask</button>
+  </div>
+</div>
+
+<style>
+#sitebot { position: fixed; right: 20px; bottom: 20px; width: 350px; height: 480px;
+  border: 1px solid #ddd; background: #fff; border-radius: 12px; display: flex;
+  flex-direction: column; box-shadow: 0 8px 30px rgba(0,0,0,.1); font: 14px/1.4 system-ui;}
+#sitebot-window { flex: 1; overflow-y: auto; padding: 12px; }
+#sitebot-inputs { display: flex; gap: 8px; padding: 8px; border-top: 1px solid #eee; }
+#sitebot-inputs input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+#sitebot-inputs button { padding: 10px 14px; border: 0; border-radius: 8px; background: #000; color: #fff; cursor: pointer; }
+.bot, .user { margin: 8px 0; padding: 10px 12px; border-radius: 8px; }
+.user { background: #eef5ff; margin-left: 40px; }
+.bot { background: #f6f6f6; margin-right: 40px; }
+.bot small { display:block; opacity:.7; margin-top:6px; }
+</style>
+
+<script>
+(async function(){
+  // Point to your uploaded files:
+  const PAGES_URL = "/assets/search/site_pages.json";
+  const VECS_URL  = "/assets/search/site_embeddings.json";
+
+  const pages = await fetch(PAGES_URL).then(r=>r.json());
+  const vecs  = await fetch(VECS_URL).then(r=>r.json());
+
+  function addMsg(html, who="bot"){
+    const w = document.getElementById("sitebot-window");
+    const b = document.createElement("div");
+    b.className = who; b.innerHTML = html;
+    w.appendChild(b); w.scrollTop = w.scrollHeight;
+  }
+  function dot(a,b){ let s=0; for(let i=0;i<a.length;i++) s+=a[i]*b[i]; return s; }
+
+  // Lightweight query embedding fallback (works without any API)
+  function textVecFromAnchors(q){
+    const anchors = [];
+    for (let i=0;i<Math.min(200, pages.length); i++){
+      const c = pages[i];
+      const hit = c.content.toLowerCase().includes(q.toLowerCase().split(/\W+/)[0]||"") ? 1 : 0;
+      anchors.push([hit, i]);
+    }
+    anchors.sort((a,b)=>b[0]-a[0]);
+    const idxs = anchors.slice(0,5).map(a=>a[1]);
+    if(!idxs.length) return null;
+    const out = new Array(vecs[0].length).fill(0);
+    idxs.forEach(i=>{ const e = vecs[i]; for(let k=0;k<e.length;k++) out[k]+=e[k]; });
+    const n = Math.sqrt(out.reduce((s,x)=>s+x*x,0)) || 1;
+    for(let k=0;k<out.length;k++) out[k]/=n;
+    return out;
+  }
+
+  async function answer(q){
+    addMsg(q, "user");
+    const qv = textVecFromAnchors(q);
+    let scored = [];
+    if(qv){
+      for (let i=0;i<vecs.length;i++) scored.push([dot(qv, vecs[i]), i]);
+      scored.sort((a,b)=>b[0]-a[0]);
+    } else {
+      scored = pages.map((p,i)=>[p.content.length, i]).sort((a,b)=>b[0]-a[0]);
+    }
+    const picks = scored.slice(0,5).map(x=>x[1]);
+    const hits = picks.map(i=>pages[i]);
+
+    let out = `<div><strong>Answer from the site:</strong><br>`;
+    hits.forEach(h=>{
+      const snippet = h.content.slice(0, 350).replace(/\n+/g,' ').trim();
+      out += `<div style="margin:8px 0;padding:8px;border-left:3px solid #ddd">
+                ${snippet}…<br>
+                <small>Source: <a href="${h.url}" target="_blank">${h.title||h.url}</a></small>
+              </div>`;
+    });
+    out += `</div>`;
+    addMsg(out, "bot");
+  }
+
+  document.getElementById("sitebot-send").addEventListener("click", ()=>{
+    const q = document.getElementById("sitebot-query").value.trim();
+    if(q) answer(q);
+  });
+  document.getElementById("sitebot-query").addEventListener("keydown", (e)=>{
+    if(e.key==="Enter"){ document.getElementById("sitebot-send").click(); }
+  });
+
+  addMsg("Hi! Ask me anything about Sky Way Tours & Travels. I’ll search all pages and cite sources.");
+})();
+</script>
+
+
 </body>
 </html>
