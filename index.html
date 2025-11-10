@@ -91,21 +91,32 @@
     /* WhatsApp Floating Icon */
     .whatsapp-float {
       position: fixed;
-      bottom: 20px; /* Adjust to appear above footer */
+      bottom: 20px;
       left: 20px;
       background-color: #25D366;
       color: white;
-      font-size: 36px;
-      padding: 12px;
+      font-size: 22px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 50%;
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
+      text-decoration: none !important; /* remove underline */
+    }
+    
+    .whatsapp-float i {
+      display: block;
+      text-decoration: none !important;
     }
     
     .whatsapp-float:hover {
       background-color: #128C7E;
     }
+
 
 
     @media(max-width:768px){
