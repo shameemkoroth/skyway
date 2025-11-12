@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skyway Tours & Travels — Flights, Visas, Tours, Hajj & Umrah, Bus & Train</title>
+  <meta name="description" content="Skyway Tours & Travels — flight booking, visa services, curated tour packages, Hajj & Umrah packages, bus & train booking. Best travels in Kerala, Nadapuram & Kozhikode." />
+  <meta name="keywords" content="Skyway Tours, travel agency, flights, visas, tour packages, Hajj Umrah, bus booking, train booking, Kozhikode, Calicut, Kerala" />
+  <meta name="theme-color" content="#0b6efd" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="Skyway Tours & Travels" />
+  <meta property="og:description" content="Flight booking, visa services, tour packages and Hajj & Umrah packages — Skyway Tours & Travels." />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Skyway+Tours+%26+Travels" />
+  <meta property="og:url" content="https://skywaytourandtravel.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0b6efd;
+      --muted:#6b7280;
+      --bg:#f7f9fc;
+      --card:#fff;
+      --radius:14px;
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+      padding-bottom:60px;
+    }
+
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px;}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0a84ff);
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:18px;
+      box-shadow: 0 6px 18px rgba(11,110,253,0.16);
+    }
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+    nav a.primary{background:linear-gradient(90deg,var(--accent),#0066ff);color:white;}
+    .cta{background:transparent;border:1px solid rgba(11,110,253,0.12);padding:8px 12px;border-radius:10px;color:var(--accent);font-weight:600}
+
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:18px 0 36px;
+    }
+    .hero-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9));
+      padding:28px;border-radius:18px;box-shadow: 0 10px 30px rgba(13,28,55,0.06);
+    }
+    .hero h1{margin:0;font-size:32px;line-height:1.02}
+    .hero p{color:var(--muted);margin:12px 0 18px}
+
+    /* Search form */
+    .search{
+      background:var(--card);padding:14px;border-radius:12px;display:grid;gap:8px;
+      grid-template-columns:repeat(2,1fr);
+      align-items:center;
+    }
+    .field{display:flex;flex-direction:column}
+    .field label{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .field input,.field select{padding:10px 12px;border-radius:10px;border:1px solid #e6e9ee;font-weight:600}
+    .search .col-full{grid-column:1/-1;display:flex;gap:8px}
+    .btn-search{background:linear-gradient(90deg,var(--accent),#0066ff);color:white;border:none;padding:12px;border-radius:10px;font-weight:700;cursor:pointer;flex:1}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+    .service{background:var(--card);padding:18px;border-radius:14px;box-shadow: 0 6px 18px rgba(12,34,56,0.04);display:flex;gap:12px;align-items:center}
+    .ico{width:56px;height:56px;border-radius:12px;background:linear-gradient(180deg,#fff,rgba(11,110,253,0.05));display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent);font-weight:700}
+
+    /* Packages */
+    .packages{margin:18px 0}
+    .pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .pack{background:var(--card);border-radius:12px;padding:14px;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+    .pack img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+    .price{margin-left:auto;background:rgba(11,110,253,0.08);color:var(--accent);padding:8px;border-radius:10px;font-weight:700}
+
+    /* Two-column long sections */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;margin:18px 0}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow: 0 6px 18px rgba(12,34,56,0.04)}
+
+    /* Footer */
+    footer{margin-top:30px;padding:28px 0;color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;align-items:start}
+    .socials{display:flex;gap:10px;margin-top:10px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .pack-grid{grid-template-columns:repeat(2,1fr)}
+      .split{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    @media (max-width:600px){
+      .services{grid-template-columns:1fr}
+      .pack-grid{grid-template-columns:1fr}
+      .logo{width:48px;height:48px;font-size:16px}
+    }
+
+    /* small utility */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(9,9,9,0.04);font-weight:700}
+    .center{text-align:center}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .btn{padding:10px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#" aria-label="Skyway Tours & Travels home">
+        <div class="logo" aria-hidden="true">ST</div>
+        <div>
+          <div style="font-weight:800">Skyway Tours & Travels</div>
+          <div style="font-size:12px;color:var(--muted)">We craft journeys you'll remember</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#flights">Flights</a>
+        <a href="#visas">Visa</a>
+        <a href="#packages">Tour Packages</a>
+        <a href="#hajj">Hajj & Umrah</a>
+        <a href="#bus-train">Bus & Train</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card" aria-labelledby="hero-title">
+        <h1 id="hero-title">Explore the world with Skyway — Book flights, visas & curated packages</h1>
+        <p>Easy flight & bus/train booking, trusted visa assistance, handpicked tour packages and complete Hajj & Umrah services. Local offices in Calicut and Nadapuram.</p>
+
+        <!-- Quick search / booking -->
+        <div style="margin-top:12px">
+          <div class="search" role="search" aria-label="Quick booking">
+            <div class="field">
+              <label for="from">From</label>
+              <input id="from" placeholder="City or airport (e.g. Calicut, COK)" />
+            </div>
+            <div class="field">
+              <label for="to">To</label>
+              <input id="to" placeholder="Destination (e.g. Dubai, DXB)" />
+            </div>
+
+            <div class="field">
+              <label for="depart">Depart</label>
+              <input id="depart" type="date" />
+            </div>
+            <div class="field">
+              <label for="return">Return</label>
+              <input id="return" type="date" />
+            </div>
+
+            <div class="col-full">
+              <div style="display:flex;gap:8px;flex:1">
+                <select id="type" style="border-radius:10px;padding:10px 12px;">
+                  <option value="oneway">One way</option>
+                  <option value="round">Round trip</option>
+                  <option value="multi">Multi-city</option>
+                </select>
+                <select id="passengers" style="border-radius:10px;padding:10px 12px;">
+                  <option>1 passenger</option>
+                  <option>2 passengers</option>
+                  <option>3 passengers</option>
+                  <option>4+ passengers</option>
+                </select>
+                <button class="btn-search" onclick="openBooking('flight')">Search flights</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
+          <div class="pill">Trusted since 2005</div>
+          <div class="muted" style="font-weight:700">Local offices in Kozhikode & Nadapuram</div>
+        </div>
+      </div>
+
+      <!-- Right side quick links -->
+      <aside>
+        <div class="card" style="border-radius:18px;">
+          <h3 style="margin:0 0 8px">Services</h3>
+          <ul style="padding-left:16px;margin:0;color:var(--muted);line-height:1.8">
+            <li>Flight booking & ticketing</li>
+            <li>Visa consultancy & processing</li>
+            <li>Domestic & international tour packages</li>
+            <li>Hajj & Umrah complete packages</li>
+            <li>Bus & train reservations</li>
+          </ul>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="btn" style="background:var(--accent);color:white" onclick="openBooking('visa')">Apply for Visa</button>
+            <button class="btn" style="border:1px solid rgba(0,0,0,0.08)" onclick="scrollToId('packages')">View Packages</button>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px">Need help right away?</h4>
+          <div class="muted">Call: <strong>+91 98765 43210</strong></div>
+          <div class="muted" style="margin-top:8px">Email: <a href="mailto:info@skywaytourandtravel.com">info@skywaytourandtravel.com</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SERVICES -->
+    <section aria-labelledby="services" >
+      <h2 id="services">Our Core Services</h2>
+      <div class="services" role="list">
+        <div class="service" role="listitem">
+          <div class="ico">✈️</div>
+          <div>
+            <div style="font-weight:800">Flight Booking</div>
+            <div class="muted" style="font-size:13px">Domestic & international tickets with fare comparison.</div>
+          </div>
+        </div>
+
+        <div class="service" role="listitem">
+          <div class="ico">🛂</div>
+          <div>
+            <div style="font-weight:800">Visa Services</div>
+            <div class="muted" style="font-size:13px">Visa evaluation, document prep & embassy submissions.</div>
+          </div>
+        </div>
+
+        <div class="service" role="listitem">
+          <div class="ico">🗺️</div>
+          <div>
+            <div style="font-weight:800">Tour Packages</div>
+            <div class="muted" style="font-size:13px">Custom leisure, family & corporate packages across India & abroad.</div>
+          </div>
+        </div>
+
+        <div class="service" role="listitem">
+          <div class="ico">🕋</div>
+          <div>
+            <div style="font-weight:800">Hajj & Umrah</div>
+            <div class="muted" style="font-size:13px">Full-service packages: visas, hotels, transportation & guidance.</div>
+          </div>
+        </div>
+
+        <div class="service" role="listitem">
+          <div class="ico">🚌</div>
+          <div>
+            <div style="font-weight:800">Bus Booking</div>
+            <div class="muted" style="font-size:13px">Intercity bus bookings, seat selection & group rates.</div>
+          </div>
+        </div>
+
+        <div class="service" role="listitem">
+          <div class="ico">🚆</div>
+          <div>
+            <div style="font-weight:800">Train Booking</div>
+            <div class="muted" style="font-size:13px">PNR checks, Tatkal booking support and e-tickets assistance.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" class="packages" aria-labelledby="packages-title">
+      <h2 id="packages-title">Popular Tour Packages</h2>
+      <div class="pack-grid">
+        <!-- Package 1 -->
+        <article class="pack" aria-labelledby="pack1">
+          <img src="https://via.placeholder.com/600x400.png?text=Kerala+Backwaters" alt="Kerala Backwaters" />
+          <div style="display:flex;align-items:center;gap:10px">
+            <div>
+              <div id="pack1" style="font-weight:800">Kerala Backwaters — 5 nights</div>
+              <div class="muted" style="font-size:13px">Houseboat stay, local sightseeing & traditional meals</div>
+            </div>
+            <div class="price">₹18,499</div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" style="background:var(--accent);color:white" onclick="openPackage('Kerala Backwaters')">Book now</button>
+            <button class="btn" onclick="openPackage('Kerala Backwaters', true)">View details</button>
+          </div>
+        </article>
+
+        <!-- Package 2 -->
+        <article class="pack" aria-labelledby="pack2">
+          <img src="https://via.placeholder.com/600x400.png?text=Golden+Triangle+Delhi+Agra+Jaipur" alt="Golden Triangle" />
+          <div style="display:flex;align-items:center;gap:10px">
+            <div>
+              <div id="pack2" style="font-weight:800">Golden Triangle — 4 nights</div>
+              <div class="muted" style="font-size:13px">Delhi, Agra (Taj Mahal) & Jaipur with guide</div>
+            </div>
+            <div class="price">₹22,999</div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" style="background:var(--accent);color:white" onclick="openPackage('Golden Triangle')">Book now</button>
+            <button class="btn" onclick="openPackage('Golden Triangle', true)">View details</button>
+          </div>
+        </article>
+
+        <!-- Package 3 -->
+        <article class="pack" aria-labelledby="pack3">
+          <img src="https://via.placeholder.com/600x400.png?text=Dubai+Getaway" alt="Dubai" />
+          <div style="display:flex;align-items:center;gap:10px">
+            <div>
+              <div id="pack3" style="font-weight:800">Dubai Getaway — 3 nights</div>
+              <div class="muted" style="font-size:13px">City tour, desert safari & Marina dinner cruise</div>
+            </div>
+            <div class="price">₹25,499</div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" style="background:var(--accent);color:white" onclick="openPackage('Dubai Getaway')">Book now</button>
+            <button class="btn" onclick="openPackage('Dubai Getaway', true)">View details</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Hajj & Umrah -->
+    <section id="hajj" class="split" aria-labelledby="hajj-title">
+      <div class="card">
+        <h3 id="hajj-title">Hajj & Umrah Packages</h3>
+        <p class="muted">Comprehensive packages including visa processing, flights, transportation, hotels, and guided religious services. We provide tailored group packages and individual arrangements with trusted Saudi partners.</p>
+        <ul style="padding-left:16px;color:var(--muted)">
+          <li>Managed group departures with experienced guides</li>
+          <li>Ziyarah options and halal-certified hotels</li>
+          <li>Transparent pricing and installment plans</li>
+        </ul>
+        <div style="margin-top:12px">
+          <button class="btn" style="background:var(--accent);color:white" onclick="openBooking('hajj')">Enquire Hajj Packages</button>
+          <button class="btn" onclick="openBooking('umrah')">Enquire Umrah</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>What we include</h4>
+        <div class="muted">Flight + Visa + Accommodation + Local Transport + Religious Guidance + 24/7 Support</div>
+
+        <div style="margin-top:14px;display:flex;gap:8px">
+          <div style="flex:1">
+            <label class="muted" style="font-size:13px">Preferred month</label>
+            <select style="width:100%;padding:10px;border-radius:10px">
+              <option>Ramadan</option>
+              <option>Shawwal</option>
+              <option>Zul Hijjah</option>
+              <option>Anytime (Umrah)</option>
+            </select>
+          </div>
+          <div style="width:160px">
+            <label class="muted" style="font-size:13px">Travellers</label>
+            <input type="number" min="1" value="2" style="width:100%;padding:10px;border-radius:10px" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISA -->
+    <section id="visas" class="card" style="margin:18px 0" aria-labelledby="visa-title">
+      <h2 id="visa-title">Visa Services</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
+        <div>
+          <p class="muted">We assist with Tourist, Business, Employment & Transit visas. Our visa team reviews documents, fills forms, and advises on embassy appointments. We also offer E-visa application support where available.</p>
+
+          <h4>How it works</h4>
+          <ol class="muted">
+            <li>Choose visa type & country</li>
+            <li>Upload documents & pay service fee</li>
+            <li>We prepare application and track the process</li>
+            <li>Receive visa & travel instructions</li>
+          </ol>
+
+          <div style="margin-top:12px">
+            <button class="btn" style="background:var(--accent);color:white" onclick="openBooking('visa')">Start visa application</button>
+            <button class="btn" onclick="scrollToId('contact')">Contact Visa Team</button>
+          </div>
+        </div>
+
+        <aside>
+          <div style="padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff)">
+            <div style="font-weight:800">Quick Visa Checker</div>
+            <p class="muted" style="font-size:13px">Choose country & visa type to see documents required.</p>
+            <select id="visaCountry" style="width:100%;padding:10px;border-radius:10px;margin-bottom:8px">
+              <option>United Arab Emirates</option>
+              <option>Saudi Arabia</option>
+              <option>United Kingdom</option>
+              <option>Schengen (Europe)</option>
+              <option>Malaysia</option>
+            </select>
+            <select id="visaType" style="width:100%;padding:10px;border-radius:10px;margin-bottom:8px">
+              <option>Tourist</option>
+              <option>Business</option>
+              <option>Employment</option>
+              <option>Transit</option>
+            </select>
+            <button class="btn" onclick="alert('Our team will contact you with visa checklist for selected country.')" style="width:100%;background:var(--accent);color:white">Check</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- BUS & TRAIN -->
+    <section id="bus-train" class="split" aria-labelledby="transport-title">
+      <div class="card">
+        <h3 id="transport-title">Bus & Train Booking</h3>
+        <p class="muted">We support bus bookings for popular operators and assist with train reservations, PNR checks and Tatkal guidance. Ideal for domestic travel within Kerala and inter-state routes.</p>
+
+        <div style="margin-top:12px" class="grid-2">
+          <div style="background:rgba(11,110,253,0.04);padding:12px;border-radius:12px">
+            <div style="font-weight:800">Bus Booking</div>
+            <div class="muted" style="font-size:13px">Seat selection, group discounts & charter bus arrangements.</div>
+            <div style="margin-top:8px">
+              <button class="btn" style="background:var(--accent);color:white" onclick="openBooking('bus')">Book Bus</button>
+            </div>
+          </div>
+
+          <div style="background:rgba(0,0,0,0.03);padding:12px;border-radius:12px">
+            <div style="font-weight:800">Train Booking</div>
+            <div class="muted" style="font-size:13px">PNR help, quota checks & booking assistance.</div>
+            <div style="margin-top:8px">
+              <button class="btn" onclick="openBooking('train')">Book Train</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Group & Corporate travel</h4>
+        <p class="muted">Need travel for a corporate team or school trip? We provide coordinated transport, lodging and on-ground support with a single point of contact.</p>
+        <div style="margin-top:12px">
+          <button class="btn" style="background:var(--accent);color:white" onclick="scrollToId('contact')">Request Group Quote</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card" style="margin-top:18px">
+      <h2>Contact & Office</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div>
+          <p class="muted">Visit our office or send a message — our team replies within 1 business day.</p>
+
+          <form id="contactForm" onsubmit="submitContact(event)" style="display:grid;gap:8px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <input id="cname" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee" />
+              <input id="cphone" placeholder="Phone or WhatsApp" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee" />
+            </div>
+            <input id="cemail" type="email" placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid #e6e9ee" />
+            <textarea id="cmessage" placeholder="How can we help you?" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6e9ee"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn" style="background:var(--accent);color:white" type="submit">Send Message</button>
+              <button class="btn" type="button" onclick="location.href='mailto:info@skywaytourandtravel.com'">Email</button>
+            </div>
+          </form>
+        </div>
+
+        <aside>
+          <div style="padding:12px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);">
+            <div style="font-weight:800">Office (Kozhikode)</div>
+            <div class="muted" style="margin-top:6px">123, MG Road, Kozhikode, Kerala</div>
+            <div class="muted" style="margin-top:6px">Phone: +91 98765 43210</div>
+
+            <div style="margin-top:12px">
+              <div style="font-weight:800">Working hours</div>
+              <div class="muted">Mon–Sat: 9:00 AM — 7:00 PM</div>
+              <div class="muted">Sun: By appointment</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div style="font-weight:800">Skyway Tours & Travels</div>
+          <div class="small">Trusted travel partner — flights, visas, packages & Hajj/Umrah</div>
+          <div class="socials">
+            <a href="#" aria-label="facebook">🔵</a>
+            <a href="#" aria-label="instagram">📸</a>
+            <a href="#" aria-label="whatsapp">💬</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:800">Quick links</div>
+          <div class="small" style="margin-top:8px">
+            <div><a href="#flights">Flights</a></div>
+            <div><a href="#visas">Visa</a></div>
+            <div><a href="#packages">Packages</a></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:800">Newsletter</div>
+          <div class="small" style="margin-top:8px">Get travel deals & offers</div>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <input id="nl" placeholder="Your email" style="padding:8px;border-radius:8px;border:1px solid #e6e9ee" />
+            <button class="btn" onclick="subscribeNews()">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="small">© <span id="year"></span> Skyway Tours & Travels — All rights reserved.</div>
+    </footer>
+  </div>
+
+  <!-- Booking modal (simple) -->
+  <div id="modal" role="dialog" aria-hidden="true" style="display:none;position:fixed;inset:0;background:rgba(2,6,23,0.5);backdrop-filter:blur(2px);align-items:center;justify-content:center;z-index:50">
+    <div style="width:960px;max-width:94%;background:white;border-radius:14px;padding:18px;box-shadow:0 30px 80px rgba(2,6,23,0.6);">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="font-weight:800" id="modalTitle">Booking</div>
+        <button onclick="closeModal()" style="background:none;border:none;font-size:20px;cursor:pointer">✖</button>
+      </div>
+      <div id="modalBody" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <script>
+    // small helpers & interactions
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openBooking(type){
+      const modal = document.getElementById('modal');
+      document.getElementById('modalTitle').textContent = (type || 'Booking').toUpperCase();
+      const mb = document.getElementById('modalBody');
+      if(type === 'visa'){
+        mb.innerHTML = `<p class="muted">Visa request received. Please provide details below and we'll contact you within 24 hours.</p>
+          <form onsubmit="submitBooking(event, 'visa')">
+            <input id="vname" placeholder="Full name" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%" />
+            <input id="vphone" placeholder="Phone" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%" />
+            <select id="vcountry" style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;width:100%">
+              <option>United Arab Emirates</option>
+              <option>Saudi Arabia</option>
+              <option>Schengen (Europe)</option>
+              <option>United Kingdom</option>
+            </select>
+            <div style="display:flex;gap:8px">
+              <button class="btn" style="background:var(--accent);color:white" type="submit">Submit</button>
+              <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+            </div>
+          </form>`;
+      } else if(type === 'flight'){
+        mb.innerHTML = `<p class="muted">We can search flights and send best fares. Provide travel details below.</p>
+          <form onsubmit="submitBooking(event, 'flight')">
+            <input placeholder="From (city/airport)" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <input placeholder="To (city/airport)" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <div style="display:flex;gap:8px">
+              <input type="date" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;flex:1" />
+              <input type="date" style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;flex:1" />
+            </div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn" style="background:var(--accent);color:white" type="submit">Request quotes</button>
+              <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+            </div>
+          </form>`;
+      } else if(type === 'bus' || type === 'train'){
+        mb.innerHTML = `<p class="muted">Provide travel route & date. We'll confirm booking options and fares.</p>
+          <form onsubmit="submitBooking(event,'${type}')">
+            <input placeholder="From" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <input placeholder="To" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <input type="date" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;display:block;width:100%;margin-bottom:8px"/>
+            <div style="display:flex;gap:8px">
+              <button class="btn" style="background:var(--accent);color:white" type="submit">Check options</button>
+              <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+            </div>
+          </form>`;
+      } else if(type === 'hajj' || type === 'umrah'){
+        mb.innerHTML = `<p class="muted">Tell us preferred dates and number of pilgrims. We'll send a detailed itinerary & price.</p>
+          <form onsubmit="submitBooking(event,'${type}')">
+            <input placeholder="Contact name" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <input placeholder="Phone or WhatsApp" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <input type="number" min="1" value="2" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;display:block;width:100%;margin-bottom:8px"/>
+            <div style="display:flex;gap:8px">
+              <button class="btn" style="background:var(--accent);color:white" type="submit">Enquire</button>
+              <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+            </div>
+          </form>`;
+      } else {
+        mb.innerHTML = `<p class="muted">Tell us what you need and we'll get back with options.</p>
+          <form onsubmit="submitBooking(event,'general')">
+            <input placeholder="Name" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <input placeholder="Phone" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%"/>
+            <textarea placeholder="Message" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;display:block;width:100%;margin-bottom:8px"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn" style="background:var(--accent);color:white" type="submit">Send</button>
+              <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+            </div>
+          </form>`;
+      }
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden','false');
+    }
+
+    function closeModal(){ const m = document.getElementById('modal'); m.style.display='none'; m.setAttribute('aria-hidden','true'); }
+
+    function submitBooking(e, type){
+      e.preventDefault();
+      // In a production site you'd send this to your backend via fetch().
+      closeModal();
+      alert('Thanks — your ' + (type || 'request') + ' has been received. Our team will contact you soon.');
+    }
+
+    function submitContact(e){
+      e.preventDefault();
+      // collect values (demo only)
+      const name = document.getElementById('cname').value || 'Guest';
+      closeModal(); // ensure modal closed if any
+      alert('Thanks ' + name + '. We received your message and will respond within 1 business day.');
+      // In production: send via fetch to your server or 3rd-party form service
+    }
+
+    function openPackage(name, details){
+      openBooking(); // open generic modal
+      document.getElementById('modalTitle').textContent = name;
+      document.getElementById('modalBody').innerHTML = `<p class="muted">You chose <strong>${name}</strong>. Enter contact details and preferred date to get the best offer.</p>
+        <form onsubmit="submitBooking(event,'package')">
+          <input placeholder="Full name" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%" />
+          <input placeholder="Phone" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%" />
+          <input type="date" style="padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;display:block;width:100%" />
+          <div style="display:flex;gap:8px">
+            <button class="btn" style="background:var(--accent);color:white" type="submit">Request booking</button>
+            <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+          </div>
+        </form>`;
+    }
+
+    function scrollToId(id){
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    function subscribeNews(){
+      const email = document.getElementById('nl').value || '';
+      if(!email.includes('@')) return alert('Please enter a valid email.');
+      alert('Thanks — subscribed: ' + email);
+    }
+  </script>
+
+  <!-- Structured data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TravelAgency",
+    "name":"Skyway Tours & Travels",
+    "url":"https://skywaytourandtravel.com/",
+    "logo":"https://via.placeholder.com/400x200.png?text=Skyway+Tours+%26+Travels",
+    "description":"Flight booking, visa services, tour packages, Hajj & Umrah packages and bus & train booking.",
+    "telephone":"+919876543210",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"123, MG Road",
+      "addressLocality":"Kozhikode",
+      "addressRegion":"Kerala",
+      "postalCode":"673001",
+      "addressCountry":"IN"
+    },
+    "sameAs":[]
+  }
+  </script>
+</body>
+</html>
