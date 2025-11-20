@@ -56,47 +56,168 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg h-screen flex items-center justify-center text-white pt-16">
-        <div class="text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore the World with Sky Way</h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-200">Your journey begins here. Best deals on flights and packages.</p>
-            <a href="#contact" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
-                Plan Your Trip
+    <section id="home" class="hero-bg h-[600px] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Your Gateway to Global Adventures</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90">From the backwaters of Kerala to the skylines of Dubai, we make every journey unforgettable.</p>
+            <a href="#destinations" class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-8 rounded-full font-semibold text-lg transition duration-300 shadow-lg transform hover:scale-105 inline-block">
+                Explore Packages
             </a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900">Our Services</h2>
-                <p class="mt-4 text-gray-600">Comprehensive travel solutions tailored for you.</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to Skyway Tour and Travel</h2>
+                <div class="w-20 h-1 bg-sky-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">
+                    At <strong>Skyway Tour and Travel</strong>, we believe that travel is not just about going to a place; it's about the memories you create. Whether you are looking for a serene getaway in Manali, a cultural immersion in Rajasthan, or an exotic international vacation, we are your trusted partner.
+                </p>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 border rounded-xl hover:shadow-xl transition bg-gray-50 group">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-sliders text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Customized Packages</h3>
+                    <p class="text-sm text-gray-500">Tours designed specifically around your budget and interests.</p>
+                </div>
+                <div class="text-center p-6 border rounded-xl hover:shadow-xl transition bg-gray-50 group">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-globe text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Global Reach</h3>
+                    <p class="text-sm text-gray-500">Expertise in both Indian and International destinations.</p>
+                </div>
+                <div class="text-center p-6 border rounded-xl hover:shadow-xl transition bg-gray-50 group">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-passport text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Visa Assistance</h3>
+                    <p class="text-sm text-gray-500">Hassle-free documentation for seamless travel.</p>
+                </div>
+                <div class="text-center p-6 border rounded-xl hover:shadow-xl transition bg-gray-50 group">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">24/7 Support</h3>
+                    <p class="text-sm text-gray-500">Dedicated customer service to assist you at every step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition border border-gray-100">
-                    <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-plane text-sky-600 text-xl"></i>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Resort" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Hotel & Resort Booking</h3>
+                        <p class="text-gray-600 text-sm">From budget-friendly homestays to luxury 5-star resorts, we ensure your stay is comfortable and safe.</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Flight Booking</h3>
-                    <p class="text-gray-600">Domestic and International flight tickets at best competitive rates.</p>
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition border border-gray-100">
-                    <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-passport text-sky-600 text-xl"></i>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flight" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Flight Booking</h3>
+                        <p class="text-gray-600 text-sm">Get the best deals on domestic and international flights with the most convenient routes.</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Visa Assistance</h3>
-                    <p class="text-gray-600">Hassle-free visa documentation and processing support for all countries.</p>
                 </div>
                 <!-- Service 3 -->
-                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition border border-gray-100">
-                    <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-umbrella-beach text-sky-600 text-xl"></i>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car Rental" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Car Rentals & Transfers</h3>
+                        <p class="text-gray-600 text-sm">Safe and reliable cab services for airport transfers, local sightseeing, and outstation trips.</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Holiday Packages</h3>
-                    <p class="text-gray-600">Customized tour packages for families, honeymooners, and groups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Top Destinations</h2>
+                <p class="text-gray-600 mt-2">Handpicked domestic and international getaways</p>
+            </div>
+
+            <!-- Domestic -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-sky-600 mb-6 border-l-4 border-sky-600 pl-3">Incredible India</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Kerala -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kerala" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Kerala</h4>
+                            <p class="text-gray-200 text-sm">God's Own Country</p>
+                        </div>
+                    </div>
+                    <!-- Himachal -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Himachal" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Himachal</h4>
+                            <p class="text-gray-200 text-sm">Shimla & Manali</p>
+                        </div>
+                    </div>
+                    <!-- Karnataka -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1582505796353-a49942f7215c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Karnataka" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Karnataka</h4>
+                            <p class="text-gray-200 text-sm">Mysore & Coorg</p>
+                        </div>
+                    </div>
+                    <!-- Goa -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Goa" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Goa</h4>
+                            <p class="text-gray-200 text-sm">Beaches & Nightlife</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International -->
+            <div>
+                <h3 class="text-2xl font-semibold text-sky-600 mb-6 border-l-4 border-sky-600 pl-3">International Getaways</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Dubai -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea932a23644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dubai" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Dubai & UAE</h4>
+                            <p class="text-gray-200 text-sm">City of Gold</p>
+                        </div>
+                    </div>
+                    <!-- Singapore -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1565963035038-3122cdf28b71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Singapore" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Singapore</h4>
+                            <p class="text-gray-200 text-sm">Modern Asia</p>
+                        </div>
+                    </div>
+                    <!-- Europe -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1499856871940-a09627c6dcf6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paris" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Europe</h4>
+                            <p class="text-gray-200 text-sm">History & Romance</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
