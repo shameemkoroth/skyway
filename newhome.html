@@ -2,75 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Sky Way Tours & Travels — Trusted travel, visa & holiday planning</title>
   <meta name="description" content="Sky Way Tours & Travels — Flight booking, hotel reservations, visa assistance and curated tour packages from Kerala. Fast service, transparent pricing, 24/7 support." />
   <meta name="keywords" content="travel agency kerala, flight booking kerala, visa assistance kerala, tours in kerala, sky way tours" />
   <link rel="canonical" href="https://skywaytourandtravel.com/" />
-  <!-- Favicon (replace files/favicon.ico with your favicon file) -->
+  <!-- Favicon -->
   <link rel="icon" href="/files/favicon.ico" type="image/x-icon" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --brand-blue: #1A73E8; /* primary */
-      --accent: #FF8A00;     /* accent */
-      --bg: #ffffff;
+      --brand-blue:#1A73E8;
+      --accent:#FF8A00;
+      --bg:#ffffff;
       --muted:#6b7280;
-      --max-width:1100px;
-      --radius:10px;
-      --gap:18px;
+      --text:#0f1724;
+      --max-width:1120px;
+      --radius:12px;
+      --gap:16px;
+      --touch:48px; /* minimum touch size */
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Roboto,system-ui,Segoe UI,Arial;background:var(--bg);color:#0f1724;line-height:1.45}
+    html,body{height:100%;margin:0;padding:0;font-family:Roboto,system-ui,Segoe UI,Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
     a{color:var(--brand-blue);text-decoration:none}
-    .container{max-width:var(--max-width);margin:0 auto;padding:22px}
-    /* Header */
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:var(--max-width);margin:0 auto;padding:18px;}
+
+/* Header - mobile friendly */
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;position:relative}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:46px;width:auto}
-    nav{display:flex;gap:14px;align-items:center}
-    .btn-primary{background:var(--brand-blue);color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;display:inline-block}
-    .btn-ghost{border:1px solid #e6e9ef;padding:8px 12px;border-radius:8px}
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr;gap:20px;padding:28px 0;align-items:center}
-    .hero-grid{display:flex;flex-direction:column;gap:18px}
-    .hero h1{font-family:Poppins, sans-serif;font-size:28px;margin:0;color:#04263b}
-    .hero p.lead{color:var(--muted);margin:0 0 8px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .hero-illustration{width:100%;border-radius:12px;overflow:hidden}
-    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-    .card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(10,20,40,0.06);text-align:left}
-    .card h3{margin:8px 0 6px;font-size:16px}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-    /* Why choose */
-    .why{display:flex;gap:18px;margin:28px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg,#f8fbff, #ffffff)}
-    .why li{list-style:none;margin-bottom:8px;color:var(--muted)}
-    /* Testimonials & footer */
-    .testimonials{margin:22px 0}
-    footer{border-top:1px solid #eef2f6;padding:18px 0;margin-top:28px;color:var(--muted)}
-    .footer-grid{display:grid;grid-template-columns:1fr 220px;gap:18px;align-items:start}
-    /* Responsive */
-    @media(min-width:860px){
-      .hero{grid-template-columns:1fr 460px}
-      .card-grid{grid-template-columns:repeat(3,1fr)}
-    }
-    @media(max-width:860px){
-      .card-grid{grid-template-columns:repeat(2,1fr)}
-      .footer-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:520px){
-      .card-grid{grid-template-columns:1fr}
-      header{gap:8px}
-      .hero h1{font-size:22px}
-      .brand img{height:40px}
-    }
-    /* small helper */
+    .brand img{height:44px;width:auto}
+    .brand .name{font-weight:600;font-size:15px}
+    .hamburger{display:flex;align-items:center;gap:8px}
+    .hamburger button{background:transparent;border:0;padding:8px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px}
+    .menu{position:absolute;top:64px;right:18px;background:white;border-radius:12px;box-shadow:0 8px 24px rgba(6,18,49,0.12);overflow:hidden;display:none;min-width:200px}
+    .menu a{display:block;padding:12px 14px;border-bottom:1px solid #f1f5f9;color:var(--text)}
+    .menu a:last-child{border-bottom:0}
+    .header-contact{display:none}
+
+/* Hero - stacked for mobile */
+    .hero{display:grid;grid-template-columns:1fr;gap:14px;padding:12px 0 6px;align-items:start}
+    .hero h1{font-family:Poppins, sans-serif;font-size:22px;margin:0;line-height:1.12;color:#04263b}
+    .lead{color:var(--muted);margin:6px 0 0;font-size:15px}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 14px;border-radius:10px;font-weight:600;min-height:44px}
+    .btn-primary{background:var(--brand-blue);color:#fff;border:0}
+    .btn-ghost{background:transparent;border:1px solid #e6e9ef;color:var(--text)}
+    .card-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(10,20,40,0.04)}
+    .card h3{margin:0 0 6px;font-size:15px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+
+/* Services and why */
+    section h2{font-family:Poppins, sans-serif;font-size:18px;margin:0 0 8px}
+    .services-grid{display:grid;grid-template-columns:1fr;gap:10px}
+    .why{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(90deg,#f8fbff,#ffffff)}
+
+    /* testimonials */
+    .testimonials{margin-top:12px}
+    .testimonial-card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(10,20,40,0.04)}
+
+/* Contact box */
+    .contact-box{margin-top:12px;padding:14px;background:linear-gradient(180deg,#f8fbff,#ffffff);border-radius:12px}
+    .contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .muted{color:var(--muted);font-size:14px}
-    .phone{font-weight:600;color:#0b3b63}
+    .phone{font-weight:700;color:#06325a}
+
+/* Footer */
+    footer{margin-top:18px;padding:14px 0;border-top:1px solid #eef2f6;color:var(--muted);font-size:14px}
+
+/* Sticky bottom action bar for mobile */
+    .sticky-bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:8px;background:linear-gradient(180deg,rgba(255,255,255,0.95),#fff);box-shadow:0 -6px 18px rgba(6,18,49,0.06);align-items:center;justify-content:center;z-index:60}
+    .sticky-bar a{flex:1;display:inline-flex;align-items:center;justify-content:center;padding:12px;border-radius:10px;font-weight:700;min-height:44px}
+    .sticky-call{background:var(--brand-blue);color:#fff}
+    .sticky-whatsapp{background:#25D366;color:#fff}
+
+/* Larger tap targets on small screens */
+    .big-touch{min-height:var(--touch);display:flex;align-items:center;justify-content:center;border-radius:10px}
+
+/* Responsive adjustments */
+    @media(min-width:760px){
+      .container{padding:22px}
+      .hero h1{font-size:28px}
+      .hero{grid-template-columns:1fr 420px}
+      .menu{position:static;display:block;box-shadow:none;min-width:auto;background:transparent}
+      .menu a{display:inline-block;padding:0 12px;border-bottom:0;color:var(--muted)}
+      .hamburger{display:none}
+      .header-contact{display:flex;gap:12px;align-items:center}
+      .card-grid{grid-template-columns:repeat(3,1fr)}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .why{grid-template-columns:repeat(2,1fr)}
+      .sticky-bar{display:none}
+    }
+
+    @media(min-width:1000px){
+      .container{max-width:1000px}
+    }
   </style>
 
-  <!-- Local Business structured data -->
+  <!-- JSON-LD structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -92,158 +125,237 @@
   </script>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="page">
+
+    <!-- Header -->
     <header>
-      <div class="brand">
-        <!-- Replace /files/logo.png with your logo file -->
-        <a href="/"><img src="/files/logo.png" alt="Sky Way Tours & Travels logo"></a>
+      <div class="brand" aria-hidden="false">
+        <a href="/"><img src="/files/logo.png" alt="Sky Way Tours & Travels logo" loading="lazy"></a>
         <div>
-          <div style="font-weight:600">Sky Way Tours & Travels</div>
+          <div class="name">Sky Way Tours & Travels</div>
           <div class="muted" style="font-size:12px">Trusted travel & visa partner</div>
         </div>
       </div>
 
-      <nav>
-        <a href="#services" class="muted">Services</a>
-        <a href="#why" class="muted">Why us</a>
-        <a href="#contact" class="muted">Contact</a>
-        <a href="tel:+91XXXXXXXXXX" class="btn-primary" aria-label="Call us">Call: +91 XXXXXXXXXX</a>
+      <!-- Desktop menu (becomes inline on wide screens) -->
+      <nav class="menu" id="topMenu" aria-label="Main menu">
+        <a href="#services">Services</a>
+        <a href="#why">Why us</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+91XXXXXXXXXX" class="phone">Call: +91 XXXXXXXXXX</a>
       </nav>
+
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" aria-hidden="false">
+        <div class="header-contact" style="display:none">
+          <!-- hidden on mobile -->
+        </div>
+        <button id="hambtn" aria-expanded="false" aria-controls="topMenu" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="#0f1724" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <!-- HERO -->
-    <main class="hero" role="main">
-      <section class="hero-grid" aria-labelledby="hero-title">
-        <div>
-          <h1 id="hero-title">Your Trusted Partner for Travel, Visa & Holiday Planning</h1>
-          <p class="lead">Fast processing • Expert support • Transparent pricing • 24/7 assistance</p>
+    <main class="hero" role="main" aria-labelledby="hero-title">
+      <section style="padding-top:6px">
+        <h1 id="hero-title">Your Trusted Partner for Travel, Visa & Holiday Planning</h1>
+        <p class="lead">Fast processing • Expert support • Transparent pricing • 24/7 assistance</p>
+
+        <div class="cta-row" style="margin-top:10px">
+          <a class="btn btn-primary big-touch" href="#contact" aria-label="Get Visa Assistance">Get Visa Assistance</a>
+          <a class="btn btn-ghost big-touch" href="#services" aria-label="Explore Services">Explore Services</a>
         </div>
 
-        <div class="cta-row">
-          <a class="btn-primary" href="#contact">Get Visa Assistance</a>
-          <a class="btn-ghost" href="#services">Explore Services</a>
-          <a class="btn-ghost" href="mailto:support@skywaytourandtravel.com">Email Us</a>
-        </div>
+        <!-- small cards -->
+        <div class="card-grid" style="margin-top:12px" aria-hidden="false">
+          <article class="card" aria-labelledby="c1">
+            <h3 id="c1">Flight Booking</h3>
+            <p class="muted">Compare fares, secure the best seats and get instant e-tickets for domestic & international flights.</p>
+          </article>
 
-        <div style="margin-top:12px">
-          <div class="card-grid" aria-hidden="false">
-            <article class="card">
-              <h3>Flight Booking</h3>
-              <p>Compare fares, secure the best seats and get instant e-tickets for domestic & international flights.</p>
-            </article>
-            <article class="card">
-              <h3>Visa Assistance</h3>
-              <p>End-to-end support for multiple countries — document check, application filing, and appointment help.</p>
-            </article>
-            <article class="card">
-              <h3>Curated Tour Packages</h3>
-              <p>Kerala tours, family holidays and fully-customized itineraries tailored to your budget and interests.</p>
-            </article>
-          </div>
+          <article class="card" aria-labelledby="c2">
+            <h3 id="c2">Visa Assistance</h3>
+            <p class="muted">End-to-end support for multiple countries — documentation, filing & appointment help.</p>
+          </article>
+
+          <article class="card" aria-labelledby="c3">
+            <h3 id="c3">Tour Packages</h3>
+            <p class="muted">Hand-picked itineraries for Kerala, family holidays and fully-customized trips.</p>
+          </article>
         </div>
       </section>
 
-      <aside class="hero-illustration" aria-hidden="true">
-        <img src="/files/hero-travel.jpg" alt="Happy travelers and destinations" style="width:100%;height:auto;display:block">
+      <!-- Hero image (responsive) -->
+      <aside style="margin-top:8px; border-radius:12px; overflow:hidden" aria-hidden="true">
+        <picture>
+          <!-- webp if available -->
+          <source srcset="/files/hero-travel-640.webp 640w, /files/hero-travel-1024.webp 1024w" type="image/webp">
+          <source srcset="/files/hero-travel-640.jpg 640w, /files/hero-travel-1024.jpg 1024w" type="image/jpeg">
+          <img src="/files/hero-travel-640.jpg" alt="Happy travelers exploring destinations" loading="lazy" width="1024" style="display:block;border-radius:12px">
+        </picture>
       </aside>
     </main>
 
     <!-- SERVICES -->
-    <section id="services" style="margin-top:22px">
-      <h2 style="font-family:Poppins, sans-serif">Our Services</h2>
+    <section id="services" style="margin-top:16px">
+      <h2>Our Services</h2>
       <p class="muted">Complete travel solutions — quick, honest and reliable.</p>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px">
-        <div style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 8px 18px rgba(10,20,40,0.04)">
+
+      <div class="services-grid" style="margin-top:10px">
+        <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(10,20,40,0.04)">
           <h3 style="margin:0 0 6px">Visa Services</h3>
           <p class="muted">Processing for popular destinations with document check, application handling & interview prep.</p>
         </div>
-        <div style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 8px 18px rgba(10,20,40,0.04)">
+
+        <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(10,20,40,0.04)">
           <h3 style="margin:0 0 6px">Hotel Reservations</h3>
           <p class="muted">Book budget to premium hotels with confirmed reservations and flexible payment options.</p>
         </div>
 
-        <div style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 8px 18px rgba(10,20,40,0.04)">
+        <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(10,20,40,0.04)">
           <h3 style="margin:0 0 6px">Tour Packages</h3>
-          <p class="muted">Hand-picked itineraries for Kerala, domestic & international trips — customizable.</p>
+          <p class="muted">Custom itineraries for Kerala, India and international destinations.</p>
         </div>
-        <div style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 8px 18px rgba(10,20,40,0.04)">
+
+        <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(10,20,40,0.04)">
           <h3 style="margin:0 0 6px">Airport Transfers</h3>
-          <p class="muted">Reliable pick up and drop services with professional drivers and clean vehicles.</p>
+          <p class="muted">Reliable pickup and drop services with professional drivers and clean vehicles.</p>
         </div>
       </div>
     </section>
 
     <!-- WHY CHOOSE -->
-    <section id="why" style="margin-top:22px">
-      <h2 style="font-family:Poppins, sans-serif">Why Choose Us</h2>
-      <p class="muted">Small details make great trips. We handle the hassle so you can travel with peace of mind.</p>
-      <div class="why" role="list">
+    <section id="why" style="margin-top:14px">
+      <h2>Why Choose Us</h2>
+      <p class="muted">We handle the hassle so you can travel with peace of mind.</p>
+
+      <div class="why" role="list" aria-hidden="false">
         <div>
-          <ul style="padding-left:18px;margin:0">
+          <ul style="padding-left:16px;margin:0">
             <li>✔ 24×7 customer support</li>
             <li>✔ Fast visa processing</li>
             <li>✔ Transparent pricing</li>
-            <li>✔ Experienced, local team</li>
           </ul>
         </div>
+
         <div>
-          <ul style="padding-left:18px;margin:0">
-            <li>✔ Custom itineraries</li>
-            <li>✔ Secure payment options</li>
-            <li>✔ Verified bookings & confirmations</li>
+          <ul style="padding-left:16px;margin:0">
+            <li>✔ Experienced local team</li>
+            <li>✔ Secure payments & confirmed bookings</li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials" aria-label="Customer reviews">
-      <h2 style="font-family:Poppins, sans-serif">What customers say</h2>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px">
-        <blockquote style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 16px rgba(10,20,40,0.04)">
-          <p style="margin:0;font-weight:500">“Helped me get my Dubai visa fast — excellent support.”</p>
-          <footer style="margin-top:8px" class="muted">— Rahim, Kozhikode</footer>
-        </blockquote>
+    <section class="testimonials" style="margin-top:14px">
+      <h2>What customers say</h2>
+      <div style="display:grid;gap:10px;margin-top:10px">
+        <figure class="testimonial-card">
+          <p style="margin:0;font-weight:600">“Helped me get my Dubai visa fast — excellent support.”</p>
+          <figcaption class="muted" style="margin-top:8px">— Rahim, Kozhikode</figcaption>
+        </figure>
 
-        <blockquote style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 16px rgba(10,20,40,0.04)">
-          <p style="margin:0;font-weight:500">“Best fares and quick ticketing — saved us money.”</p>
-          <footer style="margin-top:8px" class="muted">— Shahana, Kerala</footer>
-        </blockquote>
+        <figure class="testimonial-card">
+          <p style="margin:0;font-weight:600">“Best fares and quick ticketing — saved us money.”</p>
+          <figcaption class="muted" style="margin-top:8px">— Shahana, Kerala</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- CONTACT / CTA -->
-    <section id="contact" style="margin-top:22px;background:#f8fbff;padding:18px;border-radius:12px">
-      <h2 style="font-family:Poppins, sans-serif">Get in touch</h2>
-      <p class="muted">Call or message us and we’ll assist you immediately.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;align-items:center">
-        <a class="btn-primary" href="tel:+91XXXXXXXXXX">Call Now: +91 XXXXXXXXXX</a>
-        <a class="btn-ghost" href="mailto:support@skywaytourandtravel.com">Email: support@skywaytourandtravel.com</a>
-        <a class="btn-ghost" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-      <p class="muted" style="margin-top:12px">Office: Nadapuram, Kozhikode — Open: 9:30am–7:00pm</p>
-    </section>
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:14px">
+      <h2>Get in touch</h2>
+      <p class="muted">Call or message and we'll assist you right away.</p>
 
-    <footer style="margin-top:26px">
-      <div class="footer-grid">
-        <div>
-          <div style="font-weight:600">Sky Way Tours & Travels</div>
-          <div class="muted" style="margin-top:6px">Flight tickets • Visa services • Tour packages</div>
-          <p class="muted" style="margin-top:12px">© <span id="year"></span> Sky Way Tours & Travels. All rights reserved.</p>
+      <div class="contact-box" style="margin-top:10px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <div>
+            <div class="muted">Phone</div>
+            <div class="phone" style="margin-top:4px"><a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></div>
+          </div>
+
+          <div>
+            <div class="muted">Email</div>
+            <div style="margin-top:4px"><a href="mailto:support@skywaytourandtravel.com">support@skywaytourandtravel.com</a></div>
+          </div>
+
+          <div>
+            <div class="muted">Office</div>
+            <div style="margin-top:4px">Nadapuram, Kozhikode</div>
+          </div>
         </div>
 
+        <div class="contact-actions" style="margin-top:12px">
+          <a class="btn btn-primary big-touch" href="tel:+91XXXXXXXXXX">Call Now</a>
+          <a class="btn btn-ghost big-touch" href="mailto:support@skywaytourandtravel.com">Email Us</a>
+          <a class="btn btn-ghost big-touch" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer aria-label="Footer">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <div>
-          <div style="font-weight:600;margin-bottom:8px">Contact</div>
-          <div class="muted">Phone: <a class="phone" href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></div>
-          <div class="muted">Email: <a href="mailto:support@skywaytourandtravel.com">support@skywaytourandtravel.com</a></div>
-          <div style="margin-top:12px"><a class="muted" href="/privacy">Privacy Policy</a></div>
+          <div style="font-weight:700">Sky Way Tours & Travels</div>
+          <div class="muted" style="margin-top:6px">Flight tickets • Visa services • Tour packages</div>
+        </div>
+
+        <div style="text-align:right">
+          <div class="muted">© <span id="year"></span> Sky Way Tours & Travels</div>
+          <div style="margin-top:6px"><a class="muted" href="/privacy">Privacy Policy</a></div>
         </div>
       </div>
     </footer>
   </div>
 
+  <!-- Sticky action bar for mobile -->
+  <div class="sticky-bar" role="region" aria-label="Quick actions">
+    <a class="sticky-call" href="tel:+91XXXXXXXXXX" aria-label="Call now">📞 Call</a>
+    <a class="sticky-whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬 WhatsApp</a>
+  </div>
+
   <script>
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile menu toggle
+    (function(){
+      var btn = document.getElementById('hambtn');
+      var menu = document.getElementById('topMenu');
+
+      // ensure menu is hidden on load for mobile
+      if(window.matchMedia && window.matchMedia('(max-width:759px)').matches){
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+
+      btn.addEventListener('click', function(){
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if(menu.style.display === 'block'){
+          menu.style.display = 'none';
+        } else {
+          menu.style.display = 'block';
+        }
+      });
+
+      // close menu when tapping outside (mobile)
+      document.addEventListener('click', function(e){
+        var target = e.target;
+        if(!btn.contains(target) && !menu.contains(target) && window.matchMedia('(max-width:759px)').matches){
+          if(menu.style.display === 'block'){
+            menu.style.display = 'none';
+            btn.setAttribute('aria-expanded','false');
+          }
+        }
+      });
+    })();
   </script>
 </body>
 </html>
