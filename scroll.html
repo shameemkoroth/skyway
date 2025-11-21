@@ -31,12 +31,16 @@
             background-size: cover;
             background-position: center;
         }
-        /* Custom scrollbar for the Incredible India section (for better appearance) */
+        /* Custom scrollbar for horizontal sections (for better appearance) */
+        .horizontal-scroll-container {
+            /* Enable smooth scrolling behavior */
+            scroll-behavior: smooth; 
+        }
         .horizontal-scroll-container::-webkit-scrollbar {
             height: 8px;
         }
         .horizontal-scroll-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #e0e0e0;
             border-radius: 10px;
         }
         .horizontal-scroll-container::-webkit-scrollbar-thumb {
@@ -224,30 +228,37 @@
 
             <div>
                 <h3 class="text-2xl font-semibold text-brand mb-6 border-l-4 border-brand pl-3">International Getaways</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                <div class="flex overflow-x-auto gap-6 pb-4 horizontal-scroll-container">
+                    <div class="flex-none w-80 group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
                         <img src="files/uae.jpg" alt="Dubai" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand/90 to-transparent flex flex-col justify-end p-4">
                             <h4 class="text-white text-xl font-bold">Dubai & UAE</h4>
                             <p class="text-gray-200 text-sm">City of Gold</p>
                         </div>
                     </div>
-                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                    <div class="flex-none w-80 group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
                         <img src="files/singapore.jpg" alt="Singapore" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand/90 to-transparent flex flex-col justify-end p-4">
                             <h4 class="text-white text-xl font-bold">Singapore</h4>
                             <p class="text-gray-200 text-sm">Modern Asia</p>
                         </div>
                     </div>
-                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                    <div class="flex-none w-80 group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
                         <img src="files/paris.jpg" alt="Paris" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand/90 to-transparent flex flex-col justify-end p-4">
                             <h4 class="text-white text-xl font-bold">Europe</h4>
                             <p class="text-gray-200 text-sm">History & Romance</p>
                         </div>
                     </div>
+                     <div class="flex-none w-80 group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1506501139174-099322fe521c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Thailand" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand/90 to-transparent flex flex-col justify-end p-4">
+                            <h4 class="text-white text-xl font-bold">Thailand</h4>
+                            <p class="text-gray-200 text-sm">Beaches & Culture</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                </div>
         </div>
     </section>
 
