@@ -65,13 +65,21 @@
     .hero {
       text-align: center;
       padding: 50px 20px 30px;
-      background: linear-gradient(to right, #009688, #004d40);
+      background: linear-gradient(to right, #00416A, #E4E5E6);
       color: white;
       border-radius: 10px;
       margin-top: 20px;
     }
-    .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
     .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+
+    strong {
+      font-weight: 700;
+    }
 
     /* Footer */
     .footer { background-color: #072f53; color: white; padding: 40px 20px; text-align: center; }
@@ -85,6 +93,10 @@
     .social a { font-size: 24px; margin: 0 10px; color: white; transition: color 0.3s ease; }
     .social a:hover { color: #00bfa5; }
     .end { background-color: #072f53; padding: 15px; font-size: 14px; }
+    .end p {
+      margin: 0;
+      color: #ffffff;
+    }
 
     /* WhatsApp Floating Icon */
     .whatsapp-float {
@@ -242,7 +254,7 @@
       </div>
     </div>
     <div class="end">
-      <p>Copyright © 2025 Skyway Tours and Travels. All Rights Reserved.</p>
+      <p> © <script>document.write(new Date().getFullYear())</script> Skyway Tours and Travels. All Rights Reserved.</p>
     </div>
   </section>
   
