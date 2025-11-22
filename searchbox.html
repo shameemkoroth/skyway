@@ -112,21 +112,6 @@
                 <a href="./locations.html" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white py-3 px-8 rounded-full font-semibold text-lg transition duration-300 shadow-lg transform hover:scale-105 text-center border border-white/20">
                     Destinations
                 </a>
-
-                <!-- 🔍 New Global Search Box (after Destinations) -->
-                <div class="relative mt-2 w-full sm:w-[420px]">
-                    <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-300"></i>
-                    </span>
-                    <input
-                        type="text"
-                        id="globalSearch"
-                        placeholder="Search visa services & top destinations..."
-                        onkeyup="filterGlobalResults()"
-                        class="w-full pl-10 pr-4 py-2 rounded-full bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white shadow-md"
-                    />
-                </div>
-                <!-- end search box -->
             </div>
         </div>
     </section>
@@ -205,6 +190,31 @@
             </div>
         </div>
     </section>
+
+    <!-- 🔍 NEW GLOBAL SEARCH SECTION (between Services and Visa Services) -->
+    <section id="search" class="py-10 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Search Visa Services & Top Destinations</h2>
+                <p class="text-gray-500 text-sm mb-4">
+                    Type a country, city, or region to quickly find matching visa services and holiday spots.
+                </p>
+                <div class="relative w-full">
+                    <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-300"></i>
+                    </span>
+                    <input
+                        type="text"
+                        id="globalSearch"
+                        placeholder="E.g. Dubai, Schengen, Bali, Kerala..."
+                        onkeyup="filterGlobalResults()"
+                        class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white shadow-sm"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SEARCH SECTION -->
 
     <!-- NEW VISA SERVICES SECTION WITH IMAGES -->
     <section id="visa-services" class="py-20 bg-brand-50">
