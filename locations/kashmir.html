@@ -57,13 +57,6 @@
     }
     .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    /* Legacy nav styles (nav now uses Tailwind classes) */
-    nav { background-color: #072f53; padding: 15px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
-    nav .logo { height: 50px; }
-    .navbar { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
-    .navbar li a { color: #ffffff; font-weight: 500; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
-    .navbar li a:hover { background-color: #004d40; }
-
     h1, h2 { color: #072f53; }
     section { margin-bottom: 30px; }
     p { color: #333; line-height: 1.6; }
@@ -72,26 +65,73 @@
     .hero { 
       text-align: center; 
       padding: 50px 20px 30px; 
-      background: linear-gradient(to right, #009688, #004d40); 
+      background: linear-gradient(to right, #00416A, #E4E5E6); 
       color: white; 
       border-radius: 10px; 
       margin-top: 20px; 
     }
-    .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+    .hero h1 { font-size: 2rem; margin-bottom: 15px; font-weight: 700; }
     .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
 
+    strong {
+      font-weight: 700;
+    }
+
     /* Footer */
-    .footer { background-color: #072f53; color: white; padding: 40px 20px; text-align: center; }
-    .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-    .footlinks h4 { color: #ffca28; margin-bottom: 10px; font-weight: 600; }
-    .footlinks ul { list-style: none; padding: 0; margin: 0; }
-    .footlinks ul li { margin: 5px 0; }
-    .footlinks a { color: #00bfa5; text-decoration: none; }
-    .footlinks a:hover { text-decoration: underline; }
-    .footlinks p { color: #ffffff; margin: 5px 0; }
-    .social a { font-size: 24px; margin: 0 10px; color: white; transition: color 0.3s ease; }
-    .social a:hover { color: #00bfa5; }
-    .end { background-color: #051f35; padding: 15px; font-size: 14px; color: #ffffff; }
+    .footer { 
+      background-color: #072f53; 
+      color: white; 
+      padding: 40px 20px; 
+      text-align: center; 
+    }
+    .footer-content { 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 40px; 
+    }
+    .footlinks h4 { 
+      color: #ffca28; 
+      margin-bottom: 10px; 
+      font-weight: 600; 
+    }
+    .footlinks ul { 
+      list-style: none; 
+      padding: 0; 
+      margin: 0; 
+    }
+    .footlinks ul li { 
+      margin: 5px 0; 
+    }
+    .footlinks a { 
+      color: #00bfa5; 
+      text-decoration: none; 
+    }
+    .footlinks a:hover { 
+      text-decoration: underline; 
+    }
+    .footlinks p { 
+      color: #ffffff; 
+      margin: 5px 0; 
+    }
+    .social a { 
+      font-size: 24px; 
+      margin: 0 10px; 
+      color: white; 
+      transition: color 0.3s ease; 
+    }
+    .social a:hover { 
+      color: #00bfa5; 
+    }
+    .end { 
+      background-color: #072f53; 
+      padding: 15px; 
+      font-size: 14px; 
+    }
+    .end p {
+      margin: 0;
+      color: #ffffff;
+    }
 
     /* WhatsApp Floating Icon */
     .whatsapp-float {
@@ -110,7 +150,7 @@
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-      text-decoration: none !important; /* remove underline */
+      text-decoration: none !important;
     }
     
     .whatsapp-float i {
@@ -233,7 +273,7 @@
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../visa.html">Visa</a></li>
-          <li><a href="../locations.html">Locations</a></li>
+          <li><a href="../locations.html">Destinations</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
