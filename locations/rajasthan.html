@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajasthan Tour Guide: Jaipur, Udaipur, Jaisalmer & More | Sky Way Tours and Travels</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Plan your Rajasthan holiday with Sky Way Tours and Travels. Explore Jaipur, Udaipur, Jodhpur, Jaisalmer and more with customized desert, heritage and royal Rajasthan tour packages." />
+  <meta name="keywords" content="Rajasthan tour, Jaipur tour, Udaipur tour, Jaisalmer desert safari, Jodhpur sightseeing, Rajasthan honeymoon package, Rajasthan from Kerala, forts and palaces, Thar desert camp, Sky Way Tours and Travels" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Sky Way Tours and Travels" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Rajasthan Holiday Guide: Forts, Palaces & Desert Safaris | Sky Way Tours and Travels" />
+  <meta property="og:description" content="Discover the royal state of Rajasthan – Jaipur, Udaipur, Jaisalmer, Jodhpur and more with curated heritage and desert tour packages from Sky Way Tours and Travels." />
+  <meta property="og:image" content="../files/logo.png" />
+  <meta property="og:url" content="https://www.skywaytourandtravel.com/locations/rajasthan.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rajasthan Tour Guide: Jaipur, Udaipur, Jaisalmer & More | Sky Way Tours and Travels" />
+  <meta name="twitter:description" content="Book customized Rajasthan tour packages – forts, palaces, lakes, desert camps and royal experiences with Sky Way Tours and Travels." />
+  <meta name="twitter:image" content="../files/logo.png" />
+
+  <link rel="icon" href="../files/logo.png" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+  body {
+    margin: 0;
+    padding: 0 0 40px 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+  }
+  .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  nav { background-color: #072f53; padding: 15px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+  nav .logo { height: 50px; }
+  .navbar { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .navbar li a { color: #ffffff; font-weight: 500; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
+  .navbar li a:hover { background-color: #004d40; }
+  h1, h2 { color: #072f53; }
+  section { margin-bottom: 30px; }
+  p { color: #333; line-height: 1.6; }
+  li { margin: 8px 0; color: #333; line-height: 1.6; }
+  .hero { text-align: center; padding: 50px 20px 30px; background: linear-gradient(to right, #009688, #004d40); color: white; border-radius: 10px; margin-top: 20px; }
+  .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+  .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+  
+  /* Footer */
+  .footer {
+    background-color: #072f53;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .footlinks h4 {
+    color: pink;
+    margin-bottom: 10px;
+  }
+  
+  .footlinks ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footlinks ul li {
+    margin: 5px 0;
+  }
+  
+  .footlinks a {
+    color: #00bfa5;
+    text-decoration: none;
+  }
+  
+  .footlinks a:hover {
+    text-decoration: underline;
+  }
+  
+  .footlinks p {
+    color: #ffffff;
+    margin: 5px 0;
+  }
+  
+  .social a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+  }
+  
+  .end {
+    background-color: #072f53;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .end p {
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  /* WhatsApp Floating Icon */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    text-decoration: none !important;
+  }
+  
+  .whatsapp-float i {
+    display: block;
+    text-decoration: none !important;
+  }
+  
+  .whatsapp-float:hover {
+    background-color: #128C7E;
+  }
+  
+  @media (max-width: 768px) {
+    nav { flex-direction: column; align-items: flex-start; }
+    .navbar { flex-direction: column; gap: 10px; margin-top: 10px; }
+    .footer-content { flex-direction: column; align-items: center; }
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { font-size: 1rem; }
+  }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="../index.html">
+      <img src="../files/logo.png" class="logo" alt="Sky Way Tours and Travels Logo" title="Sky Way Tours and Travels" />
+    </a>
+    <ul class="navbar">
+      <li>
+        <a href="../index.html">Home</a>
+        <a href="../visa">Visa</a>
+        <a href="../locations">Locations</a>
+        <a href="../about.html">About Us</a>
+        <a href="../contact.html">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="content-wrapper">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>🏰 Rajasthan – Land of Kings, Forts & Deserts</h1>
+      <p>
+        Step into the royal land of Rajasthan with Sky Way Tours and Travels. From pink-hued Jaipur and romantic Udaipur 
+        to blue Jodhpur and golden Jaisalmer, experience palaces, forts, deserts, lakes and vibrant culture in one unforgettable journey.
+      </p>
+    </section>
+
+    <!-- Travel Facts -->
+    <section>
+      <h2>📋 Essential Travel Facts</h2>
+      <ul>
+        <li><strong>Best Time to Visit:</strong> October to March – pleasant days and cool nights, ideal for sightseeing and desert experiences.</li>
+        <li><strong>Ideal Duration:</strong> 6–10 days to cover a classic circuit like Jaipur–Jodhpur–Jaisalmer–Udaipur or Jaipur–Ajmer–Pushkar–Udaipur.</li>
+        <li><strong>Major Airports:</strong> Jaipur (JAI), Udaipur (UDR), Jodhpur (JDH). Jaipur is the main gateway.</li>
+        <li><strong>Languages:</strong> Hindi, Rajasthani dialects and English in tourist areas.</li>
+        <li><strong>Best For:</strong> Heritage lovers, honeymooners, families, photography enthusiasts and culture seekers.</li>
+      </ul>
+    </section>
+
+    <!-- Jaipur -->
+    <section>
+      <h2>🌸 Jaipur – The Pink City</h2>
+      <p>
+        Jaipur, the capital of Rajasthan, beautifully blends royal heritage with bustling markets and colourful streets.
+      </p>
+      <ul>
+        <li><strong>Amber Fort:</strong> A majestic hilltop fort with courtyards, palaces and stunning views.</li>
+        <li><strong>City Palace:</strong> The royal residence showcasing museums, courtyards and traditional architecture.</li>
+        <li><strong>Hawa Mahal:</strong> Iconic “Palace of Winds” with hundreds of jharokhas (windows).</li>
+        <li><strong>Jantar Mantar:</strong> UNESCO-listed astronomical observatory.</li>
+        <li><strong>Shopping:</strong> Famous for textiles, jewellery, blue pottery, mojari footwear and handicrafts.</li>
+      </ul>
+    </section>
+
+    <!-- Udaipur -->
+    <section>
+      <h2>🌊 Udaipur – The City of Lakes</h2>
+      <p>
+        Often called the “Venice of the East”, Udaipur is known for serene lakes, palaces and romantic backdrops.
+      </p>
+      <ul>
+        <li><strong>City Palace Udaipur:</strong> Grand palace complex overlooking Lake Pichola.</li>
+        <li><strong>Lake Pichola & Boat Ride:</strong> Sunset boat rides with views of the Lake Palace and city skyline.</li>
+        <li><strong>Fateh Sagar Lake:</strong> Perfect for evening walks and boat rides.</li>
+        <li><strong>Saheliyon ki Bari:</strong> Beautiful garden with fountains and lotus pools.</li>
+      </ul>
+    </section>
+
+    <!-- Jodhpur & Jaisalmer -->
+    <section>
+      <h2>🌅 Jodhpur & Jaisalmer – Blue City & Golden Desert</h2>
+      <p>
+        Western Rajasthan offers dramatic forts, desert landscapes and unforgettable night skies.
+      </p>
+      <ul>
+        <li><strong>Mehrangarh Fort (Jodhpur):</strong> One of India’s most impressive forts with panoramic views of the blue-painted city.</li>
+        <li><strong>Jaswant Thada:</strong> Elegant marble cenotaphs near Mehrangarh Fort.</li>
+        <li><strong>Jaisalmer Fort:</strong> Living golden fort with narrow lanes, temples and havelis.</li>
+        <li><strong>Sam Sand Dunes:</strong> Enjoy evening <strong>camel safaris, dune bashing, cultural shows and overnight desert camps</strong> under the stars.</li>
+      </ul>
+    </section>
+
+    <!-- Ajmer & Pushkar -->
+    <section>
+      <h2>🕊️ Ajmer & Pushkar – Spiritual & Scenic</h2>
+      <ul>
+        <li><strong>Ajmer Sharif Dargah:</strong> Revered Sufi shrine attracting pilgrims from across the world.</li>
+        <li><strong>Pushkar:</strong> Holy town famous for the Brahma Temple, ghats and Pushkar Lake.</li>
+        <li><strong>Pushkar Fair (Seasonal):</strong> One of the world’s largest camel fairs with cultural events and vibrant markets.</li>
+      </ul>
+    </section>
+
+    <!-- Culture & Food -->
+    <section>
+      <h2>🎭 Culture, Shopping & Rajasthani Cuisine</h2>
+      <p>Rajasthan is a feast for the senses – colourful turbans, folk music, traditional dances and rich flavours.</p>
+      <ul>
+        <li><strong>Folk Performances:</strong> Enjoy kalbeliya dance, ghoomar, puppet shows and live music at hotels or desert camps.</li>
+        <li><strong>Must-Try Dishes:</strong> Dal Baati Churma, Gatte ki Sabzi, Ker Sangri, Laal Maas, Mirchi Vada, Kachori and Ghewar.</li>
+        <li><strong>Shopping:</strong> Handcrafted textiles, block prints, mirror work, carpets, leather items, miniature paintings and silver jewellery.</li>
+      </ul>
+    </section>
+
+    <!-- Best Time -->
+    <section>
+      <h2>🗓️ Best Time to Visit Rajasthan – Season Guide</h2>
+      <ul>
+        <li><strong>Winter (Oct – Mar):</strong> The most popular season – ideal for all cities and desert safaris.</li>
+        <li><strong>Summer (Apr – Jun):</strong> Very hot, but good deals on hotels; suitable if focusing on shorter, early morning/evening sightseeing.</li>
+        <li><strong>Monsoon (Jul – Sep):</strong> Occasional showers bring a different charm, especially in Udaipur and hillier parts of Rajasthan.</li>
+      </ul>
+    </section>
+
+    <!-- Travel Tips -->
+    <section>
+      <h2>💡 Travel Tips for Rajasthan</h2>
+      <ul>
+        <li><strong>Clothing:</strong> Light cottons for the day, a light layer for cooler winter nights; modest attire for temples and shrines.</li>
+        <li><strong>Hydration:</strong> Carry water, sunglasses, caps and sunscreen – especially during daytime sightseeing.</li>
+        <li><strong>Footwear:</strong> Comfortable walking shoes or sandals for forts, palaces and markets.</li>
+        <li><strong>Desert Nights:</strong> Evenings in the desert can be cool in winter – keep a jacket or shawl handy.</li>
+        <li><strong>Guides & Tickets:</strong> Local guides enhance the experience at major forts and palaces – we can arrange them as part of your package.</li>
+      </ul>
+    </section>
+
+    <!-- Why Sky Way -->
+    <section>
+      <h2>✈️ Why Travel to Rajasthan with Sky Way Tours and Travels</h2>
+      <p>
+        <strong>Sky Way Tours and Travels</strong> designs carefully planned <strong>Rajasthan tour packages</strong> that cover Jaipur, Udaipur, Jodhpur, Jaisalmer, Ajmer, Pushkar and more – 
+        based on your time, interests and budget.
+      </p>
+      <p>
+        From <strong>flight/train assistance, private cab transfers, hotel and heritage stays, guided sightseeing, desert camps, camel safaris and cultural evenings</strong>, 
+        we manage every detail for a smooth, royal experience.
+      </p>
+      <p>
+        Whether you’re planning a <strong>honeymoon, family holiday, group tour or pilgrimage</strong>, Sky Way Tours and Travels ensures your Rajasthan trip feels truly royal – 
+        filled with stories, colours and memories.
+      </p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-content">
+      <div class="footlinks">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../visa">Visa</a></li>
+          <li><a href="../locations">Locations</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footlinks">
+        <h4>Connect</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="end">
+      <p>Copyright © <script>document.write(new Date().getFullYear())</script> Skyway Tours and Travels. All Rights Reserved.</p>
+    </div>
+  </section>
+  
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class='bx bxl-whatsapp'></i>
+  </a>
+
+  <script> window.chtlConfig = { chatbotId: "4878437818" } </script>
+  <script async data-id="4878437818" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
