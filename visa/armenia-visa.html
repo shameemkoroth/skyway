@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS for responsive menu -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -31,11 +31,11 @@
               DEFAULT: '#072f53',
               light: '#0e4675',
               50: '#f2f7fb',
-            }
-          }
-        }
-      }
-    }
+            },
+          },
+        },
+      },
+    };
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
@@ -47,14 +47,14 @@
       background-color: #f9f9f9;
     }
 
+    h1, h2, h3 {
+      color: #072f53;
+    }
+
     .content-wrapper {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
-    }
-
-    h1, h2, h3 {
-      color: #072f53;
     }
 
     .hero {
@@ -70,7 +70,6 @@
 
     .hero p {
       line-height: 1.6;
-      font-size: 1rem;
       color: #333;
     }
 
@@ -155,26 +154,15 @@
       text-decoration: none !important;
     }
 
-    .whatsapp-float i {
-      display: block;
-      text-decoration: none !important;
-    }
-
     .whatsapp-float:hover {
       background-color: #128C7E;
     }
-
-    @media (max-width: 768px) {
-      .footer-content {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
 </head>
+
 <body>
 
-  <!-- Responsive Navbar (Skyway style) -->
+  <!-- Responsive Navbar -->
   <nav class="bg-brand shadow-md fixed w-full z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
@@ -213,8 +201,6 @@
   </nav>
 
   <div class="content-wrapper pt-24">
-
-    <!-- Hero Section -->
     <section class="hero">
       <h1>Armenia Visa for Indian Travelers: Complete Guide</h1>
       <p>Planning to explore Yerevan, Lake Sevan, or the majestic monasteries of Armenia? Indian travelers require a visa to enter Armenia.</p>
@@ -329,7 +315,6 @@
       <p>Phone: <a href="tel:+914962996929">0496 299 69 29</a> | <a href="tel:+919496369777">9496 369 777</a> | <a href="tel:+919061996929">9061 99 69 29</a></p>
       <p>Email: <a href="mailto:visa@skywaytourandtravel.com">visa@skywaytourandtravel.com</a></p>
     </section>
-
   </div>
 
   <section class="footer">
@@ -344,6 +329,7 @@
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
+
       <div class="footlinks">
         <h4>Connect</h4>
         <div class="social">
@@ -356,11 +342,12 @@
         <p>📱 9061 99 69 29</p>
       </div>
     </div>
+
     <div class="end">
       <p> © <script>document.write(new Date().getFullYear())</script> Skyway Tours and Travels. All Rights Reserved.</p>
     </div>
   </section>
-  
+
   <!-- WhatsApp Floating Icon -->
   <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
@@ -368,6 +355,5 @@
 
   <script> window.chtlConfig = { chatbotId: "4878437818" } </script>
   <script async data-id="4878437818" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-  
 </body>
 </html>
