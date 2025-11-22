@@ -30,18 +30,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
-  body {
+  html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
   }
 
   .content-wrapper {
-    flex: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -88,15 +86,13 @@
     margin-bottom: 30px;
   }
 
-  p {
+  p, li {
     color: #333;
     line-height: 1.6;
   }
 
   li {
     margin: 8px 0;
-    color: #333;
-    line-height: 1.6;
   }
 
   .hero {
@@ -123,9 +119,8 @@
   .footer {
     background-color: #072f53;
     color: white;
-    padding: 40px 20px 0 20px;
+    padding: 40px 20px 10px;
     text-align: center;
-    margin-top: auto;
   }
 
   .footer-content {
@@ -133,18 +128,16 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    margin-bottom: 20px;
   }
 
   .footlinks h4 {
-    color: pink;
+    color: #ff9ecd;
     margin-bottom: 10px;
   }
 
   .footlinks ul {
     list-style: none;
     padding: 0;
-    margin: 0;
   }
 
   .footlinks ul li {
@@ -171,6 +164,7 @@
     padding: 10px 0;
     font-size: 14px;
     color: #ffffff;
+    text-align: center;
   }
 
   .end p {
@@ -247,58 +241,65 @@
   </nav>
 
   <div class="content-wrapper">
+    <!-- Hero Section -->
     <section class="hero">
       <h1>🌴 Kerala: God's Own Country</h1>
       <p>Welcome to Kerala, a land of unparalleled natural beauty where emerald backwaters, lush tea-covered hills, and golden beaches converge. Famously known as 'God's Own Country', Kerala offers a unique blend of historical charm, cultural richness, and holistic wellness.</p>
     </section>
 
+    <!-- Essential Travel Facts -->
     <section>
       <h2>📋 Essential Travel Facts</h2>
       <ul>
-        <li><strong>Best Time to Visit:</strong> Winter (Oct - Mar) — Pleasant for sightseeing, backwaters, and beaches.</li>
-        <li><strong>Ideal Duration:</strong> 7 to 10 Days (To cover major highlights like Kochi, Munnar, Thekkady, and Alleppey).</li>
-        <li><strong>Airports:</strong> Cochin, Thiruvananthapuram, Calicut International Airports.</li>
-        <li><strong>Official Language:</strong> Malayalam. English is widely spoken in tourist areas.</li>
+        <li><strong>Best Time to Visit:</strong> Winter (Oct - Mar) – Pleasant for sightseeing, backwaters, and beaches.</li>
+        <li><strong>Ideal Duration:</strong> 7 to 10 Days to cover Kochi, Munnar, Thekkady, and Alleppey.</li>
+        <li><strong>Airports:</strong> Cochin (COK), Thiruvananthapuram (TRV), Calicut (CCJ).</li>
+        <li><strong>Language:</strong> Malayalam (English widely spoken).</li>
       </ul>
     </section>
 
+    <!-- Top Destinations -->
     <section>
-      <h2>🗺️ Top Tourist Destinations</h2>
+      <h2>🗺️ Top Destinations & Experiences</h2>
       <ul>
-        <li><strong>Alleppey:</strong> Experience a night in traditional houseboats through the serene backwaters.</li>
-        <li><strong>Munnar:</strong> Explore misty tea plantations and scenic hill views.</li>
-        <li><strong>Kochi:</strong> Visit Fort Kochi, Chinese Fishing Nets, and colonial landmarks.</li>
-        <li><strong>Thekkady:</strong> Spot elephants in Periyar National Park and walk through spice gardens.</li>
-        <li><strong>Varkala & Kovalam:</strong> Relax on stunning beaches with dramatic cliffs and sunsets.</li>
+        <li><strong>Alleppey:</strong> Houseboat cruises through backwaters and paddy fields.</li>
+        <li><strong>Munnar:</strong> Misty hills and tea plantations.</li>
+        <li><strong>Kochi:</strong> Fort Kochi, Jewish Synagogue, and colonial charm.</li>
+        <li><strong>Thekkady:</strong> Wildlife safaris in Periyar National Park.</li>
+        <li><strong>Varkala & Kovalam:</strong> Iconic beaches with stunning sunsets.</li>
       </ul>
     </section>
 
+    <!-- Culture -->
     <section>
       <h2>🎭 Culture & Wellness</h2>
       <ul>
-        <li><strong>Kathakali:</strong> Witness this colorful traditional dance-drama of Kerala.</li>
-        <li><strong>Kalaripayattu:</strong> Watch ancient martial arts performances.</li>
-        <li><strong>Ayurveda:</strong> Experience authentic treatments and rejuvenation therapy.</li>
-        <li><strong>Festivals:</strong> Onam, Snake Boat Races, and more cultural celebrations.</li>
+        <li><strong>Kathakali:</strong> Classical dance-drama with expressive storytelling.</li>
+        <li><strong>Kalaripayattu:</strong> World’s oldest martial art.</li>
+        <li><strong>Ayurveda:</strong> Ideal during monsoon (Jun–Sep).</li>
+        <li><strong>Festivals:</strong> Onam and Snake Boat Races.</li>
       </ul>
     </section>
 
+    <!-- Cuisine -->
     <section>
       <h2>🍽️ Culinary Delights</h2>
       <ul>
-        <li><strong>Sadya:</strong> A vegetarian feast on banana leaves.</li>
-        <li><strong>Karimeen Pollichathu:</strong> Pearl spot fish wrapped in banana leaves.</li>
-        <li><strong>Appam & Stew:</strong> Soft rice pancakes with coconut milk stew.</li>
-        <li><strong>Malabar Biryani:</strong> Fragrant, flavorful, and unique to Kerala.</li>
+        <li><strong>Sadya:</strong> Traditional feast on banana leaf.</li>
+        <li><strong>Karimeen Pollichathu:</strong> Spiced pearl spot fish.</li>
+        <li><strong>Appam & Stew:</strong> Rice pancakes with coconut stew.</li>
+        <li><strong>Kozhikode Biryani:</strong> Fragrant and flavorful.</li>
       </ul>
     </section>
 
+    <!-- Why Choose Skyway -->
     <section>
-      <h2>💡 Why Choose Sky Way Tours and Travels</h2>
-      <p><strong>Sky Way Tours and Travels</strong> curates personalized Kerala holiday packages — from luxury houseboats and hill stations to cultural tours and wellness retreats. Enjoy a seamless, authentic experience designed by local experts.</p>
+      <h2>✈️ Why Sky Way Tours and Travels?</h2>
+      <p><strong>Sky Way Tours and Travels</strong> designs personalized Kerala holiday packages that capture the essence of 'God's Own Country.' From luxurious houseboats to Ayurvedic retreats, we ensure a seamless and unforgettable experience.</p>
     </section>
   </div>
 
+  <!-- Footer -->
   <section class="footer">
     <div class="footer-content">
       <div class="footlinks">
@@ -325,6 +326,7 @@
     </div>
   </section>
 
+  <!-- WhatsApp Floating Icon -->
   <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
   </a>
