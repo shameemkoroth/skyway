@@ -33,16 +33,23 @@
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
   }
 
+  /* Make page a flex column so footer sticks to bottom */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
   .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px 40px;
+    flex: 1; /* pushes footer to bottom if content is short */
   }
 
   nav {
@@ -119,8 +126,9 @@
   .footer {
     background-color: #072f53;
     color: white;
-    padding: 40px 20px 10px;
+    padding: 40px 20px 0;
     text-align: center;
+    margin: 0;
   }
 
   .footer-content {
@@ -138,6 +146,7 @@
   .footlinks ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   .footlinks ul li {
@@ -161,15 +170,16 @@
 
   .end {
     background-color: #072f53;
-    padding: 10px 0;
+    padding: 10px 0 15px;
     font-size: 14px;
     color: #ffffff;
     text-align: center;
+    margin: 0;
   }
 
   .end p {
     margin: 0;
-    color: #ffffff;
+    color: #ffffff; /* ensures copyright is white */
   }
 
   /* WhatsApp Floating Icon */
@@ -194,6 +204,14 @@
 
   .whatsapp-float:hover {
     background-color: #128C7E;
+  }
+
+  /* Make sure chat widget doesn't add extra margin/space */
+  #chtl-script,
+  iframe[src*="chatling"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
   }
 
   @media (max-width: 768px) {
