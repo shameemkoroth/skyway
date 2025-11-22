@@ -22,31 +22,10 @@
   <style>
     body {margin:0; padding:0 0 40px 0; font-family: 'Poppins', sans-serif; background-color: #f9f9f9;}
     .content-wrapper {max-width:1200px; margin:0 auto; padding:0 20px;}
-    nav {
-      background-color:#072f53;
-      padding:15px 20px;
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:space-between;
-    }
+    nav {background-color:#072f53; padding:15px 20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;}
     nav .logo {height:50px;}
-    .navbar {
-      display:flex;
-      gap:20px;
-      list-style:none;
-      margin:0;
-      padding:0;
-      align-items:center;
-    }
-    .navbar li a {
-      color:#ffffff;
-      font-weight:500;
-      text-decoration:none;
-      padding:8px 12px;
-      border-radius:4px;
-      display:inline-block;
-    }
+    .navbar {display:flex; gap:20px; list-style:none; margin:0; padding:0;}
+    .navbar li a {color:#ffffff; font-weight:500; text-decoration:none; padding:8px 12px; border-radius:4px;}
     .navbar li a:hover {background-color:#004d40;}
     h1,h2,h3 {color:#072f53;}
     .hero {padding:40px 0;}
@@ -81,7 +60,7 @@
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-      text-decoration: none !important;
+      text-decoration: none !important; /* remove underline */
     }
     
     .whatsapp-float i {
@@ -93,7 +72,7 @@
       background-color: #128C7E;
     }
 
-    /* Hamburger button (like first page behaviour) */
+    /* Hamburger toggle (hidden on desktop) */
     .menu-toggle {
       display:none;
       background:none;
@@ -104,48 +83,49 @@
     }
 
     @media (max-width:768px){
-      nav {
-        flex-wrap:nowrap;
+      nav{flex-direction:column;align-items:flex-start;}
+      
+      .menu-toggle{
+        display:block;
+        margin-left:auto;
       }
-      .navbar {
-        display:none;           /* hide menu on mobile by default */
+
+      .navbar{
+        display:none;              /* hide menu on mobile by default */
         flex-direction:column;
         gap:10px;
         margin-top:10px;
         width:100%;
       }
-      .navbar.show {
-        display:flex;           /* show when toggled */
+
+      .navbar.show{
+        display:flex;              /* show when toggled */
       }
-      .menu-toggle {
-        display:block;          /* show hamburger on mobile */
-        margin-left:auto;
-      }
-      .footer-content{
-        flex-direction:column;
-        align-items:center;
-      }
+
+      .footer-content{flex-direction:column;align-items:center;}
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="../index.html">
+    <a href="index.html">
       <img src="../files/logo.png" class="logo" alt="Skyway Tours and Travels Logo" title="Skyway Tours and Travels" />
     </a>
 
-    <!-- Hamburger button for mobile -->
+    <!-- Hamburger button (added) -->
     <button class="menu-toggle" aria-label="Toggle navigation"
       onclick="document.querySelector('.navbar').classList.toggle('show')">
       <i class='bx bx-menu'></i>
     </button>
 
     <ul class="navbar">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../visa">Visa</a></li>
-      <li><a href="../locations">Locations</a></li>
-      <li><a href="../about.html">About Us</a></li>
-      <li><a href="../contact.html">Contact Us</a></li>
+      <li>
+        <a href="../index.html">Home</a>
+        <a href="../visa">Visa</a>
+        <a href="../locations">Locations</a>
+        <a href="../about.html">About Us</a>
+        <a href="../contact.html">Contact Us</a>
+      </li>
     </ul>
   </nav>
 
