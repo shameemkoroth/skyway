@@ -11,45 +11,32 @@
   <link rel="icon" href="./files/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS for responsive menu -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#072f53',
+              light: '#0e4675',
+              50: '#f2f7fb',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
-    }
-
-    nav {
-      background-color: #072f53;
-      padding: 15px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    nav .logo {
-      height: 50px;
-    }
-
-    .navbar {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar li a {
-      color: #ffffff;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-    }
-
-    .navbar li a:hover {
-      background-color: #004d40;
     }
 
     .about {
@@ -72,18 +59,22 @@
     .about-left h1 {
       font-size: 2rem;
       margin-bottom: 20px;
+      color: #072f53;
+      font-weight: 700; /* restored bold */
     }
 
     .about-left h2 {
       font-size: 1.5rem;
       margin-top: 30px;
       color: #072f53;
+      font-weight: 600; /* restored semi-bold */
     }
 
     .about-left h3 {
       font-size: 1.2rem;
       margin-top: 20px;
       color: #004d40;
+      font-weight: 600; /* restored semi-bold */
     }
 
     .about-left p {
@@ -171,7 +162,12 @@
       padding: 15px;
       font-size: 14px;
     }
-        
+
+    /* Make <strong> really bold again */
+    strong {
+      font-weight: 700;
+    }
+
     /* WhatsApp Floating Icon */
     .whatsapp-float {
       position: fixed;
@@ -189,32 +185,14 @@
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-      text-decoration: none !important; /* remove underline */
-    }
-    
-    .whatsapp-float i {
-      display: block;
       text-decoration: none !important;
     }
-    
+
     .whatsapp-float:hover {
       background-color: #128C7E;
     }
 
-
-
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .navbar {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
       .about-layout,
       .footer-content {
         flex-direction: column;
@@ -237,26 +215,51 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">
-      <img src="./files/logo.png" class="logo" alt="Sky Way Tours and Travels Logo" title="Sky Way Tours and Travels" />
-    </a>
-    <ul class="navbar">
-      <li>
-        <a href="./index.html">Home</a>
-        <a href="./visa">Visa</a>
-        <a href="./locations">Destinations</a>
-        <a href="./contact">Contact Us</a>
-      </li>
-    </ul>
+
+  <!-- Responsive Navbar (same behavior as home page) -->
+  <nav class="bg-brand shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="./index.html" class="flex-shrink-0 flex items-center gap-2">
+            <img src="files/logo.png" alt="Sky Way Tours Logo" class="h-12 w-auto object-contain bg-white rounded-md p-1">
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="./index.html" class="text-gray-200 hover:text-white transition">Home</a>
+          <a href="./visa.html" class="text-gray-200 hover:text-white transition">Visa Services</a>
+          <a href="./locations.html" class="text-gray-200 hover:text-white transition">Destinations</a>
+          <a href="./about.html" class="px-4 py-2 rounded-full bg-white text-brand hover:bg-gray-100 transition shadow-md font-semibold">About Us</a>
+          <a href="./contact.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="md:hidden flex items-center">
+          <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white hover:text-gray-200 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand border-t border-brand-light">
+      <a href="./index.html" class="block px-4 py-2 text-white hover:bg-brand-light">Home</a>
+      <a href="./visa.html" class="block px-4 py-2 text-white hover:bg-brand-light">Visa Services</a>
+      <a href="./locations.html" class="block px-4 py-2 text-white hover:bg-brand-light">Destinations</a>
+      <a href="./about.html" class="block px-4 py-2 text-blue-200 font-semibold hover:bg-brand-light">About Us</a>
+      <a href="./contact.html" class="block px-4 py-2 text-white hover:bg-brand-light">Contact Us</a>
+    </div>
   </nav>
 
-  <main class="about">
+  <main class="about pt-24">
     <div class="about-layout">
       <div class="about-left">
         <h1>About Sky Way Tours & Travels</h1>
         <p>
-          Welcome to <strong>Sky Way Tours & Travels</strong>—your trusted travel agency in Kerala. We don’t just book trips—we craft unforgettable journeys. Travel is more than a destination; it’s a gateway to new cultures, meaningful experiences, and lifelong memories.
+          Welcome to <strong>Sky Way Tours & Travels</strong> — your trusted travel agency in Kerala. We don’t just book trips — we craft unforgettable journeys. Travel is more than a destination; it’s a gateway to new cultures, meaningful experiences, and lifelong memories.
         </p>
         <p>
           Whether you're planning a serene local getaway, a sacred pilgrimage, or a grand international adventure, our mission is to make your journey seamless, inspiring, and perfectly executed.
@@ -266,7 +269,7 @@
 
         <h3>🎯 Personalized Travel Planning</h3>
         <p>
-          Every traveler is unique—and so is our approach. We design customized tour packages tailored to your preferences, ensuring every detail reflects your travel goals.
+          Every traveler is unique — and so is our approach. We design customized tour packages tailored to your preferences, ensuring every detail reflects your travel goals.
         </p>
 
         <h3>🛡️ Safety & Reliability Guaranteed</h3>
@@ -297,8 +300,8 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./visa">Visa</a></li>
-          <li><a href="./locations">Destinations</a></li>
+          <li><a href="./visa.html">Visa</a></li>
+          <li><a href="./locations.html">Destinations</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
         </ul>
       </div>
@@ -320,7 +323,7 @@
       <p>&copy; 2025 Sky Way Tours and Travels. All Rights Reserved.</p>
     </div>
   </footer>
-  
+
   <!-- WhatsApp Floating Icon -->
   <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
@@ -329,6 +332,5 @@
   <script> window.chtlConfig = { chatbotId: "4878437818" } </script>
   <script async data-id="4878437818" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 
-  
 </body>
 </html>
