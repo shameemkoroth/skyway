@@ -30,158 +30,87 @@
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
-  html, body {
+  body {
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow-x: hidden;
+    padding: 0 0 40px 0;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
   }
-
-  /* Make page a flex column so footer sticks to bottom */
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 40px;
-    flex: 1; /* pushes footer to bottom if content is short */
-  }
-
-  nav {
-    background-color: #072f53;
-    padding: 15px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav .logo {
-    height: 50px;
-  }
-
-  .navbar {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .navbar li a {
-    color: #ffffff;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-  }
-
-  .navbar li a:hover {
-    background-color: #004d40;
-  }
-
-  h1, h2 {
-    color: #072f53;
-  }
-
-  section {
-    margin-bottom: 30px;
-  }
-
-  p, li {
-    color: #333;
-    line-height: 1.6;
-  }
-
-  li {
-    margin: 8px 0;
-  }
-
-  .hero {
-    text-align: center;
-    padding: 50px 20px 30px;
-    background: linear-gradient(to right, #009688, #004d40);
-    color: white;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
+  .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  nav { background-color: #072f53; padding: 15px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+  nav .logo { height: 50px; }
+  .navbar { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .navbar li a { color: #ffffff; font-weight: 500; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
+  .navbar li a:hover { background-color: #004d40; }
+  h1, h2 { color: #072f53; }
+  section { margin-bottom: 30px; }
+  p { color: #333; line-height: 1.6; }
+  li { margin: 8px 0; color: #333; line-height: 1.6; }
+  .hero { text-align: center; padding: 50px 20px 30px; background: linear-gradient(to right, #009688, #004d40); color: white; border-radius: 10px; margin-top: 20px; }
+  .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+  .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+  
   /* Footer */
   .footer {
     background-color: #072f53;
     color: white;
-    padding: 40px 20px 0;
+    padding: 40px 20px;
     text-align: center;
-    margin: 0;
   }
-
+  
   .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
   }
-
+  
   .footlinks h4 {
-    color: #ff9ecd;
+    color: pink;
     margin-bottom: 10px;
   }
-
+  
   .footlinks ul {
     list-style: none;
     padding: 0;
-    margin: 0;
   }
-
+  
   .footlinks ul li {
     margin: 5px 0;
   }
-
+  
   .footlinks a {
     color: #00bfa5;
     text-decoration: none;
   }
-
+  
   .footlinks a:hover {
     text-decoration: underline;
   }
-
+  
+  .footlinks p {
+    color: #ffffff;
+    margin: 5px 0;
+  }
+  
   .social a {
     font-size: 24px;
     margin: 0 10px;
     color: white;
   }
-
+  
   .end {
     background-color: #072f53;
-    padding: 10px 0 15px;
+    padding: 10px 0;
     font-size: 14px;
-    color: #ffffff;
-    text-align: center;
-    margin: 0;
+    color: #ffffff; /* ✅ sets text color to white */
   }
-
+  
   .end p {
     margin: 0;
-    color: #ffffff; /* ensures copyright is white */
+    color: #ffffff; /* ✅ ensures <p> text also appears white */
   }
-
+  
   /* WhatsApp Floating Icon */
   .whatsapp-float {
     position: fixed;
@@ -199,45 +128,24 @@
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
+    text-decoration: none !important; /* remove underline */
+  }
+  
+  .whatsapp-float i {
+    display: block;
     text-decoration: none !important;
   }
-
+  
   .whatsapp-float:hover {
     background-color: #128C7E;
   }
-
-  /* Make sure chat widget doesn't add extra margin/space */
-  #chtl-script,
-  iframe[src*="chatling"] {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block;
-  }
-
+  
   @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .navbar {
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 1.6rem;
-    }
-
-    .hero p {
-      font-size: 1rem;
-    }
+    nav { flex-direction: column; align-items: flex-start; }
+    .navbar { flex-direction: column; gap: 10px; margin-top: 10px; }
+    .footer-content { flex-direction: column; align-items: center; }
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { font-size: 1rem; }
   }
   </style>
 </head>
@@ -265,55 +173,119 @@
       <p>Welcome to Kerala, a land of unparalleled natural beauty where emerald backwaters, lush tea-covered hills, and golden beaches converge. Famously known as 'God's Own Country', Kerala offers a unique blend of historical charm, cultural richness, and holistic wellness.</p>
     </section>
 
-    <!-- Essential Travel Facts -->
+    <!-- Travel Facts-->
     <section>
       <h2>📋 Essential Travel Facts</h2>
       <ul>
-        <li><strong>Best Time to Visit:</strong> Winter (Oct - Mar) – Pleasant for sightseeing, backwaters, and beaches.</li>
-        <li><strong>Ideal Duration:</strong> 7 to 10 Days to cover Kochi, Munnar, Thekkady, and Alleppey.</li>
-        <li><strong>Airports:</strong> Cochin (COK), Thiruvananthapuram (TRV), Calicut (CCJ).</li>
-        <li><strong>Language:</strong> Malayalam (English widely spoken).</li>
-      </ul>
+        <li>
+          <strong>Best Time to Visit:</strong> Winter (Oct - Mar):</strong> Pleasant for sightseeing, backwaters, and beaches.
+        </li>
+        <li>
+          <strong>Ideal Duration:</strong> 7 to 10 Days (To cover major highlights like Kochi, Munnar, Thekkady, and Alleppey).
+        </li>
+        <li>
+          <strong>Airports:</strong> Cochin International Airport (COK), Thiruvananthapuram International Airport (TRV), Calicut International Airport (CCJ).
+        </li>
+        <li>
+          <strong>Official Language:</strong> Malayalam. English is widely spoken in tourist areas.
+        </li>
     </section>
 
-    <!-- Top Destinations -->
+    <!-- Destinations -->
     <section>
-      <h2>🗺️ Top Destinations & Experiences</h2>
+      <h2>🗺️ Top Tourist Destinations & Must-Do Experiences</h2>
       <ul>
-        <li><strong>Alleppey:</strong> Houseboat cruises through backwaters and paddy fields.</li>
-        <li><strong>Munnar:</strong> Misty hills and tea plantations.</li>
-        <li><strong>Kochi:</strong> Fort Kochi, Jewish Synagogue, and colonial charm.</li>
-        <li><strong>Thekkady:</strong> Wildlife safaris in Periyar National Park.</li>
-        <li><strong>Varkala & Kovalam:</strong> Iconic beaches with stunning sunsets.</li>
+        <li>
+          <strong>Alleppey (Alappuzha) & The Backwaters:</strong> The quintessential Kerala experience. Spend a night aboard a **traditional houseboat (Kettuvallam)**, cruising through a labyrinth of canals, lagoons, and lakes, witnessing authentic village life and lush paddy fields.
+        </li>
+        <li>
+          <strong>Munnar:</strong> A breathtaking hill station famous for its sprawling **tea plantations**. Visit the Tea Museum, witness the panoramic views from Top Station, and trek through the misty Western Ghats.
+        </li>
+        <li>
+          <strong>Kochi (Cochin):</strong> A historic port city known as the 'Queen of the Arabian Sea'. Explore the colonial charm of **Fort Kochi**, see the iconic **Chinese Fishing Nets**, and discover the Jewish Synagogue and Mattancherry Palace.
+        </li>
+        <li>
+          <strong>Thekkady (Periyar):</strong> The hub for wildlife and spices. Take a boat safari in the **Periyar National Park** to spot elephants, sambar, and various birds. Don't miss a guided walk through a local **spice plantation**.
+        </li>
+        <li>
+          <strong>Varkala & Kovalam:</strong> For beach lovers. Varkala is famous for its dramatic red cliffs adjacent to the Arabian Sea, offering stunning sunset views and mineral springs. Kovalam is a tranquil seaside town known for its three crescent beaches.
+        </li>
       </ul>
     </section>
 
-    <!-- Culture -->
+    <!-- Culture & Wellness -->
     <section>
-      <h2>🎭 Culture & Wellness</h2>
+      <h2>🎭 Culture, Arts & Wellnes</h2>
+      <p>Kerala's cultural tapestry is vibrant and deeply rooted, offering unique experiences that define the region:</p>
       <ul>
-        <li><strong>Kathakali:</strong> Classical dance-drama with expressive storytelling.</li>
-        <li><strong>Kalaripayattu:</strong> World’s oldest martial art.</li>
-        <li><strong>Ayurveda:</strong> Ideal during monsoon (Jun–Sep).</li>
-        <li><strong>Festivals:</strong> Onam and Snake Boat Races.</li>
+        <li>
+          <strong>Kathakali:</strong> Witness this dramatic classical dance-drama, known for its elaborate costumes, vibrant face makeup, and expressive hand gestures (mudras), often depicting Hindu epics.
+        </li>
+        <li>
+          <strong>Kalaripayattu:</strong> Experience the world's oldest surviving martial art. Watch the swift, acrobatic movements and weapon techniques of this ancient combat system, especially in Kochi or Thekkady.
+        </li>
+        <li>
+          <strong>Ayurveda & Wellness:</strong> Monsoon season (June-August) is traditionally considered the best time for **Ayurvedic treatments** as the atmosphere is moist and cool. Kerala is the global capital for rejuvenation, detox, and therapeutic massages.
+        </li>
+        <li>
+          <strong>Festivals:</strong> Plan your trip around **Onam** (Harvest Festival, usually Aug/Sep) for the spectacular **Snake Boat Races (Vallam Kali)**, Puli Kali (Tiger Dance), and the traditional Onam Sadya feast.
+        </li>
       </ul>
     </section>
 
-    <!-- Cuisine -->
+    <!-- Culinary Delights -->
     <section>
-      <h2>🍽️ Culinary Delights</h2>
+      <h2>🍽️ Culinary Delights: The Taste of Kerala</h2>
+      <p>Kerala's cuisine is famous for its generous use of coconut, local spices (cardamom, pepper, cinnamon), and fresh seafood. Sampling these dishes is a key part of the travel experience:</p>
       <ul>
-        <li><strong>Sadya:</strong> Traditional feast on banana leaf.</li>
-        <li><strong>Karimeen Pollichathu:</strong> Spiced pearl spot fish.</li>
-        <li><strong>Appam & Stew:</strong> Rice pancakes with coconut stew.</li>
-        <li><strong>Kozhikode Biryani:</strong> Fragrant and flavorful.</li>
+        <li>
+          <strong>Sadya:</strong> A traditional vegetarian feast served on a banana leaf, featuring a variety of curries, pickles, and payasams (sweet puddings).
+        </li>
+        <li>
+          <strong>Karimeen Pollichathu:</strong>> Pearl Spot fish marinated in spices, wrapped in a banana leaf, and traditionally pan-fried.
+        </li>
+        <li>
+          <strong>Appam and Stew:</strong> A light, lacy rice pancake with a soft center, typically paired with a rich, white vegetable or chicken stew.
+        </li>
+        <li>
+          <strong>Biryani:</strong> A distinct and flavorful preparation of biryani, especially famous in the northern parts of Kerala (Kozhikode).
+        </li>
       </ul>
     </section>
 
-    <!-- Why Choose Skyway -->
+    <!-- Best Time to Visit -->
     <section>
-      <h2>✈️ Why Sky Way Tours and Travels?</h2>
-      <p><strong>Sky Way Tours and Travels</strong> designs personalized Kerala holiday packages that capture the essence of 'God's Own Country.' From luxurious houseboats to Ayurvedic retreats, we ensure a seamless and unforgettable experience.</p>
+      <h2>🗓️ Best Time to Visit: Season-by-Season Guide</h2>
+      <ul>
+        <li>
+          <strong>Peak Season (Oct - Mar):</strong> The most popular time. Weather is pleasant ($18^\circ\text{C}$ to $29^\circ\text{C}$), ideal for all activities: houseboats, sightseeing, and beach relaxation. Book accommodations well in advance.
+        </li>
+        <li>
+          <strong>Summer (Apr - May):</strong> Hot and humid on the plains and coast. Best for visiting hill stations like Munnar and Wayanad for cooler temperatures. Expect off-season discounts.
+        </li>
+        <li>
+          <strong>Monsoon/Ayurveda Season (Jun - Sep):</strong> Known as the 'Ayurveda Season'. The cool, moist air is considered optimal for therapeutic treatments. Landscape is at its greenest, and it's perfect for budget travel and witnessing the snake boat races.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Travel Tips -->
+     <section>
+      <h2>💡 Essential Travel Tips</h2>
+      <ul>
+        <li><strong>Dress Code:</strong> Light cotton clothing is suitable year-round. While on beaches, be mindful of local customs outside tourist areas. Temple visits require modest attire (men often need to remove shirts, women should wear traditional clothing or salwar kameez).</li>
+        <li><strong>Transport:</strong> Prepaid taxis/Uber are available in cities. For intercity travel, a hired car with a driver is highly recommended for comfort and navigating the mountainous terrain to hill stations.</li>
+        <li><strong>Water:</strong> Always drink bottled water.</li>
+        <li><strong>Backwater Booking:</strong> Book your houseboat stay well in advance, especially during the peak season.</li>
+      </ul>
+    </section>
+
+
+    <!-- Why Choose Sky Way -->
+    <section>
+      <h2>✈️ Why Travel to Kerala with Sky Way Tours and Travels</h2>
+      <p><strong>Sky Way Tours and Travels</strong> specializes in crafting personalized Kerala holiday packages, ensuring you experience the true essence of 'God's Own Country.' From luxury houseboat cruises and authentic Ayurvedic retreats to thrilling wildlife safaris and cultural tours, we manage every detail. Our local experts provide seamless transfers, hand-picked accommodations, and guidance on the best cultural shows and dining experiences.</p>
+      <p>Let us design your perfect **Kerala adventure** with our exclusive, all-inclusive tour packages. Your journey to tranquility starts here!</p>
     </section>
   </div>
 
@@ -343,15 +315,12 @@
       <p>Copyright © 2025 Skyway Tours and Travels. All Rights Reserved.</p>
     </div>
   </section>
-
+  
   <!-- WhatsApp Floating Icon -->
   <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
   </a>
 
-  <script>
-    window.chtlConfig = { chatbotId: "4878437818" }
-  </script>
-  <script async data-id="4878437818" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+
 </body>
 </html>
