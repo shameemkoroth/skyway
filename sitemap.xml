@@ -3,172 +3,184 @@
 
   <!-- Homepage -->
 <url>
-  <loc>http://skywaytourandtravel.com/</loc>
+  <loc>https://skywaytourandtravel.com/</loc>
   <changefreq>daily</changefreq>
   <priority>1</priority>
 </url>
 
 <!-- Visa Page -->
 <url>
-  <loc>http://skywaytourandtravel.com/visa</loc>
+  <loc>https://skywaytourandtravel.com/visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 
 <!-- Locations Page -->
 <url>
-  <loc>http://skywaytourandtravel.com/locations</loc>
+  <loc>https://skywaytourandtravel.com/locations</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Hajj & Umrah Page -->
+<url>
+  <loc>https://skywaytourandtravel.com/hajj-package</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://skywaytourandtravel.com/umrah-package</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 
 <!-- About Page -->
 <url>
-  <loc>http://skywaytourandtravel.com/about</loc>
+  <loc>https://skywaytourandtravel.com/about</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 
 <!-- Contact Page -->
 <url>
-  <loc>http://skywaytourandtravel.com/contact</loc>
+  <loc>https://skywaytourandtravel.com/contact</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 
 <!-- Visa Details Page -->
 <url>
-  <loc>http://skywaytourandtravel.com/visa/azerbaijan-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/azerbaijan-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/schengen-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/schengen-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/uae-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/uae-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/oman-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/oman-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/bahrain-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/bahrain-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/qatar-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/qatar-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/saudi-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/saudi-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>  
 <url>
-  <loc>http://skywaytourandtravel.com/visa/india-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/india-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/srilanka-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/srilanka-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
   <url>
-  <loc>http://skywaytourandtravel.com/visa/thailand-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/thailand-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/ethiopia-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/ethiopia-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/malaysia-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/malaysia-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/egypt-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/egypt-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/cambodia-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/cambodia-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/vietnam-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/vietnam-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/uzbekistan-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/uzbekistan-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/morroco-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/morroco-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/indonesia-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/indonesia-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/tanzania-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/tanzania-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/angola-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/angola-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/jordan-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/jordan-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/kenya-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/kenya-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/kyrgyzstan-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/kyrgyzstan-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/tajikistan-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/tajikistan-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/turkey-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/turkey-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/armenia-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/armenia-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://skywaytourandtravel.com/visa/russia-visa</loc>
+  <loc>https://skywaytourandtravel.com/visa/russia-visa</loc>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
