@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Category: Document Meta -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andaman & Nicobar Islands: India’s Emerald Paradise | Skyway Tours and Travels</title>
 
-  <!-- Category: SEO Meta Tags -->
-  <meta name="description" content="Discover the Andaman & Nicobar Islands — India’s tropical paradise of turquoise waters, coral reefs, beaches, and adventure. Plan your dream vacation with Skyway Tours and Travels." />
-  <meta name="keywords" content="Andaman travel guide, Andaman tour packages, Nicobar islands, Havelock Island, Radhanagar Beach, Scuba diving, Andaman tourism, Skyway Tours and Travels" />
+  <meta name="description" content="Discover the Andaman & Nicobar Islands — India’s tropical paradise. Plan your dream vacation with Skyway Tours and Travels." />
+  <meta name="keywords" content="Andaman travel guide, Andaman tour packages, Havelock Island, Scuba diving, Andaman tourism, Skyway Tours" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Skyway Tours and Travels" />
 
-  <!-- Category: Open Graph Meta Tags -->
-  <meta property="og:title" content="Andaman & Nicobar Islands: India’s Emerald Paradise | Skyway Tours and Travels" />
-  <meta property="og:description" content="Plan your trip to the Andaman & Nicobar Islands with Skyway Tours and Travels. Explore pristine beaches, coral reefs, and island adventures." />
+  <meta property="og:title" content="Andaman & Nicobar Islands | Skyway Tours and Travels" />
+  <meta property="og:description" content="Plan your trip to the Andaman & Nicobar Islands with Skyway Tours and Travels." />
   <meta property="og:image" content="../files/logo.png" />
   <meta property="og:url" content="https://www.skywaytourandtravel.com/locations/andaman.html" />
   <meta property="og:type" content="website" />
 
-  <!-- Category: Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Andaman & Nicobar Islands: India’s Emerald Paradise | Skyway Tours and Travels" />
-  <meta name="twitter:description" content="Experience turquoise waters, coral reefs, and adventure in the Andaman & Nicobar Islands with Skyway Tours and Travels." />
-  <meta name="twitter:image" content="../files/logo.png" />
-
-  <!-- Category: Favicon -->
   <link rel="icon" href="../files/logo.png" />
   
-  <!-- Category: Icon & Font Stylesheets -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Category: Tailwind Setup -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
           colors: {
             brand: {
               DEFAULT: '#072f53',
               light: '#0e4675',
+              accent: '#00bfa5',
               50: '#f2f7fb',
             }
           }
@@ -52,220 +44,282 @@
     }
   </script>
 
-  <!-- Category: Custom Styles -->
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    /* --- Standard Components (Modal & Footer) --- */
+    /* Smooth Scroll */
+    html { scroll-behavior: smooth; }
     
     /* Modal Animation */
-    .modal-animate {
-        animation: fadeIn 0.3s ease-out forwards;
-    }
+    .modal-animate { animation: fadeIn 0.3s ease-out forwards; }
     @keyframes fadeIn {
         from { opacity: 0; transform: scale(0.95); }
         to { opacity: 1; transform: scale(1); }
     }
-
-    /* Footer Styles */
-    .footer { background-color: #072f53; color: white; padding: 40px 20px; text-align: center; }
-    .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-    .footlinks h4 { color: pink; margin-bottom: 10px; }
-    .footlinks ul { list-style: none; padding: 0; }
-    .footlinks ul li { margin: 5px 0; }
-    .footlinks a { color: #00bfa5; text-decoration: none; }
-    .footlinks a:hover { text-decoration: underline; }
-    .end { background-color: #072f53; padding: 15px; font-size: 14px; }
-
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position: fixed; bottom: 20px; left: 20px; background-color: #25D366;
-      color: white; font-size: 22px; width: 50px; height: 50px;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; z-index: 1000; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      text-decoration: none !important; transition: background-color 0.3s ease;
-    }
-    .whatsapp-float:hover { background-color: #128C7E; }
-
-    /* --- Page Specific Styles --- */
-    .content-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    h1, h2 { color: #072f53; }
-
-    /* Make H2 look like strong/bold headings */
-    h2 {
-      font-weight: 800;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-
-    section { margin-bottom: 30px; }
-    p { color: #333; line-height: 1.6; }
-    li { margin: 8px 0; color: #333; line-height: 1.6; }
-
-    .hero {
-      text-align: center;
-      padding: 50px 20px 30px;
-      background: linear-gradient(to right, #0288d1, #004d73);
-      color: white;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    .hero h1 { font-size: 2rem; margin-bottom: 15px; font-weight: 700; color: white; }
-    .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: white; }
-    strong { font-weight: 700; }
-
-    @media (max-width: 768px) {
-      .footer-content { flex-direction: column; align-items: center; text-align: center; }
-      .hero h1 { font-size: 1.6rem; }
-    }
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 relative">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand selection:text-white">
 
-  <!-- Category: Navigation Menu -->
-  <nav class="bg-brand shadow-md fixed w-full z-50">
+  <nav class="bg-brand shadow-md fixed w-full z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex items-center">
-                <a href="../index.html" class="flex-shrink-0 flex items-center gap-2">
-                    <img src="../files/logo.png" alt="Sky Way Tours Logo" class="h-12 w-auto object-contain bg-white rounded-md p-1">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="../index.html" class="bg-white p-1 rounded-md">
+                    <img src="../files/logo.png" alt="Sky Way Tours Logo" class="h-12 w-auto object-contain">
                 </a>
             </div>
+            
             <div class="hidden md:flex items-center space-x-8">
-                <a href="../index.html" class="text-gray-200 hover:text-white transition">Home</a>
-                <a href="../visa.html" class="text-gray-200 hover:text-white transition">Visa Services</a>
-                <a href="../locations.html" class="text-white font-bold border-b-2 border-white transition">Destinations</a>
-                <a href="javascript:void(0)" onclick="openSelectionModal()" class="text-gray-200 hover:text-white transition flex items-center gap-1">
+                <a href="../index.html" class="text-gray-200 hover:text-white hover:scale-105 transition transform text-sm font-medium">Home</a>
+                <a href="../visa.html" class="text-gray-200 hover:text-white hover:scale-105 transition transform text-sm font-medium">Visa Services</a>
+                <a href="../locations.html" class="text-white border-b-2 border-brand-accent pb-1 text-sm font-bold">Destinations</a>
+                <a href="javascript:void(0)" onclick="openSelectionModal()" class="text-gray-200 hover:text-white hover:scale-105 transition transform text-sm font-medium flex items-center gap-1">
                     Hajj & Umrah <i class="fas fa-caret-down text-xs opacity-75"></i>
                 </a>
-                <a href="../about.html" class="text-gray-200 hover:text-white transition">About Us</a>
-                <a href="../contact.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                <a href="../about.html" class="text-gray-200 hover:text-white hover:scale-105 transition transform text-sm font-medium">About Us</a>
+                <a href="../contact.html" class="bg-brand-accent hover:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium transition shadow-lg">Contact Us</a>
             </div>
+
             <div class="md:hidden flex items-center">
-                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white hover:text-gray-200 focus:outline-none">
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white hover:text-gray-200 focus:outline-none p-2">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-brand border-t border-brand-light">
-        <a href="../index.html" class="block px-4 py-2 text-white hover:bg-brand-light">Home</a>
-        <a href="../visa.html" class="block px-4 py-2 text-white hover:bg-brand-light">Visa Services</a>
-        <a href="../locations.html" class="block px-4 py-2 text-white font-bold bg-brand-light">Destinations</a>
-        <a href="javascript:void(0)" onclick="openSelectionModal()" class="block px-4 py-2 text-white hover:bg-brand-light">Hajj & Umrah</a>
-        <a href="../about.html" class="block px-4 py-2 text-white hover:bg-brand-light">About Us</a>
-        <a href="../contact.html" class="block px-4 py-2 text-white hover:bg-brand-light">Contact Us</a>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-light border-t border-brand">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-brand">Home</a>
+            <a href="../visa.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-brand">Visa Services</a>
+            <a href="../locations.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-brand shadow-inner">Destinations</a>
+            <a href="javascript:void(0)" onclick="openSelectionModal()" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-brand">Hajj & Umrah</a>
+            <a href="../about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-brand">About Us</a>
+            <a href="../contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-brand">Contact Us</a>
+        </div>
     </div>
   </nav>
 
-  <div class="content-wrapper pt-24">
-
-    <!-- Category: Hero Section -->
-    <section class="hero">
-      <h1>🏝️ Andaman & Nicobar Islands: India’s Emerald Paradise</h1>
-      <p>Where turquoise waters meet golden sands, the Andaman & Nicobar Islands are a tropical dream come true. Escape to a world of coral reefs, pristine beaches, lush forests, and unforgettable adventures.</p>
-    </section>
-
-    <!-- Category: Top Attractions -->
-    <section>
-      <h2>🌅 Top Attractions</h2>
-      <ul>
-        <li><strong>Radhanagar Beach (Havelock Island):</strong> Voted one of Asia’s best beaches, known for its powdery white sand and crystal-clear waters.</li>
-        <li><strong>Cellular Jail (Port Blair):</strong> A national memorial that tells the story of India’s freedom struggle.</li>
-        <li><strong>Ross Island:</strong> Discover colonial ruins enveloped by nature, just a short boat ride from Port Blair.</li>
-        <li><strong>North Bay Island:</strong> Perfect for snorkeling, sea walking, and coral viewing.</li>
-        <li><strong>Neil Island:</strong> A tranquil haven for nature lovers and beach explorers.</li>
-      </ul>
-    </section>
-
-    <!-- Category: Adventure & Water Sports -->
-    <section>
-      <h2>🤿 Adventure & Water Sports</h2>
-      <p>Dive into the underwater magic of the Andamans! The islands are a diver’s paradise with vibrant coral reefs and marine life. Popular activities include:</p>
-      <ul>
-        <li><strong>Scuba Diving:</strong> Explore colorful reefs at Havelock and Neil Islands.</li>
-        <li><strong>Snorkeling:</strong> Experience coral gardens up close at North Bay.</li>
-        <li><strong>Sea Walking:</strong> A unique experience for non-swimmers to explore marine life safely.</li>
-        <li><strong>Kayaking & Mangrove Tours:</strong> Paddle through serene mangrove creeks at night under a starlit sky.</li>
-      </ul>
-    </section>
-
-    <!-- Category: Culture & Heritage -->
-    <section>
-      <h2>🏛️ Culture & Heritage</h2>
-      <p>Beyond the beaches, the Andaman Islands hold a rich cultural and historical legacy. Visit the <strong>Cellular Jail</strong> to witness stories of valor, explore indigenous tribes’ heritage, and experience the local island lifestyle infused with Indian and Southeast Asian influences.</p>
-    </section>
-
-    <!-- Category: Nature & Wildlife -->
-    <section>
-      <h2>🌿 Nature & Wildlife</h2>
-      <p>The islands are home to rare flora and fauna — from tropical rainforests to exotic birds. Explore the <strong>Mahatma Gandhi Marine National Park</strong> for coral reefs and marine biodiversity, or trek through <strong>Mount Harriet National Park</strong> for panoramic views.</p>
-    </section>
-
-    <!-- Category: Best Time to Visit -->
-    <section>
-      <h2>☀️ Best Time to Visit</h2>
-      <p>The ideal time to visit the Andaman & Nicobar Islands is between <strong>October and May</strong>. The weather is perfect for swimming, diving, and sightseeing, with calm seas and clear skies.</p>
-    </section>
-
-    <!-- Category: Why Travel with Skyway -->
-    <section>
-      <h2>✈️ Why Travel with Skyway Tours and Travels</h2>
-      <p>At <strong>Skyway Tours and Travels</strong>, we bring you the best of the Andaman experience — from luxurious beach resorts to thrilling underwater adventures. Our customized itineraries ensure a perfect mix of relaxation, exploration, and excitement.</p>
-      <p>Book your <strong>Andaman tour package</strong> today and let us craft your unforgettable island escape!</p>
-    </section>
-  </div>
-
-  <!-- Category: Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footlinks">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../visa.html">Visa</a></li>
-          <li><a href="../locations.html">Destinations</a></li>
-          <a href="javascript:void(0)" onclick="openSelectionModal()" class="hover:text-white transition text-sm">Hajj & Umrah Packages</a>
-          <li><a href="../contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footlinks">
-        <h4>Contact & Connect</h4>
-        <div class="social">
-          <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank"><i class='bx bxl-facebook'></i></a>
-          <a href="https://www.instagram.com/skyway__travels" target="_blank"><i class='bx bxl-instagram'></i></a>
-          <a href="mailto:info@skywaytourandtravel.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-        </div>
-        <p>📞 0496 299 69 29</p>
-        <p>📱 9496 369 777</p>
-        <p>📱 9061 99 69 29</p>
-      </div>
+  <header class="relative pt-20 h-[60vh] min-h-[400px] flex items-center justify-center bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1596500474640-23a411440705?q=80&w=1920&auto=format&fit=crop');">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand/70 via-brand/40 to-brand/80"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/20 border border-brand-accent text-brand-accent text-sm font-bold tracking-wide mb-4 backdrop-blur-sm">TROPICAL PARADISE</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg leading-tight">
+        Andaman & Nicobar Islands
+      </h1>
+      <p class="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+        Where turquoise waters meet golden sands. Escape to a world of coral reefs, pristine beaches, and unforgettable adventures.
+      </p>
     </div>
+  </header>
 
-    <div class="end">
-      <p> © <script>document.write(new Date().getFullYear())</script> Skyway Tours and Travels. All Rights Reserved.</p>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-3xl font-bold text-brand mb-6 relative inline-block">
+                India’s Emerald Paradise
+                <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-brand-accent rounded-full"></span>
+            </h2>
+            <p class="text-gray-600 leading-7 text-lg mb-6">
+                The Andaman & Nicobar Islands are a slice of paradise tucked away in the Bay of Bengal. From the colonial history of Port Blair to the world-famous beaches of Havelock, every island tells a different story.
+            </p>
+            [attachment_0](attachment)
+            <div class="flex flex-wrap gap-4 mt-4">
+                <div class="flex items-center gap-2 text-brand font-medium">
+                    <i class='bx bxs-sun text-yellow-500 text-xl'></i> Tropical Weather
+                </div>
+                <div class="flex items-center gap-2 text-brand font-medium">
+                    <i class='bx bxs-plane-alt text-blue-500 text-xl'></i> Easy Access
+                </div>
+                <div class="flex items-center gap-2 text-brand font-medium">
+                    <i class='bx bxs-check-shield text-green-500 text-xl'></i> Safe Tourism
+                </div>
+            </div>
+        </div>
+        <div class="relative group">
+             <img src="https://images.unsplash.com/photo-1544983053-913a5317796d?q=80&w=800&auto=format&fit=crop" alt="Andaman Beach" class="rounded-2xl shadow-2xl object-cover h-80 w-full transform transition duration-500 group-hover:scale-[1.02]">
+            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl hidden md:block">
+                <p class="text-brand font-bold text-2xl">572</p>
+                <p class="text-gray-500 text-sm">Islands in total</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-brand">Top Attractions</h2>
+        <p class="text-gray-500 mt-2">Must-visit locations in the archipelago</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border border-gray-100">
+            <div class="h-48 bg-gray-200 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb5689?q=80&w=600" alt="Radhanagar Beach" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute top-4 right-4 bg-white/90 px-2 py-1 rounded text-xs font-bold text-brand shadow-sm">Havelock</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-brand mb-2">Radhanagar Beach</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Voted one of Asia’s best beaches, known for its powdery white sand and crystal-clear turquoise waters.</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border border-gray-100">
+            <div class="h-48 bg-gray-200 overflow-hidden relative">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cellular_Jail_Wings.jpg/640px-Cellular_Jail_Wings.jpg" alt="Cellular Jail" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute top-4 right-4 bg-white/90 px-2 py-1 rounded text-xs font-bold text-brand shadow-sm">Port Blair</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-brand mb-2">Cellular Jail</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">A national memorial that tells the poignant story of India’s freedom struggle. A must-visit for history buffs.</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border border-gray-100">
+            <div class="h-48 bg-gray-200 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1517427677506-ade074eb1432?q=80&w=600" alt="Scuba Diving" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute top-4 right-4 bg-white/90 px-2 py-1 rounded text-xs font-bold text-brand shadow-sm">North Bay</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-brand mb-2">North Bay Island</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">The hub for water sports. Perfect for snorkeling, sea walking, and viewing vibrant coral reefs.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold text-brand mb-6 flex items-center gap-3">
+                        <i class="fas fa-water text-brand-accent"></i> Adventure & Sports
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="bg-white p-4 rounded-lg shadow-sm flex gap-4 items-start">
+                            <div class="bg-blue-100 text-blue-600 p-2 rounded-full shrink-0"><i class="fas fa-swimmer"></i></div>
+                            <div>
+                                <strong class="block text-brand">Scuba Diving</strong>
+                                <span class="text-sm text-gray-600">Explore the vibrant reefs of Havelock & Neil.</span>
+                            </div>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm flex gap-4 items-start">
+                            <div class="bg-teal-100 text-teal-600 p-2 rounded-full shrink-0"><i class="fas fa-mask"></i></div>
+                            <div>
+                                <strong class="block text-brand">Snorkeling</strong>
+                                <span class="text-sm text-gray-600">Experience coral gardens up close at North Bay.</span>
+                            </div>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm flex gap-4 items-start">
+                            <div class="bg-green-100 text-green-600 p-2 rounded-full shrink-0"><i class="fas fa-tree"></i></div>
+                            <div>
+                                <strong class="block text-brand">Mangrove Kayaking</strong>
+                                <span class="text-sm text-gray-600">Paddle through serene creeks, even at night!</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-1 space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-bold text-brand mb-4 flex items-center gap-3">
+                            <i class="fas fa-calendar-alt text-brand-accent"></i> Best Time to Visit
+                        </h2>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand-accent">
+                            <p class="text-gray-700">The ideal time is between <strong>October and May</strong>. The weather is perfect for swimming and sightseeing, with calm seas and clear skies. Avoid the monsoon season (June-Sept) for water sports.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-2xl font-bold text-brand mb-4 flex items-center gap-3">
+                            <i class="fas fa-leaf text-brand-accent"></i> Nature & Wildlife
+                        </h2>
+                        <p class="text-gray-600">
+                            Home to rare flora and fauna. Explore the <strong>Mahatma Gandhi Marine National Park</strong> for biodiversity or trek through <strong>Mount Harriet National Park</strong> for panoramic views.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for an Island Escape?</h2>
+            <p class="text-brand-accent text-lg mb-8 max-w-2xl mx-auto">
+                Skyway Tours and Travels brings you the best of Andaman — from luxurious resorts to thrilling underwater adventures.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="../contact.html" class="bg-brand-accent hover:bg-white hover:text-brand-accent text-brand-dark font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg transform hover:-translate-y-1">
+                    Book Now
+                </a>
+                <a href="https://wa.me/919496369777" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand font-bold py-3 px-8 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                    <i class='bx bxl-whatsapp text-xl'></i> Chat with Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-brand text-white pt-16 pb-6 border-t border-brand-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 text-center md:text-left">
+        
+        <div class="space-y-4">
+            <img src="../files/logo.png" alt="Logo" class="h-16 w-auto bg-white p-2 rounded-lg mx-auto md:mx-0">
+            <p class="text-gray-300 text-sm leading-relaxed">
+                Your trusted partner for memorable journeys. From Andaman beaches to spiritual pilgrimages, we make travel seamless.
+            </p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-brand-accent mb-6">Quick Links</h4>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li><a href="../index.html" class="hover:text-white hover:pl-2 transition-all duration-300">Home</a></li>
+            <li><a href="../visa.html" class="hover:text-white hover:pl-2 transition-all duration-300">Visa Services</a></li>
+            <li><a href="../locations.html" class="hover:text-white hover:pl-2 transition-all duration-300">Destinations</a></li>
+            <li><a href="javascript:void(0)" onclick="openSelectionModal()" class="hover:text-white hover:pl-2 transition-all duration-300">Hajj & Umrah</a></li>
+            <li><a href="../contact.html" class="hover:text-white hover:pl-2 transition-all duration-300">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-bold text-brand-accent mb-6">Popular Destinations</h4>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li><a href="#" class="hover:text-white transition">Andaman Islands</a></li>
+              <li><a href="#" class="hover:text-white transition">Lakshadweep</a></li>
+              <li><a href="#" class="hover:text-white transition">Dubai</a></li>
+              <li><a href="#" class="hover:text-white transition">Thailand</a></li>
+            </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-brand-accent mb-6">Connect with Us</h4>
+          <div class="flex justify-center md:justify-start gap-4 mb-6">
+            <a href="https://www.facebook.com/skywaytoursandtravel" target="_blank" class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center hover:bg-blue-600 transition"><i class='bx bxl-facebook text-xl'></i></a>
+            <a href="https://www.instagram.com/skyway__travels" target="_blank" class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center hover:bg-pink-600 transition"><i class='bx bxl-instagram text-xl'></i></a>
+            <a href="mailto:info@skywaytourandtravel.com" class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center hover:bg-red-500 transition"><i class='bx bxl-gmail text-xl'></i></a>
+          </div>
+          <div class="space-y-2 text-sm text-gray-300">
+             <p><i class="fas fa-phone-alt mr-2 text-brand-accent"></i> 0496 299 69 29</p>
+             <p><i class="fas fa-mobile-alt mr-2 text-brand-accent"></i> 9496 369 777</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+        <p>© <script>document.write(new Date().getFullYear())</script> Skyway Tours and Travels. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Category: Floating WhatsApp -->
-  <a href="https://wa.me/919496369777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class='bx bxl-whatsapp'></i>
+  <a href="https://wa.me/919496369777" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110" aria-label="Chat on WhatsApp">
+    <i class='bx bxl-whatsapp text-4xl'></i>
   </a>
 
-  <!-- Category: Hajj & Umrah Selection Modal -->
   <div id="selectionModal" class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity duration-300">
     <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full relative modal-animate mx-4 border-2 border-brand/10">
         <button onclick="closeSelectionModal()" class="absolute top-4 right-4 text-gray-400 hover:text-brand transition duration-200 focus:outline-none">
@@ -304,7 +358,6 @@
     </div>
   </div>
 
-  <!-- Category: Scripts -->
   <script>
     function openSelectionModal() {
         const modal = document.getElementById('selectionModal');
